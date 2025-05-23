@@ -4,6 +4,8 @@
  */
 package cafecraft_group2_37a;
 import database.*;
+import view.*;
+import controller.*;
 /**
  *
  * @author ASUS
@@ -21,6 +23,11 @@ public class Cafecraft_group2_37A {
         else{
             System.out.println("faiiled to connect to database");
         }
+         javax.swing.SwingUtilities.invokeLater(() -> {
+        editmenu frame = new editmenu();  // Your main window class name
+          ItemController controller = new ItemController(frame);
+        frame.setVisible(true);
+    });
     }
     }
     

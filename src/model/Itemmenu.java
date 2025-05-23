@@ -12,13 +12,13 @@ public class Itemmenu {
      private int id;
     private String name;
     private double price;
-    private String imagePath;
+    private byte[] imagePath;
     private String category;
 
     public Itemmenu() {
     }
 
-    public Itemmenu(int id, String name, double price, String imagePath, String category, String description) {
+    public Itemmenu(int id, String name, double price, byte[] imagePath, String category) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -38,11 +38,14 @@ public class Itemmenu {
         return price;
     }
 
-    public String getImagePath() {
+    public byte[] getImagePath() {
         return imagePath;
     }
 
-    public void setImagePath(String imagePath) {
+      public void setName(String name) {
+     this.name= name;
+    }
+    public void setImagePath(byte[] imagePath) {
         this.imagePath = imagePath;
     }
 

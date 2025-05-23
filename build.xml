@@ -37,7 +37,7 @@
 <target name="copy-resources" depends="compile">
     <copy todir="${build.classes.dir}">
         <fileset dir="src">
-            <include name="image/**"/>
+            <include name="images/**"/>
         </fileset>
     </copy>
 </target>

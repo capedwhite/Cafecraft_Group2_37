@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package view;
-
+import java.awt.event.ActionListener;
 /**
  *
  * @author ASUS
@@ -11,10 +11,12 @@ package view;
 public class editmenu extends javax.swing.JFrame {
 
     /**
-     * Creates new form editmenu
+     * Creates new form 
      */
     public editmenu() {
         initComponents();
+            this.setResizable(false);
+            setLocationRelativeTo(null);
     }
 
     /**
@@ -37,46 +39,47 @@ public class editmenu extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         menupanel = new javax.swing.JPanel();
         blackforestpanel = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         price1 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         crossiantpanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         price2 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         blackcoffeepanel = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         price3 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
         hotchocolatepanel = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         price4 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         lemonadepanel = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         price5 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         milkpanel = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         price6 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         lattepanel = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         price7 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         capuccinopanel = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
         price8 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         randomextrapanel = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
@@ -106,16 +109,16 @@ public class editmenu extends javax.swing.JFrame {
         titlepanel.setLayout(titlepanelLayout);
         titlepanelLayout.setHorizontalGroup(
             titlepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(titlepanelLayout.createSequentialGroup()
-                .addGap(476, 476, 476)
-                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(376, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlepanelLayout.createSequentialGroup()
+                .addContainerGap(455, Short.MAX_VALUE)
+                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(410, 410, 410))
         );
         titlepanelLayout.setVerticalGroup(
             titlepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlepanelLayout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
-                .addComponent(jLabel34)
+                .addContainerGap()
+                .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -196,8 +199,7 @@ public class editmenu extends javax.swing.JFrame {
 
         blackforestpanel.setMaximumSize(new java.awt.Dimension(100, 200));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cake.png"))); // NOI18N
-        jLabel6.setText("jLabel6");
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cake.png")));
 
         jLabel9.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jLabel9.setText("blackforest cake");
@@ -213,34 +215,39 @@ public class editmenu extends javax.swing.JFrame {
         blackforestpanelLayout.setHorizontalGroup(
             blackforestpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(blackforestpanelLayout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addComponent(jLabel9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blackforestpanelLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addContainerGap()
+                .addGroup(blackforestpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blackforestpanelLayout.createSequentialGroup()
+                        .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blackforestpanelLayout.createSequentialGroup()
+                        .addGap(0, 109, Short.MAX_VALUE)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(65, 65, 65))))
+            .addGroup(blackforestpanelLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
                 .addComponent(price1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
+                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blackforestpanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jLabel9)
+                .addGap(53, 53, 53))
         );
         blackforestpanelLayout.setVerticalGroup(
             blackforestpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(blackforestpanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9)
+                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(blackforestpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(price1)
-                    .addComponent(jLabel11)
                     .addComponent(jLabel12))
+                .addGap(124, 124, 124)
+                .addComponent(jLabel11)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -260,49 +267,50 @@ public class editmenu extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jLabel15.setText("90");
 
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/croissinat.png")));
+
         javax.swing.GroupLayout crossiantpanelLayout = new javax.swing.GroupLayout(crossiantpanel);
         crossiantpanel.setLayout(crossiantpanelLayout);
         crossiantpanelLayout.setHorizontalGroup(
             crossiantpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(crossiantpanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(crossiantpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, crossiantpanelLayout.createSequentialGroup()
-                        .addGap(0, 28, Short.MAX_VALUE)
-                        .addGroup(crossiantpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, crossiantpanelLayout.createSequentialGroup()
-                                .addComponent(price2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(88, 88, 88)
-                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(15, 15, 15))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, crossiantpanelLayout.createSequentialGroup()
-                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(57, 57, 57))))
+                .addGap(73, 73, 73)
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, crossiantpanelLayout.createSequentialGroup()
+                .addGroup(crossiantpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(crossiantpanelLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                        .addGap(21, 21, 21)
+                        .addComponent(price2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(crossiantpanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(9, 9, 9)))
+                .addGap(19, 19, 19))
         );
         crossiantpanelLayout.setVerticalGroup(
             crossiantpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(crossiantpanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(crossiantpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(2, 2, 2)
                 .addGroup(crossiantpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(price2)
                     .addComponent(jLabel15))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         menupanel.add(crossiantpanel);
 
         blackcoffeepanel.setMaximumSize(new java.awt.Dimension(100, 200));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tea.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         jLabel16.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jLabel16.setText("black coffee");
@@ -313,48 +321,46 @@ public class editmenu extends javax.swing.JFrame {
         jLabel18.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jLabel18.setText("70");
 
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tea.png")));
+        jLabel26.setToolTipText("");
+        jLabel26.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
         javax.swing.GroupLayout blackcoffeepanelLayout = new javax.swing.GroupLayout(blackcoffeepanel);
         blackcoffeepanel.setLayout(blackcoffeepanelLayout);
         blackcoffeepanelLayout.setHorizontalGroup(
             blackcoffeepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blackcoffeepanelLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(price3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blackcoffeepanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel16)
+                .addGap(71, 71, 71))
             .addGroup(blackcoffeepanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(blackcoffeepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blackcoffeepanelLayout.createSequentialGroup()
-                        .addGap(0, 37, Short.MAX_VALUE)
-                        .addGroup(blackcoffeepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blackcoffeepanelLayout.createSequentialGroup()
-                                .addComponent(price3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(79, 79, 79)
-                                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(15, 15, 15))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blackcoffeepanelLayout.createSequentialGroup()
-                                .addComponent(jLabel16)
-                                .addGap(69, 69, 69))))
-                    .addGroup(blackcoffeepanelLayout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addContainerGap())))
+                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         blackcoffeepanelLayout.setVerticalGroup(
             blackcoffeepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(blackcoffeepanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(blackcoffeepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(price3)
                     .addComponent(jLabel18))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(16, 16, 16))
         );
 
         menupanel.add(blackcoffeepanel);
 
         hotchocolatepanel.setMaximumSize(new java.awt.Dimension(100, 200));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/hot chocolate.png"))); // NOI18N
-        jLabel4.setText("jLabel4");
 
         jLabel19.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jLabel19.setText("Hot chocolate");
@@ -365,46 +371,44 @@ public class editmenu extends javax.swing.JFrame {
         jLabel21.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jLabel21.setText("240");
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/hot chocolate.png")));
+
         javax.swing.GroupLayout hotchocolatepanelLayout = new javax.swing.GroupLayout(hotchocolatepanel);
         hotchocolatepanel.setLayout(hotchocolatepanelLayout);
         hotchocolatepanelLayout.setHorizontalGroup(
             hotchocolatepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(hotchocolatepanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(hotchocolatepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hotchocolatepanelLayout.createSequentialGroup()
-                        .addComponent(price4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(91, 91, 91)
-                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hotchocolatepanelLayout.createSequentialGroup()
-                        .addComponent(jLabel19)
-                        .addGap(68, 68, 68))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hotchocolatepanelLayout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hotchocolatepanelLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(price4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hotchocolatepanelLayout.createSequentialGroup()
+                .addContainerGap(69, Short.MAX_VALUE)
+                .addComponent(jLabel19)
+                .addGap(64, 64, 64))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hotchocolatepanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         hotchocolatepanelLayout.setVerticalGroup(
             hotchocolatepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(hotchocolatepanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel19)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(hotchocolatepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(price4)
                     .addComponent(jLabel21))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         menupanel.add(hotchocolatepanel);
 
         lemonadepanel.setMaximumSize(new java.awt.Dimension(100, 200));
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lemon.png"))); // NOI18N
-        jLabel5.setText("jLabel5");
-        jLabel5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         jLabel22.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jLabel22.setText("Lemonade");
@@ -415,34 +419,35 @@ public class editmenu extends javax.swing.JFrame {
         jLabel24.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jLabel24.setText("100");
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lemon.png")));
+
         javax.swing.GroupLayout lemonadepanelLayout = new javax.swing.GroupLayout(lemonadepanel);
         lemonadepanel.setLayout(lemonadepanelLayout);
         lemonadepanelLayout.setHorizontalGroup(
             lemonadepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(lemonadepanelLayout.createSequentialGroup()
-                .addGroup(lemonadepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(lemonadepanelLayout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(price5, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(93, 93, 93)
-                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(lemonadepanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(15, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lemonadepanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 17, Short.MAX_VALUE)
+                .addComponent(price5, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(93, 93, 93)
+                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
+            .addGroup(lemonadepanelLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
                 .addComponent(jLabel22)
-                .addGap(67, 67, 67))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lemonadepanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         lemonadepanelLayout.setVerticalGroup(
             lemonadepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(lemonadepanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel22)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(lemonadepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(price5)
                     .addComponent(jLabel24))
@@ -453,9 +458,6 @@ public class editmenu extends javax.swing.JFrame {
 
         milkpanel.setMaximumSize(new java.awt.Dimension(100, 200));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/teaig.png"))); // NOI18N
-        jLabel3.setText("jLabel3");
-
         jLabel25.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jLabel25.setText("milk blast");
 
@@ -465,6 +467,8 @@ public class editmenu extends javax.swing.JFrame {
         jLabel27.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jLabel27.setText("120");
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/teaig.png")));
+
         javax.swing.GroupLayout milkpanelLayout = new javax.swing.GroupLayout(milkpanel);
         milkpanel.setLayout(milkpanelLayout);
         milkpanelLayout.setHorizontalGroup(
@@ -472,27 +476,26 @@ public class editmenu extends javax.swing.JFrame {
             .addGroup(milkpanelLayout.createSequentialGroup()
                 .addGroup(milkpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(milkpanelLayout.createSequentialGroup()
-                        .addGap(40, 40, 40)
+                        .addGap(77, 77, 77)
+                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(milkpanelLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
                         .addComponent(price6, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(81, 81, 81)
                         .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(milkpanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(16, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, milkpanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51))
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(9, Short.MAX_VALUE))
         );
         milkpanelLayout.setVerticalGroup(
             milkpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(milkpanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel25)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel25)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(milkpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(price6)
                     .addComponent(jLabel27))
@@ -503,9 +506,6 @@ public class editmenu extends javax.swing.JFrame {
 
         lattepanel.setMaximumSize(new java.awt.Dimension(100, 200));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/teaa.png"))); // NOI18N
-        jLabel8.setText("jLabel8");
-
         jLabel28.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jLabel28.setText("Latte ");
 
@@ -515,45 +515,45 @@ public class editmenu extends javax.swing.JFrame {
         jLabel30.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jLabel30.setText("300");
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/late.png")));
+
         javax.swing.GroupLayout lattepanelLayout = new javax.swing.GroupLayout(lattepanel);
         lattepanel.setLayout(lattepanelLayout);
         lattepanelLayout.setHorizontalGroup(
             lattepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lattepanelLayout.createSequentialGroup()
+                .addContainerGap(16, Short.MAX_VALUE)
+                .addComponent(price7, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(91, 91, 91)
+                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
             .addGroup(lattepanelLayout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
                 .addGroup(lattepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lattepanelLayout.createSequentialGroup()
-                        .addComponent(price7, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(91, 91, 91)
-                        .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lattepanelLayout.createSequentialGroup()
-                        .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(75, 75, 75))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lattepanelLayout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                    .addGroup(lattepanelLayout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(lattepanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         lattepanelLayout.setVerticalGroup(
             lattepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(lattepanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel28)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(lattepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(price7)
                     .addComponent(jLabel30))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         menupanel.add(lattepanel);
 
         capuccinopanel.setMaximumSize(new java.awt.Dimension(100, 200));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/late.png"))); // NOI18N
-        jLabel7.setText("jLabel7");
 
         jLabel31.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jLabel31.setText("Capuccino");
@@ -564,30 +564,32 @@ public class editmenu extends javax.swing.JFrame {
         jLabel33.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jLabel33.setText("320");
 
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/teaa.png")));
+
         javax.swing.GroupLayout capuccinopanelLayout = new javax.swing.GroupLayout(capuccinopanel);
         capuccinopanel.setLayout(capuccinopanelLayout);
         capuccinopanelLayout.setHorizontalGroup(
             capuccinopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, capuccinopanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap(81, Short.MAX_VALUE)
                 .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52))
-            .addGroup(capuccinopanelLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
+                .addGap(60, 60, 60))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, capuccinopanelLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
                 .addComponent(price8, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(91, 91, 91)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addGap(25, 25, 25))
             .addGroup(capuccinopanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         capuccinopanelLayout.setVerticalGroup(
             capuccinopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(capuccinopanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel31)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -603,7 +605,6 @@ public class editmenu extends javax.swing.JFrame {
         randomextrapanel.setPreferredSize(new java.awt.Dimension(50, 190));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redvelvet.png"))); // NOI18N
-        jLabel10.setText("jLabel10");
 
         jLabel14.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jLabel14.setText("Red velvet");
@@ -618,21 +619,21 @@ public class editmenu extends javax.swing.JFrame {
         randomextrapanel.setLayout(randomextrapanelLayout);
         randomextrapanelLayout.setHorizontalGroup(
             randomextrapanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(randomextrapanelLayout.createSequentialGroup()
-                .addGroup(randomextrapanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, randomextrapanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, randomextrapanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, randomextrapanelLayout.createSequentialGroup()
+                .addGroup(randomextrapanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(randomextrapanelLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(randomextrapanelLayout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, randomextrapanelLayout.createSequentialGroup()
-                .addGap(0, 83, Short.MAX_VALUE)
-                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54))
         );
         randomextrapanelLayout.setVerticalGroup(
             randomextrapanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -668,8 +669,8 @@ public class editmenu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(titlepanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 422, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(buttonpanel, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -720,6 +721,7 @@ public class editmenu extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new editmenu().setVisible(true);
+                
             }
         });
     }
@@ -750,8 +752,10 @@ public class editmenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
@@ -762,7 +766,6 @@ public class editmenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel6;
@@ -782,4 +785,12 @@ public class editmenu extends javax.swing.JFrame {
     private javax.swing.JPanel randomextrapanel;
     private javax.swing.JPanel titlepanel;
     // End of variables declaration//GEN-END:variables
+
+    
+    public void addAddItemListener(ActionListener listener){
+Addbutton.addActionListener(listener);
+    }
+    public void addADDEditlistener(ActionListener Listener){
+        Editbutton.addActionListener(Listener);
+    }
 }
