@@ -9,6 +9,7 @@ package model;
  * @author ASUS
  */
 public class User {
+<<<<<<< HEAD
     private int id;
     private String username;
     private String password;
@@ -32,4 +33,40 @@ public String getEmail(){
     return email;
 }
 
+=======
+    
+    private String username;
+    private String password;
+
+    // Constructor (empty)
+    public User() {
+    }
+
+    // Constructor (with username and password)
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    // Getter for username
+    public String getUsername() {
+        return username;
+    }
+
+    // Setter for username
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    // Getter for password
+    public String getPassword() {
+        return password;
+    }
+
+    // Setter for password
+    public void setPassword(String password) {
+        this.password = password;
+    }
+>>>>>>> origin/forgotpassword
 }
+
