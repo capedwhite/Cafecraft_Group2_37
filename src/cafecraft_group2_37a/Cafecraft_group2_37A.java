@@ -4,7 +4,9 @@
  */
 package cafecraft_group2_37a;
 
+import controller.ItemController;
 import database.*;
+import view.editmenu;
 
 
 /**
@@ -25,6 +27,12 @@ public class Cafecraft_group2_37A {
         else{
             System.out.println("faiiled to connect to database");
         }
-    }
-    }
+        javax.swing.SwingUtilities.invokeLater(() -> {
+        editmenu frame = new editmenu();  // Your main window class name
+          ItemController controller = new ItemController(frame);
+        frame.setVisible(true);
+       }
+                
+       }
+}
     

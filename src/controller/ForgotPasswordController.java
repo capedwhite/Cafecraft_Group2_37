@@ -12,7 +12,7 @@ import model.User;
  */
 public class ForgotPasswordController {
         public void resetPassword(String username, String newPassword) {
-        User user = new User(username, newPassword); // User object
+        User user = new User(username, newPassword ,); // User object
         ForgotPasswordDAO dao = new ForgotPasswordDAO();
         dao.updatePassword(user);
         }
