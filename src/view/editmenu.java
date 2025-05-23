@@ -400,11 +400,7 @@ public class editmenu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel19)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-<<<<<<< HEAD
-                .addGroup(hotchocolatepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-=======
                 .addGroup(hotchocolatepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
->>>>>>> origin/menuitem
                     .addComponent(price4)
                     .addComponent(jLabel21))
                 .addContainerGap(16, Short.MAX_VALUE))
