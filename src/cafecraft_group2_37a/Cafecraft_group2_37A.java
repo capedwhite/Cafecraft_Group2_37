@@ -3,6 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package cafecraft_group2_37a;
+import controller.Signupcontroller;
+import database.*;
+import view.Signup;
+
 
 /**
  *
@@ -15,6 +19,19 @@ public class Cafecraft_group2_37A {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    }
+        Database db= new Mysqlconnection();
+        if(db.openConnection()!=null){
+            System.out.println("Database connected sucessfuly!");
+        }
+        else{
+            System.out.println("faiiled to connect to database");
+        }
     
+    
+    Signup signupview = new Signup();
+    Signupcontroller controller = new Signupcontroller (signupview);
+    
+    controller.open();
+    
+}
 }

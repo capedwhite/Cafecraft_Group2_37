@@ -8,7 +8,11 @@
             <file>file:/C:/Users/Predator/Documents/NetBeansProjects/Cafecraft_Group2_37/src/cafecraft_group2_37a/Cafecraft_group2_37A.java</file>
             <file>file:/C:/Users/Predator/Documents/NetBeansProjects/Cafecraft_Group2_37/src/view/NewClass.java</file>
             <file>file:/C:/Users/Predator/Documents/NetBeansProjects/Cafecraft_Group2_37/src/controller/NewClass.java</file>
-            <file>file:/C:/Users/Predator/Documents/NetBeansProjects/Cafecraft_Group2_37/src/view/login.java</file>
+            <file>file:/C:/Users/Predator/Documents/NetBeansProjects/Cafecraft_Group2_37/src/database/Database.java</file>
+            <file>file:/C:/Users/Predator/Documents/NetBeansProjects/Cafecraft_Group2_37/src/database/Mysqlconnection.java</file>
+            <file>file:/C:/Users/Predator/Documents/NetBeansProjects/Cafecraft_Group2_37/src/view/Signup.java</file>
+            <file>file:/C:/Users/Predator/Documents/NetBeansProjects/Cafecraft_Group2_37/src/controller/Signupcontroller.java</file>
+            <file>file:/C:/Users/Predator/Documents/NetBeansProjects/Cafecraft_Group2_37/src/dao/userdao.java</file>
         </group>
     </open-files>
 </project-private>
