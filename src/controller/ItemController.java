@@ -20,7 +20,11 @@ public class ItemController {
 //double price = Double.parseDouble(priceField.getText());
 //byte[] imageBytes = getImageBytesFromLabelOrChooser();
 
+<<<<<<< HEAD
 
+=======
+  private final Itemdao itemDao =new Itemdao();
+>>>>>>> origin/menuitem
     private final editmenu userView;
     
     

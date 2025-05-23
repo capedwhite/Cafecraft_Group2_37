@@ -4,11 +4,16 @@
  */
 package view;
 
+<<<<<<< HEAD
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import javax.imageio.ImageIO;
+=======
+import java.awt.image.BufferedImage;
+import java.io.File;
+>>>>>>> origin/menuitem
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
@@ -82,7 +87,11 @@ public class adddialouge extends javax.swing.JDialog {
             imageBytes
         );
     }
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> origin/menuitem
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -256,4 +265,7 @@ public class adddialouge extends javax.swing.JDialog {
     private javax.swing.JLabel pricelabel;
     // End of variables declaration//GEN-END:variables
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/menuitem

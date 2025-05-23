@@ -5,6 +5,7 @@
         <group>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/cafecraft_group2_37a/Cafecraft_group2_37A.java</file>
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/model/User.java</file>
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/database/Mysqlconnection.java</file>
@@ -28,6 +29,17 @@
             <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/database/Mysqlconnection.java</file>
             <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/view/NewClass.java</file>
 >>>>>>> origin/admin-sidebar
+=======
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/model/Itemmenu.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/dao/Itemdao.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/editmenu.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/cafecraft_group2_37a/Cafecraft_group2_37A.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/ItemController.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/adddialouge.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/reusemenupanel.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/editdialoge.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/model/User.java</file>
+>>>>>>> origin/menuitem
         </group>
     </open-files>
 </project-private>
