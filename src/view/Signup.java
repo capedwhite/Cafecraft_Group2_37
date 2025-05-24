@@ -17,6 +17,9 @@ public class Signup extends javax.swing.JFrame {
      */
     public Signup() {
         initComponents();
+         this.setResizable(false);
+            setLocationRelativeTo(null);
+            setSize(660,540);
     }
 
     /**
@@ -28,19 +31,33 @@ public class Signup extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        showpassword = new javax.swing.JCheckBox();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         password = new javax.swing.JPasswordField();
         username = new javax.swing.JTextField();
-        email = new javax.swing.JTextField();
+        question = new javax.swing.JTextField();
         Signin = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        Answer = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        showpassword.setBackground(new java.awt.Color(0, 0, 0));
+        showpassword.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        showpassword.setForeground(new java.awt.Color(255, 255, 255));
+        showpassword.setText("Show password");
+        showpassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showpasswordActionPerformed(evt);
+            }
+        });
+        getContentPane().add(showpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 370, 120, 20));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -49,50 +66,71 @@ public class Signup extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Email:");
+        jLabel3.setText("Security Question");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Password:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 100, -1));
-        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 160, 30));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 100, -1));
+        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 200, 30));
 
         username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usernameActionPerformed(evt);
             }
         });
-        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 160, 30));
+        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 200, 30));
 
-        email.addActionListener(new java.awt.event.ActionListener() {
+        question.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailActionPerformed(evt);
+                questionActionPerformed(evt);
             }
         });
-        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 160, 30));
+        getContentPane().add(question, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 200, 30));
 
         Signin.setBackground(new java.awt.Color(0, 255, 0));
+        Signin.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
         Signin.setText("Sign in");
         Signin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SigninActionPerformed(evt);
             }
         });
-        getContentPane().add(Signin, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, -1, -1));
+        getContentPane().add(Signin, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 420, 100, 30));
 
         jButton2.setBackground(new java.awt.Color(255, 0, 0));
+        jButton2.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Back");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 320, -1, -1));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 420, 70, 30));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Bahnschrift", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Sign Up");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, -1, -1));
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Answer");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, -1, -1));
+
+        Answer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnswerActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Answer, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, 200, 30));
+
+        jLabel5.setBackground(new java.awt.Color(255, 204, 204));
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cofeee login.png"))); // NOI18N
-        jLabel5.setText("jLabel5");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 610, 560));
+        jLabel5.setText("show password");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 660, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -101,13 +139,25 @@ public class Signup extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_usernameActionPerformed
 
-    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
+    private void questionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_questionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailActionPerformed
+    }//GEN-LAST:event_questionActionPerformed
 
     private void SigninActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SigninActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SigninActionPerformed
+
+    private void showpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showpasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_showpasswordActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void AnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnswerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnswerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,28 +193,38 @@ public class Signup extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Answer;
     private javax.swing.JButton Signin;
-    private javax.swing.JTextField email;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPasswordField password;
+    private javax.swing.JTextField question;
+    private javax.swing.JCheckBox showpassword;
     private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables
 
     public void addSignupListener(ActionListener listener){
         Signin.addActionListener(listener);
     }
-    public javax.swing.JTextField getEmailField(){
-return email;
+    public javax.swing.JTextField getQuestionField(){
+return question;
 }
+        public javax.swing.JTextField getanswerField(){
+return Answer;
+        }
 public javax.swing.JPasswordField getPasswordField(){
 return password;
 }
 public javax.swing.JTextField getUsernameField(){
 return username;
+}
+public void addshowpasswordlistener(ActionListener listener)
+{
+    showpassword.addActionListener(listener);
 }
 }

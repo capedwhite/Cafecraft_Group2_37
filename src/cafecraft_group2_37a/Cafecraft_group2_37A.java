@@ -3,12 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package cafecraft_group2_37a;
-import controller.ItemController;
+import controller.Logincontroller;
+import controller.Signupcontroller;
 import database.*;
 import view.*;
-import controller.*;
 
- *
+ /*
  * @author ASUS
  */
 public class Cafecraft_group2_37A {
@@ -28,21 +28,13 @@ public class Cafecraft_group2_37A {
             System.out.println("faiiled to connect to database");
         }
 
-        javax.swing.SwingUtilities.invokeLater(() -> {
-        editmenu frame = new editmenu();  // Your main window class name
-          ItemController controller = new ItemController(frame);
-        frame.setVisible(true);
-       }
-                
-       }
+  javax.swing.SwingUtilities.invokeLater(() -> {
+    login frame = new login();  // Your main window class name
+    Logincontroller logincontrol = new Logincontroller(frame);
+    frame.setVisible(true);
+});
+    }
 }
     
-         javax.swing.SwingUtilities.invokeLater(() -> {
-        editmenu frame = new editmenu();  // Your main window class name
-          ItemController controller = new ItemController(frame);
-        frame.setVisible(true);
-    });
-    }
-    }
     
    

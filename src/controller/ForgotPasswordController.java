@@ -11,8 +11,8 @@ import model.User;
  * @author Unish K.C
  */
 public class ForgotPasswordController {
-        public void resetPassword(String username, String newPassword) {
-        User user = new User(username, newPassword ,); // User object
+        public void resetPassword(String username, String newPassword,String email) {
+        User user = new User(username, newPassword , email); // User object
         ForgotPasswordDAO dao = new ForgotPasswordDAO();
         dao.updatePassword(user);
         }

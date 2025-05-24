@@ -4,8 +4,12 @@
  */
 package view;
 
+import java.awt.Image;
+import java.awt.MenuItem;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
@@ -43,7 +47,6 @@ public class adddialouge extends javax.swing.JDialog {
                 ImageIO.write(img, "jpg", baos);
                 imageBytes = baos.toByteArray();
             } catch (Exception ex) {
-                ex.printStackTrace();
                 JOptionPane.showMessageDialog(this, "Failed to load image");
             }
         }
@@ -79,7 +82,7 @@ public class adddialouge extends javax.swing.JDialog {
             imageBytes
         );
     }
-}
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

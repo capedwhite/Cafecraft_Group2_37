@@ -19,11 +19,13 @@ public class userdao {
 public void signup(User user){
 Connection conn=mysql.openConnection();
 
-String sql = "INSERT INTO users(username,email,password)VALUES(?,?,?)";
+String sql = "INSERT INTO users(username,security_qn,Answer,password)VALUES(?,?,?)";
 try(PreparedStatement pstmt=conn.prepareStatement(sql)){
 pstmt.setString(1,user.getUsername());
-pstmt.setString(2,user.getEmail());
+pstmt.setString(2,user.getSecurityqn());
+pstmt.setString(3,user.getAnswer());
 pstmt.setString(3,user.getPassword());
+
 pstmt.executeUpdate();
 }
 catch(SQLException ex){

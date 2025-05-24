@@ -45,12 +45,12 @@ public class admin_sidebar extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(290, 260));
 
         jButton2.setBackground(new java.awt.Color(255, 51, 51));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(51, 51, 0));
+        jButton2.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Logout");
 
         jButton1.setBackground(new java.awt.Color(102, 255, 102));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
         jButton1.setText("CafeCraft");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,6 +58,7 @@ public class admin_sidebar extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(51, 0, 51));
         jButton3.setText("View Reservations");
         jButton3.setBorder(null);
@@ -69,6 +70,7 @@ public class admin_sidebar extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(51, 51, 0));
         jButton4.setText("Home");
         jButton4.setBorder(null);
@@ -80,6 +82,7 @@ public class admin_sidebar extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jButton5.setForeground(new java.awt.Color(51, 51, 0));
         jButton5.setText("Edit Menu");
         jButton5.setBorder(null);
@@ -93,6 +96,7 @@ public class admin_sidebar extends javax.swing.JFrame {
         });
 
         jButton6.setBackground(new java.awt.Color(51, 0, 51));
+        jButton6.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jButton6.setForeground(new java.awt.Color(51, 51, 0));
         jButton6.setText("view feedback");
         jButton6.setBorder(null);
@@ -105,6 +109,7 @@ public class admin_sidebar extends javax.swing.JFrame {
         });
 
         jButton7.setBackground(new java.awt.Color(51, 0, 51));
+        jButton7.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jButton7.setForeground(new java.awt.Color(51, 51, 51));
         jButton7.setText("Attendance");
         jButton7.setBorder(null);
@@ -117,6 +122,7 @@ public class admin_sidebar extends javax.swing.JFrame {
         });
 
         jButton8.setBackground(new java.awt.Color(51, 0, 51));
+        jButton8.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jButton8.setForeground(new java.awt.Color(51, 51, 0));
         jButton8.setText("Manage employee");
         jButton8.setBorder(null);
@@ -129,6 +135,7 @@ public class admin_sidebar extends javax.swing.JFrame {
         });
 
         jButton9.setBackground(new java.awt.Color(51, 0, 51));
+        jButton9.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jButton9.setForeground(new java.awt.Color(51, 51, 0));
         jButton9.setText("view orders");
         jButton9.setBorder(null);
@@ -141,6 +148,7 @@ public class admin_sidebar extends javax.swing.JFrame {
         });
 
         jButton10.setBackground(new java.awt.Color(51, 0, 51));
+        jButton10.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jButton10.setForeground(new java.awt.Color(51, 51, 0));
         jButton10.setText("inventory");
         jButton10.setBorder(null);
