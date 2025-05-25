@@ -4,6 +4,8 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author NITRO
@@ -38,8 +40,8 @@ public class dashboard extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         jButton10 = new javax.swing.JButton();
+        logoutbutton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -127,13 +129,6 @@ public class dashboard extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setBackground(new java.awt.Color(255, 0, 0));
-        jLabel3.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Log out");
-        jLabel3.setOpaque(true);
-
         jButton10.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         jButton10.setForeground(new java.awt.Color(255, 255, 255));
         jButton10.setText("Order history");
@@ -146,15 +141,21 @@ public class dashboard extends javax.swing.JFrame {
             }
         });
 
+        logoutbutton.setBackground(new java.awt.Color(255, 51, 51));
+        logoutbutton.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
+        logoutbutton.setForeground(new java.awt.Color(255, 255, 255));
+        logoutbutton.setText("Log out");
+        logoutbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutbuttonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jButton6)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -175,6 +176,11 @@ public class dashboard extends javax.swing.JFrame {
                             .addComponent(jButton3)
                             .addComponent(jButton4))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(logoutbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,8 +200,8 @@ public class dashboard extends javax.swing.JFrame {
                 .addComponent(jButton10)
                 .addGap(18, 18, 18)
                 .addComponent(jButton9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addComponent(logoutbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 500));
@@ -239,6 +245,10 @@ public class dashboard extends javax.swing.JFrame {
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void logoutbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutbuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_logoutbuttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -287,9 +297,17 @@ public class dashboard extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton logoutbutton;
     // End of variables declaration//GEN-END:variables
+ 
+    /**
+     *
+     * @param listener
+     */
+    public void addlogoutlistener( ActionListener listener){
+        logoutbutton.addActionListener(listener);
+    }
 }

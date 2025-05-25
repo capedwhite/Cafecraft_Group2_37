@@ -11,7 +11,6 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import model.User;
 
 /**
  *
@@ -19,14 +18,14 @@ import model.User;
  */
 public class ForgotPasswordDAO {
       Mysqlconnection mysql = new Mysqlconnection();
-    public void updatePassword(User user) {
+    public void updatePassword(String password, String username) {
         try {
             Connection con = mysql.openConnection();
 
             String sql = "UPDATE users SET password = ? WHERE username = ?";
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, user.getPassword());
-            pst.setString(2, user.getUsername());
+            pst.setString(1, password);
+            pst.setString(2, username);
 
             int rows = pst.executeUpdate();
 
@@ -44,12 +43,12 @@ public class ForgotPasswordDAO {
 public String getSecurityQuestion(String username) {
         try {
             Connection con = mysql.openConnection();
-            String sql = "SELECT security_question FROM users WHERE username = ?";
+            String sql = "SELECT security_qn FROM users WHERE username = ?";
              PreparedStatement psmt = con.prepareStatement(sql);
             psmt.setString(1, username);
             ResultSet rs = psmt.executeQuery();
              if (rs.next()) {
-                return rs.getString("security_question");
+                return rs.getString("security_qn");
             }
         }
              catch (SQLException e) {
@@ -61,7 +60,7 @@ public String getSecurityQuestion(String username) {
 public boolean checkSecurityAnswer(String username, String answer) {
         try{
              Connection conn = mysql.openConnection();
-              String sql = "SELECT * FROM users WHERE username = ? AND security_answer = ?";
+              String sql = "SELECT * FROM users WHERE username = ? AND Answer = ?";
                  PreparedStatement psmt = conn.prepareStatement(sql);
 
             psmt.setString(1, username);

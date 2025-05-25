@@ -33,6 +33,7 @@ public class Logincontroller {
         userView.addloginListener(new AddUserListener());
         userView.addswitchtosigninlistener(new addswitchtosignin());
         userView.addforgetpasswordlistener (new addforgetpassword());
+        userView.addshowpasswordlistener(new showpassword());
     }
     public void open(){
         
@@ -63,7 +64,9 @@ class AddUserListener implements ActionListener{
             JOptionPane.showMessageDialog(userView,"Login sucessfull");
             dashboard Dashboard = new dashboard(); 
     Dashboard.setVisible(true);
-      close();
+    Dashboardcontroller dashboardcontrol = new Dashboardcontroller(Dashboard);
+    close();
+      
             }
             else{
                JOptionPane.showMessageDialog(userView,"cannot find username");
@@ -92,10 +95,24 @@ class addforgetpassword implements ActionListener{
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            String name=userView.getUsernameFieldd().getText();
             ForgotPassword forgotpassword = new ForgotPassword();
-            forgotpassword.setVisible(true);
-            
+            ForgotPasswordController controller = new ForgotPasswordController(forgotpassword,name);     
         }
     
+}
+class showpassword implements ActionListener{
+   boolean passwordvisible = false;
+        @Override
+        public void actionPerformed(ActionEvent e) {
+                passwordvisible=!passwordvisible;
+                if(passwordvisible){
+                userView.getPasswordFieldd().setEchoChar((char) 0); // Show characters
+                }
+                else{
+                userView.getPasswordFieldd().setEchoChar('\u2022');
+                }
+
+        }
 }
 }

@@ -54,12 +54,14 @@ class AddUserListener implements ActionListener{
             }
             if(check){
                 JOptionPane.showMessageDialog(userView,"duplicate user");
-                return;
+
             }else{
                 userDao.signup(user);
                   JOptionPane.showMessageDialog(userView, "Signup successful!");
                 dashboard Dashboard = new dashboard(); // replace with your actual dashboard class
     Dashboard.setVisible(true);
+    Dashboardcontroller dashboardcontrol = new Dashboardcontroller(Dashboard);
+    close();
     close();
             }
         }

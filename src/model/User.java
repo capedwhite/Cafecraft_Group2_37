@@ -17,7 +17,7 @@ public class User {
     private String Securityqn;
     private String Answer;
 
-public User(String username,String password,String Securityqn,String Answer){
+public User(String username,String Securityqn,String Answer,String password){
 this.username=username;
 this.password=password;
 this.Securityqn=Securityqn;

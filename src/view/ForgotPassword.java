@@ -4,6 +4,7 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
 
 /**
  *
@@ -17,8 +18,7 @@ public class ForgotPassword extends javax.swing.JFrame {
     public ForgotPassword() {
         initComponents();
            this.setResizable(false);
-            setLocationRelativeTo(null);
-            Savebutton.setEnabled(false); 
+            setLocationRelativeTo(null); 
     }
 
     /**
@@ -32,16 +32,17 @@ public class ForgotPassword extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        newpassword = new javax.swing.JTextField();
         Savebutton = new javax.swing.JButton();
-        btnBack = new javax.swing.JButton();
+        Backbtn = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        Username = new javax.swing.JTextField();
+        newpassword = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        giveAnswer = new javax.swing.JTextField();
+        askquestion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(java.awt.Color.gray);
+        jPanel1.setBackground(new java.awt.Color(175, 146, 130));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1002, 552));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -49,20 +50,10 @@ public class ForgotPassword extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Forgot Password");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, -1));
-
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Username:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
-
-        newpassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                newpasswordActionPerformed(evt);
-            }
-        });
-        jPanel1.add(newpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 190, 30));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, -1, -1));
 
         Savebutton.setBackground(java.awt.Color.green);
+        Savebutton.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
         Savebutton.setText("Save");
         Savebutton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Savebutton.addActionListener(new java.awt.event.ActionListener() {
@@ -70,29 +61,49 @@ public class ForgotPassword extends javax.swing.JFrame {
                 SavebuttonActionPerformed(evt);
             }
         });
-        jPanel1.add(Savebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 80, 35));
+        jPanel1.add(Savebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 80, 35));
 
-        btnBack.setBackground(java.awt.Color.red);
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setText("Back");
-        btnBack.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        Backbtn.setBackground(java.awt.Color.red);
+        Backbtn.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
+        Backbtn.setForeground(new java.awt.Color(255, 255, 255));
+        Backbtn.setText("Back");
+        Backbtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                BackbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 80, 35));
+        jPanel1.add(Backbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 80, 35));
 
+        jLabel4.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("New Password:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, -1, -1));
+        jLabel4.setText("Answer");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, -1, -1));
 
-        Username.addActionListener(new java.awt.event.ActionListener() {
+        newpassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UsernameActionPerformed(evt);
+                newpasswordActionPerformed(evt);
             }
         });
-        jPanel1.add(Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 190, 30));
+        jPanel1.add(newpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 190, 30));
+
+        jLabel5.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("New Password:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
+
+        giveAnswer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                giveAnswerActionPerformed(evt);
+            }
+        });
+        jPanel1.add(giveAnswer, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 190, 30));
+
+        askquestion.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
+        askquestion.setForeground(new java.awt.Color(153, 255, 0));
+        askquestion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        askquestion.setText("jLabel3");
+        jPanel1.add(askquestion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 460, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -116,17 +127,17 @@ public class ForgotPassword extends javax.swing.JFrame {
 
     }//GEN-LAST:event_SavebuttonActionPerformed
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void BackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackbtnActionPerformed
         this.dispose();
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_BackbtnActionPerformed
 
     private void newpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newpasswordActionPerformed
-        Savebutton.doClick();
+        // TODO add your handling code here:
     }//GEN-LAST:event_newpasswordActionPerformed
 
-    private void UsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernameActionPerformed
+    private void giveAnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_giveAnswerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_UsernameActionPerformed
+    }//GEN-LAST:event_giveAnswerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,26 +169,34 @@ public class ForgotPassword extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ForgotPassword().setVisible(true);
+          
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Backbtn;
     private javax.swing.JButton Savebutton;
-    private javax.swing.JTextField Username;
-    private javax.swing.JButton btnBack;
+    private javax.swing.JLabel askquestion;
+    private javax.swing.JTextField giveAnswer;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField newpassword;
     // End of variables declaration//GEN-END:variables
- 
-    public javax.swing.JTextField getUsernamefield(){
-return Username;
- }
+    
+    public void addForgetpasswordlistener(ActionListener listener){
+        Savebutton.addActionListener(listener);
+    }
+    public javax.swing.JTextField getanswer(){
+        return giveAnswer;
+    } 
     public javax.swing.JTextField getnewpassword(){
         return newpassword;
+    }
+    public javax.swing.JTextField setsecurityquestion(String question){
+        askquestion.setText(question);
+        return null;
     }
 }

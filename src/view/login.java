@@ -53,6 +53,7 @@ public class login extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jCheckBox1.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBox1.setFont(new java.awt.Font("Bahnschrift", 0, 12)); // NOI18N
         jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox1.setText("show password");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -240,6 +241,9 @@ public class login extends javax.swing.JFrame {
 public void addloginListener(ActionListener listener){
         loginbutton.addActionListener(listener);
     }
+public void addshowpasswordlistener(ActionListener listener){
+    jCheckBox1.addActionListener(listener);
+}
 public javax.swing.JPasswordField getPasswordFieldd(){
 return password;
 }
