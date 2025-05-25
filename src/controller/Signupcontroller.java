@@ -35,7 +35,7 @@ public class Signupcontroller {
     
 
 class AddUserListener implements ActionListener{
-      public boolean authenticatesignin(String name, String password,String email) {
+      public boolean authenticatesignin(String name, String password,String Securityqn,String Answer) {
         return !(name.isEmpty() || password.isEmpty());
     }
     @Override
@@ -43,15 +43,18 @@ class AddUserListener implements ActionListener{
         try{
             System.out.println("button clicked");
             String name=userView.getUsernameField().getText();
-            String email=userView.getEmailField().getText();
+            String Securityqn=userView.getQuestionField().getText();
+            String Answer = userView.getanswerField().getText();
             String password = userView.getPasswordField().getText();
-            User user= new User(name,email,password);
+            User user= new User(name,Securityqn,Answer,password);
             boolean check = userDao.checkUser(user);
-            if(! authenticatesignin(name,password,email)){
+            if(! authenticatesignin(name,password,Securityqn,Answer)){
                  JOptionPane.showMessageDialog(userView,"Cant leave empty fields");
+                 return ;
             }
             if(check){
                 JOptionPane.showMessageDialog(userView,"duplicate user");
+                return;
             }else{
                 userDao.signup(user);
                   JOptionPane.showMessageDialog(userView, "Signup successful!");

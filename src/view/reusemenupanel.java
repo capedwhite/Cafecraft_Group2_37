@@ -19,6 +19,7 @@ public class reusemenupanel extends javax.swing.JPanel {
      */
     public reusemenupanel() {
         initComponents();
+        setSize(206,194);
     }
      public void setItemName(String name) {
     nameofitem.setText(name);
@@ -85,7 +86,7 @@ public void setItemImage(byte[] imageBytes) {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(forimage)
                             .addComponent(nameofitem, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

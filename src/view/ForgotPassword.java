@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package view;
-import controller.ForgotPasswordController;
+
 
 /**
  *
@@ -173,6 +173,11 @@ public class ForgotPassword extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField newpassword;
     // End of variables declaration//GEN-END:variables
-
-
+ 
+    public javax.swing.JTextField getUsernamefield(){
+return Username;
+ }
+    public javax.swing.JTextField getnewpassword(){
+        return newpassword;
+    }
 }

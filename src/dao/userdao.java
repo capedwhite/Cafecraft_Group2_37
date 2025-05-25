@@ -19,12 +19,12 @@ public class userdao {
 public void signup(User user){
 Connection conn=mysql.openConnection();
 
-String sql = "INSERT INTO users(username,security_qn,Answer,password)VALUES(?,?,?)";
+String sql = "INSERT INTO users(username,security_qn,Answer,password)VALUES(?,?,?,?)";
 try(PreparedStatement pstmt=conn.prepareStatement(sql)){
 pstmt.setString(1,user.getUsername());
 pstmt.setString(2,user.getSecurityqn());
 pstmt.setString(3,user.getAnswer());
-pstmt.setString(3,user.getPassword());
+pstmt.setString(4,user.getPassword());
 
 pstmt.executeUpdate();
 }
@@ -39,10 +39,9 @@ mysql.CloseConnection(conn);
 
 public boolean checkUser(User user){
 Connection conn=mysql.openConnection();
-String sql="SELECT * FROM users WHERE email = ? OR username = ?";
+String sql="SELECT * FROM users WHERE username = ?";
 try(PreparedStatement pstmt = conn.prepareStatement(sql)){
-pstmt.setString(1,user.getEmail());
-pstmt.setString(2,user.getUsername());
+pstmt.setString(1,user.getUsername());
 ResultSet result = pstmt.executeQuery();
 return result.next();
 }

@@ -3,22 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package controller;
+
 import dao.ForgotPasswordDAO;
-import model.User;
+import view.ForgotPassword;
 
-/**
- *
- * @author Unish K.C
- */
 public class ForgotPasswordController {
-        public void resetPassword(String username, String newPassword,String email) {
-        User user = new User(username, newPassword , email); // User object
-        ForgotPasswordDAO dao = new ForgotPasswordDAO();
-        dao.updatePassword(user);
-        }
-}
+    private final ForgotPasswordDAO dao = new ForgotPasswordDAO();
+    private final ForgotPassword view;
 
-
-
-
+    public ForgotPasswordController(ForgotPassword view) {
+        this.view = view;
 
