@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/view/admin_sidebar.java</file>
-            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/database/Mysqlconnection.java</file>
-            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/view/NewClass.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/zview/MenuItems.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/controller/MenuitemsController.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/cafecraft_group2_37a/ViewControllerConnector.java</file>
         </group>
     </open-files>
 </project-private>
