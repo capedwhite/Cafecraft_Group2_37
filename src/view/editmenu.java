@@ -17,7 +17,11 @@ public class editmenu extends javax.swing.JFrame {
         initComponents();
             this.setResizable(false);
             setLocationRelativeTo(null);
+           
     }
+   
+
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -29,13 +33,14 @@ public class editmenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel6 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
         titlepanel = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         buttonpanel = new javax.swing.JPanel();
         Addbutton = new javax.swing.JButton();
         exitbutton = new javax.swing.JButton();
         Editbutton = new javax.swing.JButton();
-        itemcombo = new javax.swing.JComboBox<>();
+        itemcombobox = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         menupanel = new javax.swing.JPanel();
         blackforestpanel = new javax.swing.JPanel();
@@ -69,7 +74,6 @@ public class editmenu extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         price6 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         lattepanel = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
         price7 = new javax.swing.JLabel();
@@ -96,6 +100,8 @@ public class editmenu extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 149, Short.MAX_VALUE)
         );
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/teaig.png")));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -129,6 +135,11 @@ public class editmenu extends javax.swing.JFrame {
         Addbutton.setForeground(new java.awt.Color(255, 255, 255));
         Addbutton.setText("ADD");
         Addbutton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Addbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddbuttonActionPerformed(evt);
+            }
+        });
 
         exitbutton.setBackground(new java.awt.Color(255, 61, 61));
         exitbutton.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
@@ -152,10 +163,10 @@ public class editmenu extends javax.swing.JFrame {
             }
         });
 
-        itemcombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        itemcombo.addActionListener(new java.awt.event.ActionListener() {
+        itemcombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Cake", "Drinks", "Coffee" }));
+        itemcombobox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemcomboActionPerformed(evt);
+                itemcomboboxActionPerformed(evt);
             }
         });
 
@@ -168,8 +179,8 @@ public class editmenu extends javax.swing.JFrame {
                 .addComponent(Addbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
                 .addComponent(Editbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(itemcombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(94, 94, 94)
+                .addComponent(itemcombobox, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(exitbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(59, 59, 59))
@@ -181,7 +192,7 @@ public class editmenu extends javax.swing.JFrame {
                 .addGroup(buttonpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Addbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Editbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(itemcombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(itemcombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(exitbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
@@ -458,8 +469,6 @@ public class editmenu extends javax.swing.JFrame {
         jLabel27.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jLabel27.setText("120");
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/teaig.png")));
-
         javax.swing.GroupLayout milkpanelLayout = new javax.swing.GroupLayout(milkpanel);
         milkpanel.setLayout(milkpanelLayout);
         milkpanelLayout.setHorizontalGroup(
@@ -474,17 +483,11 @@ public class editmenu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19))
-            .addGroup(milkpanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
         );
         milkpanelLayout.setVerticalGroup(
             milkpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(milkpanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(147, 147, 147)
                 .addComponent(jLabel25)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(milkpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -682,9 +685,15 @@ public class editmenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_EditbuttonActionPerformed
 
-    private void itemcomboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemcomboActionPerformed
+    private void itemcomboboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemcomboboxActionPerformed
+            // TODO add your handling code here:
+            
+
+    }//GEN-LAST:event_itemcomboboxActionPerformed
+
+    private void AddbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddbuttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_itemcomboActionPerformed
+    }//GEN-LAST:event_AddbuttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -732,7 +741,7 @@ public class editmenu extends javax.swing.JFrame {
     private javax.swing.JPanel crossiantpanel;
     private javax.swing.JButton exitbutton;
     private javax.swing.JPanel hotchocolatepanel;
-    private javax.swing.JComboBox<String> itemcombo;
+    private javax.swing.JComboBox<String> itemcombobox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
