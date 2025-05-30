@@ -29,8 +29,8 @@ public class Signup extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        Email = new javax.swing.JLabel();
+        Password = new javax.swing.JLabel();
         password = new javax.swing.JPasswordField();
         username = new javax.swing.JTextField();
         email = new javax.swing.JTextField();
@@ -47,15 +47,15 @@ public class Signup extends javax.swing.JFrame {
         jLabel2.setText("Username:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, -1, 26));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Email:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, -1, -1));
+        Email.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        Email.setForeground(new java.awt.Color(255, 255, 255));
+        Email.setText("Email:");
+        getContentPane().add(Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Password:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 100, -1));
+        Password.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        Password.setForeground(new java.awt.Color(255, 255, 255));
+        Password.setText("Password:");
+        getContentPane().add(Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 100, -1));
         getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 160, 30));
 
         username.addActionListener(new java.awt.event.ActionListener() {
@@ -143,13 +143,13 @@ public class Signup extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Email;
+    private javax.swing.JLabel Password;
     private javax.swing.JButton Signin;
     private javax.swing.JTextField email;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPasswordField password;
     private javax.swing.JTextField username;
