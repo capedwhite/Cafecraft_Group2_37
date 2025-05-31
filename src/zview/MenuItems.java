@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JSpinner;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 /**
@@ -35,6 +36,8 @@ public class MenuItems extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
+        jTxtTime = new javax.swing.JLabel();
+        jTxtDate = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
@@ -46,6 +49,7 @@ public class MenuItems extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jSpinner1 = new javax.swing.JSpinner();
+        jLabel11 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jPanel2 = new javax.swing.JPanel();
@@ -63,7 +67,6 @@ public class MenuItems extends javax.swing.JFrame {
         btnReset4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1380, 809));
         setSize(new java.awt.Dimension(1380, 809));
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 255));
@@ -71,19 +74,37 @@ public class MenuItems extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel10.setText("CafeCraft");
 
+        jTxtTime.setBackground(new java.awt.Color(51, 255, 255));
+        jTxtTime.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jTxtTime.setForeground(new java.awt.Color(255, 255, 255));
+
+        jTxtDate.setBackground(new java.awt.Color(102, 255, 255));
+        jTxtDate.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jTxtDate.setForeground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTxtTime, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(70, 70, 70)
+                .addComponent(jTxtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTxtTime, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTxtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -109,6 +130,8 @@ public class MenuItems extends javax.swing.JFrame {
 
         jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, 50, 1));
 
+        jLabel11.setText("3.0");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -120,9 +143,6 @@ public class MenuItems extends javax.swing.JFrame {
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jLabel7))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addContainerGap()
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel5Layout.createSequentialGroup()
                                         .addComponent(jLabel9)
@@ -132,9 +152,15 @@ public class MenuItems extends javax.swing.JFrame {
                                         .addComponent(jLabel8)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGap(21, 21, 21)
-                                .addComponent(jLabel4)))
+                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(jLabel7)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                                    .addGap(21, 21, 21)
+                                    .addComponent(jLabel4))))
                         .addGap(12, 12, 12)))
                 .addContainerGap())
         );
@@ -148,7 +174,9 @@ public class MenuItems extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel11))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
@@ -187,6 +215,7 @@ public class MenuItems extends javax.swing.JFrame {
 
         jLabel2.setText("Tax");
 
+        jTextField2.setEditable(false);
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -196,6 +225,10 @@ public class MenuItems extends javax.swing.JFrame {
         jLabel5.setText("Total");
 
         jLabel6.setText("SubTotal");
+
+        jTextField1.setEditable(false);
+
+        jTextField3.setEditable(false);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -315,7 +348,7 @@ public class MenuItems extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))
+                                        .addGap(0, 57, Short.MAX_VALUE))
                                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                         .addGap(20, 20, 20))))
         );
@@ -395,6 +428,7 @@ public class MenuItems extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -415,41 +449,82 @@ public class MenuItems extends javax.swing.JFrame {
     private java.awt.TextField jTextField1;
     private java.awt.TextField jTextField2;
     private java.awt.TextField jTextField3;
+    private javax.swing.JLabel jTxtDate;
+    private javax.swing.JLabel jTxtTime;
     // End of variables declaration//GEN-END:variables
 
     public JButton getBtnReset() {
-         
     return btnReset;
-  
 }
 
-  public void addbtnResetListener(ActionListener listener) {
-    btnReset.addActionListener(listener); 
+public void addbtnResetListener(ActionListener listener) {
+    btnReset.addActionListener(listener);
 }
 
- public JLabel[] getLabels() {
-    return new JLabel[] { jLabel1, jLabel2, jLabel3 };
+// ✅ Add additional labels (product names) here in same order as checkboxes/spinners/prices
+public JLabel[] getLabels() {
+    return new JLabel[] { jLabel4 };
+    // Example: return new JLabel[] { jLabel4, jLabelPizza, jLabelBurger };
 }
 
+// ✅ Add price per product here (same order as labels)
+public double[] getPrices() {
+    return new double[] { 3.0 };
+    // Example: return new double[] { 3.0, 5.5, 7.0 };
+    // ✅ Match order with your labels/spinners/checkboxes
+}
 
-
+// ✅ Used for resetting price fields on UI (e.g., subtotal, tax, total)
 public java.awt.TextField[] getTextFields() {
     return new java.awt.TextField[] { jTextField1, jTextField2, jTextField3 };
 }
 
-
-
-public JSpinner[]getSpinners() {
+// ✅ Add spinners here (same order as items)
+public JSpinner[] getSpinners() {
     return new JSpinner[] { jSpinner1 };
-    //add oother jspinner variable name for reset
+    // Example: return new JSpinner[] { jSpinner1, jSpinnerPizza, jSpinnerBurger };
 }
 
+// ✅ Add checkboxes here (same order as items)
 public JCheckBox[] getCheckBoxes() {
     return new JCheckBox[] { jCheckBox1 };
-    //add other jcheckbox for reset buttoon 
+    // Example: return new JCheckBox[] { jCheckBox1, jCheckBoxPizza, jCheckBoxBurger };
 }
 
-  
+// ✅ For showing time and date
+public JLabel getTxtDate() {
+    return jTxtDate;
+}
+
+public JLabel getTxtTime() {
+    return jTxtTime;
+}
+
+// ✅ Main text area for showing order details
+public JTextArea getTxtArea() {
+    return jTextArea1;
+}
+
+// ✅ Fields for showing subtotal, tax, total
+public java.awt.TextField getTxtSubTotal() {
+    return jTextField2; // subtotal
+}
+
+public java.awt.TextField getTxtTax() {
+    return jTextField1; // tax
+}
+
+public java.awt.TextField getTxtTotal() {
+    return jTextField3; // total
+}
+
+// ✅ Connects the Confirm button with the controller
+public void addConfirmListener(ActionListener listener) {
+    btnReset1.addActionListener(listener);
+}
 
 
+
+
+//for new getter setter or action listener add here f
 }
