@@ -3,11 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package view;
+import java.awt.event.ActionListener;
 import javax.swing.*;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import javax.imageio.ImageIO;
+import model.Itemmenu;
+
 /**
  *
  * @author ASUS
@@ -17,31 +16,12 @@ public class reusemenupanel extends javax.swing.JPanel {
     /**
      * Creates new form reusemenupanel
      */
-    public reusemenupanel() {
+    private Itemmenu item;
+    public reusemenupanel(Itemmenu item) {
+        this.item=item;
         initComponents();
-        setSize(206,194);
+        setSize(100,10);
     }
-     public void setItemName(String name) {
-    nameofitem.setText(name);
-}
-        public void setItemprice(Double price){
-            priceofitem.setText(String.valueOf(price));
-        }
-        
-
-public void setItemImage(byte[] imageBytes) {
-    if (imageBytes == null) return;
-    try {
-        BufferedImage img = ImageIO.read(new ByteArrayInputStream(imageBytes));
-        ImageIcon icon = new ImageIcon(img.getScaledInstance(140, 140, Image.SCALE_SMOOTH));
-        forimage.setIcon(icon);
-    } catch (Exception e) {
-       System.out.println(e);
-    }
-}
-
-    
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -51,65 +31,131 @@ public void setItemImage(byte[] imageBytes) {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        nameofitem = new javax.swing.JLabel();
-        pricename = new javax.swing.JLabel();
-        priceofitem = new javax.swing.JLabel();
-        forimage = new javax.swing.JLabel();
+        pricefield = new javax.swing.JLabel();
+        actualprice = new javax.swing.JLabel();
+        ItemName = new javax.swing.JLabel();
+        putimage = new javax.swing.JLabel();
+        Editbtn = new javax.swing.JButton();
+        Delete = new javax.swing.JButton();
 
-        setMaximumSize(new java.awt.Dimension(100, 200));
-        setPreferredSize(new java.awt.Dimension(164, 308));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setMaximumSize(new java.awt.Dimension(120, 50));
+        setPreferredSize(new java.awt.Dimension(120, 10));
 
-        nameofitem.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
-        nameofitem.setText("jLabel1");
+        pricefield.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
+        pricefield.setText("Price");
 
-        pricename.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
-        pricename.setText("jLabel2");
+        actualprice.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
+        actualprice.setText("jLabel3");
 
-        priceofitem.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
-        priceofitem.setText("jLabel3");
+        ItemName.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
+        ItemName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ItemName.setText("jLabel4");
 
-        forimage.setText("jLabel4");
+        putimage.setPreferredSize(new java.awt.Dimension(100, 100));
+
+        Editbtn.setBackground(new java.awt.Color(102, 255, 0));
+        Editbtn.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
+        Editbtn.setText("EDIT");
+        Editbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditbtnActionPerformed(evt);
+            }
+        });
+
+        Delete.setBackground(new java.awt.Color(255, 0, 51));
+        Delete.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
+        Delete.setForeground(new java.awt.Color(255, 255, 255));
+        Delete.setText("DELETE");
+        Delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+            .addComponent(putimage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(ItemName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(pricename)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(priceofitem))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(pricefield, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(actualprice, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(87, 87, 87)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(forimage)
-                            .addComponent(nameofitem, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(14, Short.MAX_VALUE))
+                        .addComponent(Editbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Delete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(27, 27, 27))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(67, 67, 67)
-                .addComponent(forimage)
-                .addGap(63, 63, 63)
-                .addComponent(nameofitem)
-                .addGap(28, 28, 28)
+                .addComponent(putimage, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ItemName, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pricename)
-                    .addComponent(priceofitem))
-                .addContainerGap(98, Short.MAX_VALUE))
+                    .addComponent(pricefield)
+                    .addComponent(actualprice))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Editbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void EditbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditbtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EditbtnActionPerformed
+
+    private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DeleteActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel forimage;
-    private javax.swing.JLabel nameofitem;
-    private javax.swing.JLabel pricename;
-    private javax.swing.JLabel priceofitem;
+    private javax.swing.JButton Delete;
+    private javax.swing.JButton Editbtn;
+    private javax.swing.JLabel ItemName;
+    private javax.swing.JLabel actualprice;
+    private javax.swing.JLabel pricefield;
+    private javax.swing.JLabel putimage;
     // End of variables declaration//GEN-END:variables
 
-
+    public JLabel getItemNameLabel() {
+    return ItemName;
 }
+    public JLabel getactualprice() {
+    return actualprice;
+}
+    public JLabel getpriceLabel() {
+    return pricefield;
+}
+  public JLabel putimagelabel(ImageIcon icon) {
+    putimage.setIcon(icon);
+    putimage.revalidate();
+    putimage.repaint();
+        return null;
+  
+}
+  public Itemmenu getItem() {
+    return item;
+}
+  
+  public void addADDeditblistener(ActionListener listener){
+      Editbtn.addActionListener(listener);
+  }
+  
+   public void addADDdeletelistener(ActionListener listener){
+      Delete.addActionListener(listener);
+  }
+}
+
+

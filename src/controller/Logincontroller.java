@@ -16,6 +16,7 @@ import javax.swing.JOptionPane;
 import model.User;
 import view.ForgotPassword;
 import view.Signup;
+import view.admin_sidebar;
 import view.dashboard;
 import view.login;
 
@@ -62,11 +63,17 @@ class AddUserListener implements ActionListener{
             
             if(check){
             JOptionPane.showMessageDialog(userView,"Login sucessfull");
-            dashboard Dashboard = new dashboard(); 
-    Dashboard.setVisible(true);
-    Dashboardcontroller dashboardcontrol = new Dashboardcontroller(Dashboard);
+               if("admin".equals(Logindao.Checkrole(user))){
+                   admin_sidebar admindashboard = new admin_sidebar();    
+                   admindashboard.setVisible(true);
+                   admindasboardcontroller admindashboardcontrol = new admindasboardcontroller(admindashboard);
+               }
+               else{
+                   dashboard Dashboard = new dashboard();
+                   Dashboard.setVisible(true);
+                   Dashboardcontroller dashboardcontrol = new Dashboardcontroller(Dashboard);
+               }
     close();
-      
             }
             else{
                JOptionPane.showMessageDialog(userView,"cannot find username");

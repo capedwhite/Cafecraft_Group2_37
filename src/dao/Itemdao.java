@@ -30,10 +30,7 @@ pstmt.setDouble(2,item.getPrice());
 pstmt.setBytes(3,item.getImagePath());
 pstmt.setString(4,item.getCategory());
 int affectedrows=pstmt.executeUpdate();
-if(affectedrows == 0){
-    return false;
-}
-return true;
+return    affectedrows != 0;
 }
     catch(SQLException ex){
 Logger.getLogger(Itemdao.class.getName()).log(Level.SEVERE,null,ex);
@@ -46,7 +43,7 @@ mysql.CloseConnection(conn);
        public List<Itemmenu> getAllMenuItems() {
              Connection conn=mysql.openConnection();
         List<Itemmenu> items = new ArrayList<>();
-        String sql = "SELECT id, name, price, image_path, Category FROM menu_items";
+        String sql = "SELECT id, name, price, image_path, Category FROM items";
         try (PreparedStatement pstmt = conn.prepareStatement(sql);
              ResultSet rs = pstmt.executeQuery()) {
             while(rs.next()) {
@@ -54,7 +51,7 @@ mysql.CloseConnection(conn);
                     rs.getInt("id"),
                     rs.getString("name"),
                     rs.getDouble("price"),
-                    rs.getBytes("imagePath"),
+                    rs.getBytes("image_path"),
                     rs.getString("category")
                 );
                 items.add(item);
@@ -62,9 +59,60 @@ mysql.CloseConnection(conn);
         } catch (SQLException ex) {
          Logger.getLogger(Itemdao.class.getName()).log(Level.SEVERE,null,ex);
         }
+                  finally{
+mysql.CloseConnection(conn);
+}
         return items;
     }
-
+public boolean deleteAllItems() {
+    String sql = "DELETE FROM items";  // or your actual table name
+    Connection conn=mysql.openConnection();
+    try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+        int rows = stmt.executeUpdate();
+        return rows > 0;
+    } catch (Exception ex) {
+        Logger.getLogger(Itemdao.class.getName()).log(Level.SEVERE,null,ex);
+        return false;
+    }
+              finally{
+mysql.CloseConnection(conn);
+}
+}
       
- }
+public boolean updateItems(Itemmenu item){
+    Connection conn=mysql.openConnection();
+    String sql = "UPDATE items SET name = ?, price = ?, category = ?, image_path = ? WHERE id = ?";
+    try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, item.getName());
+            stmt.setDouble(2, item.getPrice());
+            stmt.setString(3, item.getCategory());
+            stmt.setBytes(4, item.getImagePath());
+            stmt.setInt(5, item.getId());
+
+            int rowsAffected = stmt.executeUpdate();
+            return rowsAffected > 0;
+
+        } catch (SQLException ex) {
+            Logger.getLogger(Itemdao.class.getName()).log(Level.SEVERE,null,ex);
+            return false;
+        }
+              finally{
+mysql.CloseConnection(conn);
+}
+}
+public boolean deleteItemById(Itemmenu item) {
+    String sql = "DELETE FROM items WHERE id = ?";
+    Connection conn=mysql.openConnection();
+         try(PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+        stmt.setInt(1, item.getId());
+        int rows = stmt.executeUpdate();
+        return rows > 0;
+
+    } catch (SQLException ex) {
+        Logger.getLogger(Itemdao.class.getName()).log(Level.SEVERE,null,ex);
+        return false;
+    }
+}
+}
 

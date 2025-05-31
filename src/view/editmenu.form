@@ -58,7 +58,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="titlepanel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="438" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
               <Component id="buttonpanel" min="-2" max="-2" attributes="0"/>
@@ -88,7 +88,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="57" max="32767" attributes="0"/>
+                  <EmptySpace pref="26" max="32767" attributes="0"/>
                   <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               </Group>
@@ -120,13 +120,11 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
-                  <Component id="Addbutton" min="-2" pref="95" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                  <Component id="Editbutton" min="-2" pref="99" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="itemcombo" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Addbutton" min="-2" pref="100" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
+                  <Component id="resetbtn" min="-2" pref="100" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   <Component id="exitbutton" min="-2" pref="89" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
               </Group>
@@ -134,13 +132,17 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Addbutton" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="Editbutton" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
-                      <Component id="itemcombo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="exitbutton" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="Addbutton" min="-2" pref="37" max="-2" attributes="0"/>
+                          <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="exitbutton" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="resetbtn" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace pref="11" max="32767" attributes="0"/>
               </Group>
@@ -170,10 +172,13 @@
         <Component class="javax.swing.JButton" name="exitbutton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="3d" green="3d" red="ff" type="rgb"/>
+              <Color blue="33" green="0" red="ff" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial Black" size="12" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="EXIT"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -189,10 +194,10 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitbuttonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Editbutton">
+        <Component class="javax.swing.JButton" name="resetbtn">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="cc" red="33" type="rgb"/>
+              <Color blue="33" green="0" red="ff" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial Black" size="12" style="1"/>
@@ -200,7 +205,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Edit"/>
+            <Property name="text" type="java.lang.String" value="Reset"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
                 <BevelBorder/>
@@ -208,26 +213,8 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EditbuttonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="resetbtnActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JComboBox" name="itemcombo">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemcomboActionPerformed"/>
-          </Events>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
         </Component>
       </SubComponents>
     </Container>
@@ -546,7 +533,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="71" max="32767" attributes="0"/>
                           <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                       </Group>
@@ -619,7 +606,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="19" max="32767" attributes="0"/>
                           <Component id="price5" min="-2" pref="43" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
                           <Component id="jLabel24" min="-2" pref="43" max="-2" attributes="0"/>
@@ -873,9 +860,9 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           <Component id="price8" min="-2" pref="43" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="82" max="32767" attributes="0"/>
                           <Component id="jLabel33" min="-2" pref="43" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>

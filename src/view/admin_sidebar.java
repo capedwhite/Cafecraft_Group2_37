@@ -4,6 +4,8 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author Acer
@@ -15,6 +17,9 @@ public class admin_sidebar extends javax.swing.JFrame {
      */
     public admin_sidebar() {
         initComponents();
+         this.setResizable(false);
+            setLocationRelativeTo(null);
+            
     }
 
     /**
@@ -30,7 +35,7 @@ public class admin_sidebar extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        editmenubtn = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
@@ -82,16 +87,16 @@ public class admin_sidebar extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(51, 51, 0));
-        jButton5.setText("Edit Menu");
-        jButton5.setBorder(null);
-        jButton5.setBorderPainted(false);
-        jButton5.setContentAreaFilled(false);
-        jButton5.setOpaque(true);
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        editmenubtn.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
+        editmenubtn.setForeground(new java.awt.Color(51, 51, 0));
+        editmenubtn.setText("Edit Menu");
+        editmenubtn.setBorder(null);
+        editmenubtn.setBorderPainted(false);
+        editmenubtn.setContentAreaFilled(false);
+        editmenubtn.setOpaque(true);
+        editmenubtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                editmenubtnActionPerformed(evt);
             }
         });
 
@@ -178,7 +183,7 @@ public class admin_sidebar extends javax.swing.JFrame {
                             .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
                             .addComponent(jButton9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(editmenubtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
@@ -198,7 +203,7 @@ public class admin_sidebar extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(editmenubtn, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -251,9 +256,9 @@ public class admin_sidebar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void editmenubtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editmenubtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_editmenubtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -291,17 +296,20 @@ public class admin_sidebar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton editmenubtn;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
+public void addADDeditmenulistener(ActionListener listener){
+    editmenubtn.addActionListener(listener);
+}
 }

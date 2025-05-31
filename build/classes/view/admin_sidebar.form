@@ -41,7 +41,7 @@
                           <Component id="jButton7" alignment="0" max="32767" attributes="0"/>
                           <Component id="jButton8" alignment="0" pref="175" max="32767" attributes="0"/>
                           <Component id="jButton9" alignment="1" max="32767" attributes="0"/>
-                          <Component id="jButton5" alignment="1" max="32767" attributes="0"/>
+                          <Component id="editmenubtn" alignment="1" max="32767" attributes="0"/>
                           <Component id="jButton4" alignment="1" max="32767" attributes="0"/>
                           <Component id="jButton3" alignment="1" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
@@ -67,7 +67,7 @@
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="jButton4" min="-2" pref="34" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jButton5" min="-2" pref="46" max="-2" attributes="0"/>
+              <Component id="editmenubtn" min="-2" pref="46" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jButton3" min="-2" pref="36" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -154,7 +154,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton5">
+    <Component class="javax.swing.JButton" name="editmenubtn">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Bahnschrift" size="14" style="0"/>
@@ -171,7 +171,7 @@
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editmenubtnActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton6">

@@ -19,6 +19,7 @@ public class dashboard extends javax.swing.JFrame {
         initComponents();
         this.setResizable(false);
             setLocationRelativeTo(null);
+            this.setSize(840,520);
     }
 
     /**
@@ -177,10 +178,9 @@ public class dashboard extends javax.swing.JFrame {
                             .addComponent(jButton4))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(logoutbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jButton6)
+                .addGap(0, 10, Short.MAX_VALUE))
+            .addComponent(logoutbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -204,7 +204,7 @@ public class dashboard extends javax.swing.JFrame {
                 .addComponent(logoutbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 500));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 500));
 
         jLabel4.setFont(new java.awt.Font("Bahnschrift", 1, 48)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -217,7 +217,7 @@ public class dashboard extends javax.swing.JFrame {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, 310, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dashboardback.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 0, 790, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 0, 720, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

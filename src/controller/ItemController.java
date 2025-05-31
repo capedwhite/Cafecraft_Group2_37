@@ -7,14 +7,18 @@ import view.editmenu;
 import dao.Itemdao;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import model.Itemmenu;
 import view.adddialouge;
-import view.editdialoge;
+import view.reusemenupanel;
 
 /**
  *
  * @author ASUS
  */
-public class ItemController {
+public final class ItemController {
 //    String name = nameField.getText();
 //String category = categoryCombo.getSelectedItem().toString();
 //double price = Double.parseDouble(priceField.getText());
@@ -22,14 +26,34 @@ public class ItemController {
 
     private final Itemdao itemDao =new Itemdao();
     private final editmenu userView;
-    
+   
+   
     
     public ItemController (editmenu userView){
         this.userView = userView;
         
         userView.addAddItemListener(new AddItemListener());
-        userView.addADDEditlistener(new ADDEditListener());
+        userView.addAddresetitemListener(new resetlistener());
+        loadAllItemsToPanel();
+        
+    };
+    
+
+
+    public void loadAllItemsToPanel() {
+        List<Itemmenu> itemList = itemDao.getAllMenuItems(); 
+        JPanel menuPanel = userView.getmenupanel(); 
+
+        menuPanel.removeAll();
+        for (Itemmenu item : itemList) {
+           reusemenupanel card = userView.addItemCard(item); 
+            ReusablePanelController Reusecontrol = new ReusablePanelController(card,itemDao,userView);
+        }
+
+        menuPanel.revalidate(); // 🪞 Update UI
+        menuPanel.repaint();
     }
+    
     public void open(){
         
         this.userView.setVisible(true);
@@ -41,20 +65,32 @@ public class ItemController {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-               adddialouge dialog = new adddialouge(userView,true); // your custom dialog to input details
+           
+               adddialouge dialog = new adddialouge(userView,true);
+               AddItemController additemcontrol = new AddItemController(dialog,userView);// your custom dialog to input details   
     dialog.setVisible(true);
 
         }
         
     }
-    class ADDEditListener implements ActionListener{
+    class resetlistener implements ActionListener{
 
         @Override
         public void actionPerformed(ActionEvent e) {
-               editdialoge dialog = new editdialoge(userView,true); // your custom dialog to input details
-    dialog.setVisible(true);
-
+             int confirm = JOptionPane.showConfirmDialog(null, "Are you sure you want to reset the menu?", "Confirm Reset", JOptionPane.YES_NO_OPTION);
+    if (confirm == JOptionPane.YES_OPTION) {
+        boolean deleted = new Itemdao().deleteAllItems();
+        if (deleted) {
+            userView.removeAll();
+           userView.revalidate();
+            userView.repaint();
+            JOptionPane.showMessageDialog(null, "Menu has been reset!");
+        } else {
+            JOptionPane.showMessageDialog(null, "Failed to reset menu.");
         }
+    }
+        }
+        
     }
 }
         

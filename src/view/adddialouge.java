@@ -5,14 +5,13 @@
 package view;
 
 import java.awt.Image;
-import java.awt.MenuItem;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import javax.imageio.ImageIO;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
+import java.nio.file.Files;
 import javax.swing.ImageIcon;
-import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
+
 
 
 /**
@@ -20,7 +19,6 @@ import javax.swing.JOptionPane;
  * @author ASUS
  */
 public class adddialouge extends javax.swing.JDialog {
-
     /**
      * Creates new form adddialouge
      * @param parent
@@ -30,57 +28,6 @@ public class adddialouge extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         setLocationRelativeTo(null);
-    }
-     private boolean submitted = false;
-    
-    private void chooseImage() {
-        JFileChooser chooser = new JFileChooser();
-        int ret = chooser.showOpenDialog(this);
-        if (ret == JFileChooser.APPROVE_OPTION) {
-            try {
-                File file = chooser.getSelectedFile();
-                BufferedImage img = ImageIO.read(file);
-                imageLabel.setIcon(new ImageIcon(img.getScaledInstance(100, 100, Image.SCALE_SMOOTH)));
-
-                // Convert to byte[]
-                ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                ImageIO.write(img, "jpg", baos);
-                imageBytes = baos.toByteArray();
-            } catch (Exception ex) {
-                JOptionPane.showMessageDialog(this, "Failed to load image");
-            }
-        }
-    }
-    private void onSubmit() {
-        // Validate inputs
-        if (nameField.getText().trim().isEmpty() ||
-            priceField.getText().trim().isEmpty() ||
-            imageBytes == null) {
-            JOptionPane.showMessageDialog(this, "Please fill all fields and choose an image");
-            return;
-        }
-        try {
-            Double.parseDouble(priceField.getText().trim());
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Price must be a number");
-            return;
-        }
-
-        submitted = true;
-        setVisible(false);
-    }
-
-    public boolean isSubmitted() {
-        return submitted;
-    }
-
-    public MenuItem getMenuItem() {
-        return new MenuItem(
-            nameField.getText().trim(),
-            categoryCombo.getSelectedItem().toString(),
-            Double.parseDouble(priceField.getText().trim()),
-            imageBytes
-        );
     }
 
     /**
@@ -96,10 +43,12 @@ public class adddialouge extends javax.swing.JDialog {
         pricelabel = new javax.swing.JLabel();
         categorylabel = new javax.swing.JLabel();
         itemfield = new javax.swing.JTextField();
-        pricefieldd1 = new javax.swing.JTextField();
+        pricefield = new javax.swing.JTextField();
         categoryfield = new javax.swing.JTextField();
         chooseimagebutton = new javax.swing.JButton();
         Savebutton = new javax.swing.JButton();
+        cancel = new javax.swing.JButton();
+        chooseimagepreview = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(189, 171, 171));
@@ -116,6 +65,12 @@ public class adddialouge extends javax.swing.JDialog {
         itemfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 itemfieldActionPerformed(evt);
+            }
+        });
+
+        pricefield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pricefieldActionPerformed(evt);
             }
         });
 
@@ -138,53 +93,72 @@ public class adddialouge extends javax.swing.JDialog {
             }
         });
 
+        cancel.setBackground(new java.awt.Color(255, 0, 51));
+        cancel.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
+        cancel.setForeground(new java.awt.Color(255, 255, 255));
+        cancel.setText("Cancel");
+        cancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelActionPerformed(evt);
+            }
+        });
+
+        chooseimagepreview.setText("choose an image");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(categorylabel, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(itemnamelabel, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
-                                .addComponent(pricelabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
+                        .addComponent(Savebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cancel))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(categorylabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(categoryfield, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
-                                    .addComponent(itemfield)
-                                    .addComponent(pricefieldd1, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(57, 57, 57)
-                                .addComponent(chooseimagebutton))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(149, 149, 149)
-                        .addComponent(Savebutton)))
+                                    .addComponent(itemnamelabel, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
+                                    .addComponent(pricelabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(categoryfield, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                            .addComponent(itemfield)
+                            .addComponent(pricefield, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(chooseimagepreview, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(chooseimagebutton)))
                 .addContainerGap(82, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(51, 51, 51)
+                .addGap(59, 59, 59)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(itemnamelabel)
-                    .addComponent(itemfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(itemfield, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(itemnamelabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pricefield, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pricelabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(categorylabel)
+                    .addComponent(categoryfield, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pricelabel)
-                    .addComponent(pricefieldd1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
+                    .addComponent(chooseimagepreview, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                    .addComponent(chooseimagebutton))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(categorylabel)
-                    .addComponent(categoryfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                .addComponent(chooseimagebutton)
-                .addGap(55, 55, 55)
-                .addComponent(Savebutton)
+                    .addComponent(Savebutton)
+                    .addComponent(cancel))
                 .addGap(14, 14, 14))
         );
 
@@ -202,6 +176,15 @@ public class adddialouge extends javax.swing.JDialog {
     private void SavebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SavebuttonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SavebuttonActionPerformed
+
+    private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_cancelActionPerformed
+
+    private void pricefieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pricefieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pricefieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -247,12 +230,44 @@ public class adddialouge extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Savebutton;
+    private javax.swing.JButton cancel;
     private javax.swing.JTextField categoryfield;
     private javax.swing.JLabel categorylabel;
     private javax.swing.JButton chooseimagebutton;
+    private javax.swing.JLabel chooseimagepreview;
     private javax.swing.JTextField itemfield;
     private javax.swing.JLabel itemnamelabel;
-    private javax.swing.JTextField pricefieldd1;
+    private javax.swing.JTextField pricefield;
     private javax.swing.JLabel pricelabel;
     // End of variables declaration//GEN-END:variables
+
+ 
+    public void addSaveitembuttonlistener(ActionListener listener){
+        Savebutton.addActionListener(listener);
+    }
+    public javax.swing.JTextField getitemField(){
+return itemfield;
 }
+        public javax.swing.JTextField getpricefield(){
+return pricefield;
+}
+            public javax.swing.JTextField getcategoryfield(){
+return categoryfield;
+            }
+            
+ public void addChooseimagelistener(ActionListener listener){
+        chooseimagebutton.addActionListener(listener);
+    }
+public void setImagePreview(Image image) {
+    if (image != null) {
+        ImageIcon icon = new ImageIcon(image.getScaledInstance(40, 40, Image.SCALE_SMOOTH));
+        chooseimagepreview.setIcon(icon);
+        chooseimagepreview.setText(""); // Clear any placeholder text
+    } else {
+        chooseimagepreview.setIcon(null);
+        chooseimagepreview.setText("No Image Selected");
+    }
+}
+
+}
+

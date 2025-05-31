@@ -18,8 +18,7 @@ public class Itemmenu {
     public Itemmenu() {
     }
 
-    public Itemmenu(int id, String name, double price, byte[] imagePath, String category) {
-        this.id = id;
+    public Itemmenu(String name, double price, byte[] imagePath, String category) {
         this.name = name;
         this.price = price;
         this.imagePath = imagePath;
@@ -41,7 +40,10 @@ public class Itemmenu {
     public byte[] getImagePath() {
         return imagePath;
     }
-
+    public void setPrice(double price){
+        this.price=price;
+    }
+    
       public void setName(String name) {
      this.name= name;
     }
@@ -56,6 +58,11 @@ public class Itemmenu {
     public void setCategory(String category) {
         this.category = category;
     }
-
+public Itemmenu(int id, String name, double price, byte[] imagePath, String category) {
+    this.id = id;
+    this.name = name;
+    this.price = price;
+    this.imagePath = imagePath;
+    this.category = category;
 }
-
+}

@@ -3,20 +3,30 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package view;
+
+
+import java.awt.Image;
 import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import model.Itemmenu;
 /**
  *
  * @author ASUS
  */
-public class editmenu extends javax.swing.JFrame {
+public final class editmenu extends javax.swing.JFrame {
 
     /**
      * Creates new form 
      */
     public editmenu() {
         initComponents();
+        
+//        loadItemsIntoComboBox();
             this.setResizable(false);
             setLocationRelativeTo(null);
+            
     }
 
     /**
@@ -34,8 +44,7 @@ public class editmenu extends javax.swing.JFrame {
         buttonpanel = new javax.swing.JPanel();
         Addbutton = new javax.swing.JButton();
         exitbutton = new javax.swing.JButton();
-        Editbutton = new javax.swing.JButton();
-        itemcombo = new javax.swing.JComboBox<>();
+        resetbtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         menupanel = new javax.swing.JPanel();
         blackforestpanel = new javax.swing.JPanel();
@@ -117,7 +126,7 @@ public class editmenu extends javax.swing.JFrame {
         titlepanelLayout.setVerticalGroup(
             titlepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlepanelLayout.createSequentialGroup()
-                .addContainerGap(57, Short.MAX_VALUE)
+                .addContainerGap(26, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(25, 25, 25))
         );
@@ -130,8 +139,9 @@ public class editmenu extends javax.swing.JFrame {
         Addbutton.setText("ADD");
         Addbutton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        exitbutton.setBackground(new java.awt.Color(255, 61, 61));
+        exitbutton.setBackground(new java.awt.Color(255, 0, 51));
         exitbutton.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        exitbutton.setForeground(new java.awt.Color(255, 255, 255));
         exitbutton.setText("EXIT");
         exitbutton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         exitbutton.setPreferredSize(new java.awt.Dimension(34, 22));
@@ -141,21 +151,14 @@ public class editmenu extends javax.swing.JFrame {
             }
         });
 
-        Editbutton.setBackground(new java.awt.Color(51, 204, 0));
-        Editbutton.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        Editbutton.setForeground(new java.awt.Color(255, 255, 255));
-        Editbutton.setText("Edit");
-        Editbutton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Editbutton.addActionListener(new java.awt.event.ActionListener() {
+        resetbtn.setBackground(new java.awt.Color(255, 0, 51));
+        resetbtn.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        resetbtn.setForeground(new java.awt.Color(255, 255, 255));
+        resetbtn.setText("Reset");
+        resetbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        resetbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EditbuttonActionPerformed(evt);
-            }
-        });
-
-        itemcombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        itemcombo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemcomboActionPerformed(evt);
+                resetbtnActionPerformed(evt);
             }
         });
 
@@ -165,24 +168,24 @@ public class editmenu extends javax.swing.JFrame {
             buttonpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(buttonpanelLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
-                .addComponent(Addbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
-                .addComponent(Editbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(itemcombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Addbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(resetbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
                 .addComponent(exitbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(59, 59, 59))
         );
         buttonpanelLayout.setVerticalGroup(
             buttonpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(buttonpanelLayout.createSequentialGroup()
-                .addGap(7, 7, 7)
-                .addGroup(buttonpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Addbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Editbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(itemcombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(exitbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap()
+                .addGroup(buttonpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(buttonpanelLayout.createSequentialGroup()
+                        .addComponent(Addbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1))
+                    .addGroup(buttonpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(exitbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(resetbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
@@ -375,7 +378,7 @@ public class editmenu extends javax.swing.JFrame {
                 .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hotchocolatepanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(71, Short.MAX_VALUE)
                 .addComponent(jLabel19)
                 .addGap(64, 64, 64))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hotchocolatepanelLayout.createSequentialGroup()
@@ -417,7 +420,7 @@ public class editmenu extends javax.swing.JFrame {
         lemonadepanelLayout.setHorizontalGroup(
             lemonadepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lemonadepanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 19, Short.MAX_VALUE)
                 .addComponent(price5, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(93, 93, 93)
                 .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -570,9 +573,9 @@ public class editmenu extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, capuccinopanelLayout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addComponent(price8, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+                .addGap(20, 20, 20))
             .addGroup(capuccinopanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -664,7 +667,7 @@ public class editmenu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(titlepanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(buttonpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -676,15 +679,12 @@ public class editmenu extends javax.swing.JFrame {
 
     private void exitbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitbuttonActionPerformed
         // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_exitbuttonActionPerformed
 
-    private void EditbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditbuttonActionPerformed
+    private void resetbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetbtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_EditbuttonActionPerformed
-
-    private void itemcomboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemcomboActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemcomboActionPerformed
+    }//GEN-LAST:event_resetbtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -724,7 +724,6 @@ public class editmenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Addbutton;
-    private javax.swing.JButton Editbutton;
     private javax.swing.JPanel blackcoffeepanel;
     private javax.swing.JPanel blackforestpanel;
     private javax.swing.JPanel buttonpanel;
@@ -732,7 +731,6 @@ public class editmenu extends javax.swing.JFrame {
     private javax.swing.JPanel crossiantpanel;
     private javax.swing.JButton exitbutton;
     private javax.swing.JPanel hotchocolatepanel;
-    private javax.swing.JComboBox<String> itemcombo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -779,14 +777,45 @@ public class editmenu extends javax.swing.JFrame {
     private javax.swing.JLabel price7;
     private javax.swing.JLabel price8;
     private javax.swing.JPanel randomextrapanel;
+    private javax.swing.JButton resetbtn;
     private javax.swing.JPanel titlepanel;
     // End of variables declaration//GEN-END:variables
+
+    public reusemenupanel addItemCard(Itemmenu item) {
+    reusemenupanel card = new reusemenupanel(item);
+
+    // Image
+     byte[] imageData = item.getImagePath(); 
+    ImageIcon icon = new ImageIcon(imageData);
+     Image image = icon.getImage();
+    Image scaled = image.getScaledInstance(240, 220, Image.SCALE_SMOOTH);
+    card.putimagelabel((new ImageIcon(scaled)));
+    
+
+    // Name and Price
+card.getItemNameLabel().setText(item.getName());
+card. getactualprice().setText("Rs " + item.getPrice());
+
+
+    menupanel.add(card);
+    menupanel.revalidate();
+    menupanel.repaint();
+    return card;
+}
+
 
     
     public void addAddItemListener(ActionListener listener){
 Addbutton.addActionListener(listener);
     }
-    public void addADDEditlistener(ActionListener Listener){
-        Editbutton.addActionListener(Listener);
+
+        public void addAddresetitemListener(ActionListener listener){
+resetbtn.addActionListener(listener);
     }
+public JPanel getmenupanel(){
+    return menupanel;
 }
+
+
+}
+
