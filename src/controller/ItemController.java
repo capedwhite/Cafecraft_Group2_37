@@ -54,6 +54,7 @@ public final class ItemController {
         menuPanel.repaint();
     }
     
+    
     public void open(){
         
         this.userView.setVisible(true);

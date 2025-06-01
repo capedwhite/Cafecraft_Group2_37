@@ -19,6 +19,7 @@ public class admin_sidebar extends javax.swing.JFrame {
         initComponents();
          this.setResizable(false);
             setLocationRelativeTo(null);
+            this.setSize(1011,618);
             
     }
 

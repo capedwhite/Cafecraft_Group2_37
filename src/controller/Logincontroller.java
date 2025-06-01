@@ -9,6 +9,7 @@
  * @author user
  */
 package controller;
+import dao.Itemdao;
 import dao.logindao;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -70,8 +71,9 @@ class AddUserListener implements ActionListener{
                }
                else{
                    dashboard Dashboard = new dashboard();
+                   Itemdao itemDao = new Itemdao();
                    Dashboard.setVisible(true);
-                   Dashboardcontroller dashboardcontrol = new Dashboardcontroller(Dashboard);
+                   Dashboardcontroller dashboardcontrol = new Dashboardcontroller(Dashboard,itemDao);
                }
     close();
             }

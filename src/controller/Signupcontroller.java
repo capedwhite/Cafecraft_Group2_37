@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package controller;
+import dao.Itemdao;
 import dao.userdao;
 import model.User;
 import view.Signup;
@@ -58,9 +59,11 @@ class AddUserListener implements ActionListener{
             }else{
                 userDao.signup(user);
                   JOptionPane.showMessageDialog(userView, "Signup successful!");
-                dashboard Dashboard = new dashboard(); // replace with your actual dashboard class
+                dashboard Dashboard = new dashboard(); 
+                Itemdao itemDao = new Itemdao(); 
+// replace with your actual dashboard class
     Dashboard.setVisible(true);
-    Dashboardcontroller dashboardcontrol = new Dashboardcontroller(Dashboard);
+    Dashboardcontroller dashboardcontrol = new Dashboardcontroller(Dashboard,itemDao);
     close();
     close();
             }

@@ -10,7 +10,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JSpinner;
-import zview.MenuItems;
+import view.MenuItems;
 
 public class MenuitemsController {
 
