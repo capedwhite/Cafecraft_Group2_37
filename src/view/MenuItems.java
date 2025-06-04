@@ -5,6 +5,9 @@
 package view;
 
 import java.awt.Image;
+import java.awt.TextField;
+import java.awt.event.ActionListener;
+import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import model.Itemmenu;
@@ -17,6 +20,8 @@ import model.Itemmenu;
  * @author Acer
  */
 public class MenuItems extends javax.swing.JFrame {
+    private final java.util.List<useritempanel> itemCards = new java.util.ArrayList<>();
+
 
     /**
      * Creates new form MenuItems
@@ -40,6 +45,8 @@ public class MenuItems extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jTxtDate = new javax.swing.JLabel();
+        jTxtTime = new javax.swing.JLabel();
+        jDate = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         mainmenupanel = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -49,11 +56,11 @@ public class MenuItems extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new java.awt.TextField();
+        jSub1 = new java.awt.TextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new java.awt.TextField();
-        jTextField3 = new java.awt.TextField();
+        jTax1 = new java.awt.TextField();
+        jTotal1 = new java.awt.TextField();
         btnReset4 = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
@@ -73,6 +80,13 @@ public class MenuItems extends javax.swing.JFrame {
         jTxtDate.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jTxtDate.setForeground(new java.awt.Color(255, 255, 255));
 
+        jTxtTime.setBackground(new java.awt.Color(255, 255, 255));
+        jTxtTime.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jTxtTime.setForeground(new java.awt.Color(153, 255, 255));
+
+        jDate.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jDate.setForeground(new java.awt.Color(51, 255, 255));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -80,19 +94,34 @@ public class MenuItems extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(455, Short.MAX_VALUE)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(278, 278, 278)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTxtTime, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jDate, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTxtDate)
                 .addGap(222, 222, 222))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTxtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jTxtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jDate, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jTxtTime, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(14, 14, 14))))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, 40));
@@ -161,10 +190,10 @@ public class MenuItems extends javax.swing.JFrame {
 
         jLabel2.setText("Tax");
 
-        jTextField2.setEditable(false);
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jSub1.setEditable(false);
+        jSub1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jSub1ActionPerformed(evt);
             }
         });
 
@@ -172,9 +201,9 @@ public class MenuItems extends javax.swing.JFrame {
 
         jLabel6.setText("SubTotal");
 
-        jTextField1.setEditable(false);
+        jTax1.setEditable(false);
 
-        jTextField3.setEditable(false);
+        jTotal1.setEditable(false);
 
         btnReset4.setBackground(new java.awt.Color(102, 255, 51));
         btnReset4.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
@@ -195,9 +224,9 @@ public class MenuItems extends javax.swing.JFrame {
                         .addGap(2, 2, 2)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jTax1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
+                                .addComponent(jSub1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jTotal1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(51, 51, 51)
                         .addComponent(btnReset4)))
@@ -213,13 +242,13 @@ public class MenuItems extends javax.swing.JFrame {
                         .addGap(23, 23, 23)
                         .addComponent(jLabel6))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTax1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jSub1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTotal1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addComponent(btnReset4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16))
@@ -236,9 +265,9 @@ public class MenuItems extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jSub1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSub1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jSub1ActionPerformed
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         // TODO add your handling code here:
@@ -284,6 +313,7 @@ public class MenuItems extends javax.swing.JFrame {
     private javax.swing.JButton btnReset4;
     private javax.swing.JButton confirmbutton;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jDate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -294,36 +324,85 @@ public class MenuItems extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
+    private java.awt.TextField jSub1;
+    private java.awt.TextField jTax1;
     private javax.swing.JTextArea jTextArea2;
-    private java.awt.TextField jTextField1;
-    private java.awt.TextField jTextField2;
-    private java.awt.TextField jTextField3;
+    private java.awt.TextField jTotal1;
     private javax.swing.JLabel jTxtDate;
+    private javax.swing.JLabel jTxtTime;
     private javax.swing.JPanel mainmenupanel;
     // End of variables declaration//GEN-END:variables
 
-    public JPanel getMenupanel(){
-        return mainmenupanel;
-    }
-     public useritempanel addItemCard(Itemmenu item) {
+   
+
+public JPanel getMenupanel() {
+    return mainmenupanel;
+}
+
+public useritempanel addItemCard(Itemmenu item) {
     useritempanel card = new useritempanel(item);
 
     // Image
-     byte[] imageData = item.getImagePath(); 
+    byte[] imageData = item.getImagePath();
     ImageIcon icon = new ImageIcon(imageData);
-     Image image = icon.getImage();
+    Image image = icon.getImage();
     Image scaled = image.getScaledInstance(240, 200, Image.SCALE_SMOOTH);
-    card.putimagelabel((new ImageIcon(scaled)));
-    
+    card.putimagelabel(new ImageIcon(scaled));
 
     // Name and Price
-card.getItemNameLabel().setText(item.getName());
-card. getactualprice().setText("Rs " + item.getPrice());
+    card.getItemNameLabel().setText(item.getName());
+    card.getactualprice().setText("Rs " + item.getPrice());
 
-
+    itemCards.add(card); // ✅ track for controller
     mainmenupanel.add(card);
     mainmenupanel.revalidate();
     mainmenupanel.repaint();
+
     return card;
 }
+
+public List<useritempanel> getItemCards() {
+    return itemCards; // ✅ Give controller access to cards
+}
+public void addbtnResetListener(java.awt.event.ActionListener listener) {
+    btnReset.addActionListener(listener);
+}
+
+public void addConfirmListener(java.awt.event.ActionListener listener) {
+    confirmbutton.addActionListener(listener);
+}
+// ✅ For the JTextArea
+public javax.swing.JTextArea getTxtArea() {
+    return jTextArea2;  // <-- Replace with your actual variable name if different
+}
+
+// ✅ For the Time label
+public javax.swing.JLabel getTxtTime() {
+    return jTxtTime; // <-- Replace with your time JLabel variable
+}
+
+// ✅ For the Date label
+public javax.swing.JLabel getTxtDate() {
+    return jDate; // <-- Replace with your date JLabel variable
+}
+
+
+public TextField getTxtSubTotal() {
+    return jSub1;
+}
+
+public TextField getTxtTax() {
+    return jTax1;
+}
+
+public TextField getTxtTotal() {
+    return jTotal1;
+}
+public TextField[] getTextFields() {
+    return new TextField[] { jSub1, jTax1, jTotal1 };
+}
+public javax.swing.JButton getBtnReceipt() {
+    return btnReset4; // Replace with your actual receipt button variable name
+}
+
 }
