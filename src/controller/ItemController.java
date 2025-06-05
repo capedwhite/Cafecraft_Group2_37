@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import model.Itemmenu;
 import view.adddialouge;
+import view.admin_sidebar;
 import view.reusemenupanel;
 
 /**
@@ -34,6 +35,7 @@ public final class ItemController {
         
         userView.addAddItemListener(new AddItemListener());
         userView.addAddresetitemListener(new resetlistener());
+        userView.addAddexitbtnlistener(new Exitlistener());
         loadAllItemsToPanel();
         
     };
@@ -90,6 +92,17 @@ public final class ItemController {
             JOptionPane.showMessageDialog(null, "Failed to reset menu.");
         }
     }
+        }
+        
+    }
+    class Exitlistener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            admin_sidebar adminside = new admin_sidebar();
+            admindasboardcontroller admindashboard = new admindasboardcontroller(adminside);
+            adminside.setVisible(true);
+            
         }
         
     }

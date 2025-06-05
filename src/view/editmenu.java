@@ -812,6 +812,11 @@ Addbutton.addActionListener(listener);
         public void addAddresetitemListener(ActionListener listener){
 resetbtn.addActionListener(listener);
     }
+        public void addAddexitbtnlistener(ActionListener listener){
+            exitbutton.addActionListener(listener);
+        }
+        
+                
 public JPanel getmenupanel(){
     return menupanel;
 }

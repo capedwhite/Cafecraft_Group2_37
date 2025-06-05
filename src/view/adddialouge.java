@@ -6,10 +6,6 @@ package view;
 
 import java.awt.Image;
 import java.awt.event.ActionListener;
-import java.io.IOException;
-import java.lang.System.Logger;
-import java.lang.System.Logger.Level;
-import java.nio.file.Files;
 import javax.swing.ImageIcon;
 
 
