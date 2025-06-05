@@ -11,6 +11,7 @@ import view.dashboard;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import view.login;
 
 /**
  *
@@ -25,6 +26,7 @@ public class Signupcontroller {
         
         userView.addSignupListener(new AddUserListener());
         userView.addshowpasswordlistener(new showpassword());
+        userView.addbackbtnlistener(new backbtn());
     }
     public void open(){
         
@@ -87,5 +89,17 @@ class showpassword implements ActionListener{
                 userView.getPasswordField().setEchoChar('\u2022');
                 }
 }
+}
+class backbtn implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+           userView.dispose();
+           login Login = new login();
+           Login.setVisible(true);
+           Logincontroller logincontrol = new Logincontroller(Login);
+                   
+        }
+    
 }
 }

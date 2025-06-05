@@ -47,6 +47,7 @@ public class AddItemController {
             String price=userdialouge.getpricefield().getText();
             if (itemname.isEmpty() || category.isEmpty() || price.isEmpty() || imageBytes == null) {
                 System.out.println("Please fill all fields and select an image!");
+                return;
             }
             double pricetext = Double.parseDouble(price); 
             Itemmenu item = new Itemmenu(itemname,pricetext,imageBytes,category);
