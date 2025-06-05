@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controller;
 
 import dao.Itemdao;
@@ -11,33 +7,31 @@ import model.Itemmenu;
 import view.MenuItems;
 import view.useritempanel;
 
-/**
- *
- * @author ASUS
- */
 public class UserMenucontroller {
+
     private final Itemdao itemdao;
     private final MenuItems menuitem;
-    
-    public UserMenucontroller(Itemdao itemdao,MenuItems menuitem){
-        this.itemdao=itemdao;
-        this.menuitem=menuitem;
-        loadUserItems();
-        
-        
-    }
-    public void loadUserItems() {
- List<Itemmenu> itemList = itemdao.getAllMenuItems(); 
-        JPanel menuPanel = menuitem.getMenupanel(); 
 
-        menuPanel.removeAll();
+    public UserMenucontroller(Itemdao itemdao, MenuItems menuitem) {
+        this.itemdao = itemdao;
+        this.menuitem = menuitem;
+
+        loadUserItems(); // 🔁 Load menu items into UI
+        MenuitemsController menucontroller =new MenuitemsController(menuitem); // ✅ No .init() here
+    }
+
+    public void loadUserItems() {
+        List<Itemmenu> itemList = itemdao.getAllMenuItems();
+        JPanel menuPanel = menuitem.getMenupanel();
+
+        menuPanel.removeAll(); // Clear old items
+
         for (Itemmenu item : itemList) {
-           useritempanel card = menuitem.addItemCard(item); 
-            Useritempanelcontroller userpanelcontrol = new Useritempanelcontroller();
+            useritempanel card = menuitem.addItemCard(item); // Create and add card to panel
+            menuPanel.add(card);
         }
 
-        menuPanel.revalidate(); //update ui
+        menuPanel.revalidate();
         menuPanel.repaint();
     }
 }
-

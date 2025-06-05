@@ -9,12 +9,15 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import model.Itemmenu;
 
+
 /**
  *
  * @author ASUS
  */
 public class useritempanel extends javax.swing.JPanel {
 private Itemmenu item;
+private javax.swing.JSpinner increaseamount;
+
     /**
      * Creates new form useritempanel
      * @param item
@@ -54,6 +57,8 @@ private Itemmenu item;
         placeorder.setFont(new java.awt.Font("Bahnschrift", 0, 12)); // NOI18N
         placeorder.setText("Place Order");
 
+        increaseamt.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
+
         jLabel1.setFont(new java.awt.Font("Bahnschrift", 0, 12)); // NOI18N
         jLabel1.setText("Amount");
 
@@ -66,7 +71,7 @@ private Itemmenu item;
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
                         .addComponent(increaseamt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -115,25 +120,69 @@ private Itemmenu item;
     private javax.swing.JLabel priceofitem;
     // End of variables declaration//GEN-END:variables
 
-   public JLabel getItemNameLabel() {
+public JLabel getItemNameLabel() {
     return itemname;
 }
-    public JLabel getactualprice() {
+
+public JLabel getactualprice() {
     return priceofitem;
 }
 
-  public JLabel putimagelabel(ImageIcon icon) {
+public JLabel putimagelabel(ImageIcon icon) {
     imagefield.setIcon(icon);
     imagefield.revalidate();
     imagefield.repaint();
-        return null;
-  
+    return null;
 }
-  public Itemmenu getItem() {
+
+public Itemmenu getItem() {
     return item;
 }
-  
-  
+
+public boolean isSelected() {
+    return placeorder.isSelected(); // ✅ Checkbox
+}
+
+public void setSelected(boolean selected) {
+    placeorder.setSelected(selected);
+}
+
+public int getQuantity() {
+    return (int) increaseamt.getValue(); // ✅ Quantity spinner
+}
+
+public void setQuantity(int quantity) {
+    increaseamt.setValue(quantity);
+}
+
+public String getItemName() {
+    return itemname.getText(); // ✅ Item name label
+}
+
+public void setItemName(String name) {
+    itemname.setText(name);
+}
+
+public double getItemPrice() {
+    String text = priceofitem.getText().replace("Rs", "").trim(); // ✅ Cleaned currency
+    return Double.parseDouble(text);
+}
+
+public void setItemPrice(String priceText) {
+    priceofitem.setText(priceText);
+}
+
+public javax.swing.JCheckBox getCheckbox() {
+    return placeorder;
+}
+
+    public Object getSpinner() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
 
 }
+
+
+
+

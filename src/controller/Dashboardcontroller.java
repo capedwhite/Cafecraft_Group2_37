@@ -1,48 +1,49 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controller;
+
 import dao.Itemdao;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import view.MenuItems;
 import view.dashboard;
 import view.login;
-/**
- *
- * @author ASUS
- */
+
 public class Dashboardcontroller {
-    final private dashboard userview;
-    final private  Itemdao itemdao;
-    public Dashboardcontroller(dashboard userview,Itemdao itemdao ){
-        this.userview=userview;
-        this.itemdao=itemdao;
-        userview.addlogoutlistener(new logoutlistener());
-        userview.addMenubtnlistener(new menulistener());
-    }
-    class logoutlistener implements ActionListener{
+    private final dashboard userview;
+    private final Itemdao itemdao;
 
+    public Dashboardcontroller(dashboard userview, Itemdao itemdao) {
+        this.userview = userview;
+        this.itemdao = itemdao;
+
+        // Attach action listeners
+        userview.addlogoutlistener(new LogoutListener());
+        userview.addMenubtnlistener(new MenuListener()); // ✅ CORRECT class name
+    }
+
+    // ✅ Handles logout and opens login again
+    class LogoutListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            userview.dispose(); // close the current window
-            System.out.println("logout clicked");
-        login loginView = new login(); // create a new login window
-        Logincontroller controller = new Logincontroller(loginView); // controller
-        controller.open(); // show the login window again
-        }
-        
-    }
-    class menulistener implements ActionListener{
+            userview.dispose(); // close current dashboard
+            System.out.println("Logout clicked");
 
+            login loginView = new login(); // show login again
+            Logincontroller controller = new Logincontroller(loginView);
+            controller.open();
+        }
+    }
+    //changes made by prajal 
+    // ✅ Opens MenuItems and wires up all logic
+    class MenuListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-          System.out.println("button clickled");
-          MenuItems menuitem = new MenuItems();
-          UserMenucontroller usermenu = new UserMenucontroller(itemdao,menuitem);
-          menuitem.setVisible(true);
+            System.out.println("Menu button clicked");
+
+            MenuItems menuitem = new MenuItems(); // View
+            UserMenucontroller menucontrol=new  UserMenucontroller(itemdao, menuitem); // loads item cards
+            //new MenuitemsController(menuitem);         // wires Reset/Confirm/Receipt
+            
+            menuitem.setVisible(true); // Show UI
         }
-        
     }
 }
