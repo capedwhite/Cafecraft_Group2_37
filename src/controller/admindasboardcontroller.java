@@ -1,32 +1,44 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import view.admin_sidebar;
 import view.editmenu;
+import view.aboutcafe;
+import controller.AboutCafeController;
 
-/**
- *
- * @author ASUS
- */
 public class admindasboardcontroller {
-    private final admin_sidebar admindashboard;
-    public admindasboardcontroller(admin_sidebar admindashboard){
-        this.admindashboard=admindashboard;
-        admindashboard.addADDeditmenulistener(new additemlistener());
-    }
-   class additemlistener implements ActionListener{
 
+    private final admin_sidebar admindashboard;
+
+    public admindasboardcontroller(admin_sidebar admindashboard) {
+        this.admindashboard = admindashboard;
+
+        System.out.println("Admin Dashboard Loaded");
+
+        admindashboard.addEditmenubtnListener(new additemlistener());
+        admindashboard.addAboutCafeListener(new AboutCafeListener());
+        admindashboard.testCafeButtonWiring();
+    }
+
+    class additemlistener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-           editmenu menuadmin = new editmenu(); 
-    menuadmin.setVisible(true);
-    ItemController menucontrol = new ItemController(menuadmin);
+            editmenu menuadmin = new editmenu();
+            menuadmin.setVisible(true);
         }
-       
-   }
+    }
+    //addeed by prajal 
+    // this below part to call about cafe in adminside 
+
+    class AboutCafeListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            System.out.println("About Cafe button clicked (Admin)");
+            aboutcafe aboutView = new aboutcafe();
+           AboutCafeController aboutcafe =  new AboutCafeController(aboutView);
+            aboutView.setVisible(true);
+        }
+    }
 }

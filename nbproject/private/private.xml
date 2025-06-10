@@ -2,6 +2,30 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/dao/AboutCafeDAO.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/controller/AboutCafeUserController.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/cafecraft_group2_37a/Cafecraft_group2_37A.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/controller/AboutCafeController.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/view/admin_sidebar.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/controller/admindasboardcontroller.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/view/aboutcafe.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/model/AboutCafe.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/controller/TestDashboard.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/view/login.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/controller/Logincontroller.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/view/Workersmanage.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/dao/Itemdao.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/dao/logindao.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/model/Itemmenu.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/dao/userdao.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/dao/Employeedao.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/controller/addemployeecontroller.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/dao/ForgotPasswordDAO.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/controller/Dashboardcontroller.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/controller/AddItemController.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/controller/Editworkercontroller.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/Cafecraft_Group2_37/src/controller/Edititemcontroller.java</file>
+        </group>
     </open-files>
 </project-private>
