@@ -43,7 +43,7 @@ public class AddItemController {
             try{
             System.out.println("button clicked");
             String itemname=userdialouge.getitemField().getText();
-            String category=userdialouge.getcategoryfield().getText();
+            String category=(String) userdialouge.getcategoryfield().getSelectedItem();
             String price=userdialouge.getpricefield().getText();
             if (itemname.isEmpty() || category.isEmpty() || price.isEmpty() || imageBytes == null) {
                 System.out.println("Please fill all fields and select an image!");

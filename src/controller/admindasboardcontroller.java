@@ -52,10 +52,11 @@ public class admindasboardcontroller {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+           admindashboard.dispose();
            login Login = new login();
            Login.setVisible(true);
            Logincontroller logincontrol = new Logincontroller(Login);
-           admindashboard.dispose();
+           
         }
            
        }

@@ -61,12 +61,10 @@ class AddUserListener implements ActionListener{
             }else{
                 userDao.signup(user);
                   JOptionPane.showMessageDialog(userView, "Signup successful!");
-                dashboard Dashboard = new dashboard(); 
-                Itemdao itemDao = new Itemdao(); 
-// replace with your actual dashboard class
-    Dashboard.setVisible(true);
-    Dashboardcontroller dashboardcontrol = new Dashboardcontroller(Dashboard,itemDao);
-    close();
+                  login Login = new login();
+                  Login.setVisible(true);
+                  Logincontroller logincontrol = new Logincontroller(Login);
+               
     close();
             }
         }

@@ -48,16 +48,21 @@ public class logindao {
 
 public String Checkrole(User user) {
     Connection conn = mysql.openConnection();
-    String sql = "SELECT role FROM users WHERE username = ? AND password = ?";
+    String sql = "SELECT id,role FROM users WHERE username = ? AND password = ?";
     try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
         pstmt.setString(1, user.getUsername());
         pstmt.setString(2, user.getPassword());
         ResultSet rs = pstmt.executeQuery();
         if (rs.next()) {
+            int id = rs.getInt("id");
+            user.setID(id);
             return rs.getString("role"); // returns 'admin' or 'user'
+            
+            
         } else {
             return null; // invalid login
         }
+        
     } catch (Exception e) {
        Logger.getLogger(logindao.class.getName()).log(Level.SEVERE,null,e);
         return null;

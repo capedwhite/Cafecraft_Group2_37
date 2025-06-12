@@ -55,7 +55,7 @@ class AddUserListener implements ActionListener{
             System.out.println("button clicked");
             String name=userView.getUsernameFieldd().getText();
             String password=userView.getPasswordFieldd().getText();
-            User user = new User(name, password );
+            User user = new User(name, password);
             boolean check =  Logindao.validateUser(user);
             if(! authenticate(name,password)){
                 JOptionPane.showMessageDialog(userView,"cant leave empty fields");
@@ -64,12 +64,15 @@ class AddUserListener implements ActionListener{
             
             if(check){
             JOptionPane.showMessageDialog(userView,"Login sucessfull");
+           
                if("admin".equals(Logindao.Checkrole(user))){
+                   Sessioncontroller.setcurrentuser(user.getID());
                    admin_sidebar admindashboard = new admin_sidebar();    
                    admindashboard.setVisible(true);
                    admindasboardcontroller admindashboardcontrol = new admindasboardcontroller(admindashboard);
                }
                else{
+                   Sessioncontroller.setcurrentuser(user.getID());
                    dashboard Dashboard = new dashboard();
                    Itemdao itemDao = new Itemdao();
                    Dashboard.setVisible(true);
@@ -122,6 +125,6 @@ class showpassword implements ActionListener{
                 userView.getPasswordFieldd().setEchoChar('\u2022');
                 }
 
-        }
+        }        
 }
 }

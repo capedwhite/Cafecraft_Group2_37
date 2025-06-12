@@ -12,18 +12,18 @@ public class Employee {
     private int id;
     private String employee_name;
     private String employee_Status;
-    private int employee_number;
+    private String employee_number;
     
     public Employee(){
     }
-    public Employee(int id,String employee_name,String employee_Status,int employee_number){
+    public Employee(int id,String employee_name,String employee_Status,String employee_number){
         this.id=id;
         this.employee_name=employee_name;
         this. employee_number = employee_number;
         this.employee_Status=employee_Status;
      
     }
-        public Employee(String employee_name,String employee_Status,int employee_number){
+        public Employee(String employee_name,String employee_Status,String employee_number){
        
         this.employee_name=employee_name;
         this. employee_number = employee_number;
@@ -37,7 +37,7 @@ public class Employee {
         return employee_name;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return employee_number ;
     }
 
@@ -51,7 +51,7 @@ public class Employee {
  public void setStatus(String employee_Status){
         this.employee_Status=employee_Status;
     }
- public void setNumber(int employee_number){
+ public void setNumber(String employee_number){
      this.employee_number=employee_number;
  }
     

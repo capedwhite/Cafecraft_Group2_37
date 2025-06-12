@@ -326,7 +326,4 @@ public class dashboard extends javax.swing.JFrame {
     public void addMenubtnlistener( ActionListener listener){
         Menubtn.addActionListener(listener);
     }
-  
-
-
 }

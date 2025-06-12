@@ -47,7 +47,7 @@ public class Edititemcontroller {
         
            item.setName(userdialoge.getitemField().getText());
             item.setPrice(Double.parseDouble(userdialoge.getpricefield().getText()));
-            item.setCategory(userdialoge.getcategoryfield().getText());
+            item.setCategory((String) userdialoge.getcategoryfield().getSelectedItem());
             
             boolean check=itemdao.updateItems(item);
             if(check){

@@ -27,6 +27,7 @@ public class addemployeecontroller {
         this.addemp=addemp;
         this.workermanage=workermanage;
         addemp.addADDbtnlistener(new addbtnlistener());
+        addemp.addCancelbtnlistener(new cancelbutton());
     }
     class addbtnlistener implements ActionListener{
 
@@ -37,17 +38,16 @@ public class addemployeecontroller {
             String name=addemp.Namefield().getText();
             String Status=addemp.SectorField().getText();
             String numbertext=addemp.numberfield().getText();
-            int number = Integer.parseInt(numbertext);
+            
             if (name.isEmpty() || Status.isEmpty() || numbertext.isEmpty()) {
                 System.out.println("Please fill all fields");
                 return;
             }
-            Employee employee = new Employee(name,Status,number);
+            Employee employee = new Employee(name,Status,numbertext);
             boolean check = edao.InsertEmployee(employee);
             if (check){
                    JOptionPane.showMessageDialog(addemp,"new employee added sucessfully");
                    addemp.dispose();
-                   
                    WorkersPanelController workerpanel = new WorkersPanelController(workermanage);
                    
                 
@@ -64,4 +64,12 @@ public class addemployeecontroller {
          
     }
     }
+    class cancelbutton implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            addemp.dispose();
+        }
+        
+}
 }

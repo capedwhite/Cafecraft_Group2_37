@@ -54,7 +54,7 @@ private final Employee employee;
         add(WorkerID, gridBagConstraints);
 
         Name.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        Name.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Name.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         Name.setText("jLabel3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.ipadx = 130;

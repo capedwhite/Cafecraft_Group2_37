@@ -42,7 +42,7 @@ public class ForgotPassword extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(175, 146, 130));
+        jPanel1.setBackground(new java.awt.Color(111, 99, 99));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1002, 552));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

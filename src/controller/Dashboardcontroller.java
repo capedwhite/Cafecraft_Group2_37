@@ -3,9 +3,13 @@ package controller;
 import dao.Itemdao;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 import view.MenuItems;
+//import view.MenuItems;
 import view.dashboard;
 import view.login;
+import view.useritempanel;
 
 public class Dashboardcontroller {
     private final dashboard userview;
@@ -38,12 +42,10 @@ public class Dashboardcontroller {
         @Override
         public void actionPerformed(ActionEvent e) {
             System.out.println("Menu button clicked");
-
-            MenuItems menuitem = new MenuItems(); // View
-            UserMenucontroller menucontrol=new  UserMenucontroller(itemdao, menuitem); // loads item cards
-            //new MenuitemsController(menuitem);         // wires Reset/Confirm/Receipt
-            
-            menuitem.setVisible(true); // Show UI
+           MenuItems menuitem = new MenuItems(); 
+           List<useritempanel> itempanelList = new ArrayList<>();
+           UserMenucontroller menucontrol = new UserMenucontroller(itemdao,menuitem,itempanelList);            
+        menuitem.setVisible(true); 
         }
     }
 }

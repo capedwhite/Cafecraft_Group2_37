@@ -13,6 +13,7 @@ import model.Employee;
 import view.Workersmanage;
 import view.addemployee;
 import view.WorkerPanelreuse;
+import view.admin_sidebar;
 
 
 /**
@@ -59,7 +60,9 @@ workermanage.Backbtnlistener(new backbtn());
         @Override
         public void actionPerformed(ActionEvent e) {
            workermanage.dispose();
-           
+           admin_sidebar adminsidebar = new admin_sidebar();
+           admindasboardcontroller admincontrol = new admindasboardcontroller(adminsidebar);
+           adminsidebar.setVisible(true);
         }
       
     }

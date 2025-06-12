@@ -52,7 +52,7 @@ public final class ItemController {
             ReusablePanelController Reusecontrol = new ReusablePanelController(card,itemDao,userView);
         }
 
-        menuPanel.revalidate(); // 🪞 Update UI
+        menuPanel.revalidate();
         menuPanel.repaint();
     }
     

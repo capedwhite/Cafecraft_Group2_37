@@ -6,9 +6,10 @@ package view;
 
 
 import javax.swing.ImageIcon;
+import javax.swing.JCheckBox;
 import javax.swing.JLabel;
+import javax.swing.JSpinner;
 import model.Itemmenu;
-
 
 /**
  *
@@ -16,8 +17,6 @@ import model.Itemmenu;
  */
 public class useritempanel extends javax.swing.JPanel {
 private Itemmenu item;
-private javax.swing.JSpinner increaseamount;
-
     /**
      * Creates new form useritempanel
      * @param item
@@ -25,6 +24,7 @@ private javax.swing.JSpinner increaseamount;
     public useritempanel(Itemmenu item) {
         initComponents();
         setSize(196,236);
+        this.item=item;
         
     }
 
@@ -42,7 +42,7 @@ private javax.swing.JSpinner increaseamount;
         jLabel2 = new javax.swing.JLabel();
         priceofitem = new javax.swing.JLabel();
         placeorder = new javax.swing.JCheckBox();
-        increaseamt = new javax.swing.JSpinner();
+        increment = new javax.swing.JSpinner();
         jLabel1 = new javax.swing.JLabel();
 
         itemname.setFont(new java.awt.Font("Bahnschrift", 0, 12)); // NOI18N
@@ -57,7 +57,7 @@ private javax.swing.JSpinner increaseamount;
         placeorder.setFont(new java.awt.Font("Bahnschrift", 0, 12)); // NOI18N
         placeorder.setText("Place Order");
 
-        increaseamt.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
+        increment.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
 
         jLabel1.setFont(new java.awt.Font("Bahnschrift", 0, 12)); // NOI18N
         jLabel1.setText("Amount");
@@ -71,9 +71,9 @@ private javax.swing.JSpinner increaseamount;
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(increaseamt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(increment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -101,7 +101,7 @@ private javax.swing.JSpinner increaseamount;
                     .addComponent(priceofitem))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(increaseamt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(increment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(placeorder)
@@ -112,7 +112,7 @@ private javax.swing.JSpinner increaseamount;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel imagefield;
-    private javax.swing.JSpinner increaseamt;
+    private javax.swing.JSpinner increment;
     private javax.swing.JLabel itemname;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -120,65 +120,33 @@ private javax.swing.JSpinner increaseamount;
     private javax.swing.JLabel priceofitem;
     // End of variables declaration//GEN-END:variables
 
-public JLabel getItemNameLabel() {
+   public JLabel getItemName() {
     return itemname;
 }
-
-public JLabel getactualprice() {
+    public JLabel getactualprice() {
     return priceofitem;
 }
 
-public JLabel putimagelabel(ImageIcon icon) {
+  public JLabel putimagelabel(ImageIcon icon) {
     imagefield.setIcon(icon);
     imagefield.revalidate();
     imagefield.repaint();
-    return null;
+        return null;
+  
 }
-
-public Itemmenu getItem() {
+  public Itemmenu getItem() {
     return item;
 }
-
+  public JCheckBox getplaceorder(){
+      return placeorder;
+  }
 public boolean isSelected() {
-    return placeorder.isSelected(); // ✅ Checkbox
+    return placeorder.isSelected(); 
 }
-
-public void setSelected(boolean selected) {
-    placeorder.setSelected(selected);
+ 
+public JSpinner getQuantity() {
+    return increment;
 }
-
-public int getQuantity() {
-    return (int) increaseamt.getValue(); // ✅ Quantity spinner
-}
-
-public void setQuantity(int quantity) {
-    increaseamt.setValue(quantity);
-}
-
-public String getItemName() {
-    return itemname.getText(); // ✅ Item name label
-}
-
-public void setItemName(String name) {
-    itemname.setText(name);
-}
-
-public double getItemPrice() {
-    String text = priceofitem.getText().replace("Rs", "").trim(); // ✅ Cleaned currency
-    return Double.parseDouble(text);
-}
-
-public void setItemPrice(String priceText) {
-    priceofitem.setText(priceText);
-}
-
-public javax.swing.JCheckBox getCheckbox() {
-    return placeorder;
-}
-
-    public Object getSpinner() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
 
 }

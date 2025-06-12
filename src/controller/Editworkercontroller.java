@@ -36,7 +36,7 @@ public class Editworkercontroller {
                         try{
         
            selectedworker.setName(editemployee.getNamefield().getText());
-            selectedworker.setNumber(Integer.parseInt(editemployee.getnumber().getText()));
+            selectedworker.setNumber(editemployee.getnumber().getText());
             selectedworker.setStatus(editemployee.getsectorfield().getText());
             
             boolean check=employeedao.UpdateItems(selectedworker);

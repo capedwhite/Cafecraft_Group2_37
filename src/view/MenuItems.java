@@ -9,8 +9,10 @@ import java.awt.TextField;
 import java.awt.event.ActionListener;
 import java.util.List;
 import javax.swing.ImageIcon;
+import javax.swing.JComboBox;
 import javax.swing.JPanel;
 import model.Itemmenu;
+import view.useritempanel;
 
 
 
@@ -44,26 +46,15 @@ public class MenuItems extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jTxtDate = new javax.swing.JLabel();
-        jTxtTime = new javax.swing.JLabel();
-        jDate = new javax.swing.JLabel();
+        datetime = new javax.swing.JLabel();
+        time = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         mainmenupanel = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         btnReset = new javax.swing.JButton();
         confirmbutton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jSub1 = new java.awt.TextField();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jTax1 = new java.awt.TextField();
-        jTotal1 = new java.awt.TextField();
-        btnReset4 = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        Filterby = new javax.swing.JLabel();
+        filtercombo = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(1380, 809));
@@ -76,16 +67,11 @@ public class MenuItems extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Menu cafecraft");
 
-        jTxtDate.setBackground(new java.awt.Color(102, 255, 255));
-        jTxtDate.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jTxtDate.setForeground(new java.awt.Color(255, 255, 255));
+        datetime.setBackground(new java.awt.Color(102, 255, 255));
+        datetime.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        datetime.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTxtTime.setBackground(new java.awt.Color(255, 255, 255));
-        jTxtTime.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jTxtTime.setForeground(new java.awt.Color(153, 255, 255));
-
-        jDate.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jDate.setForeground(new java.awt.Color(51, 255, 255));
+        time.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -95,45 +81,34 @@ public class MenuItems extends javax.swing.JFrame {
                 .addContainerGap(455, Short.MAX_VALUE)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTxtTime, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jDate, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTxtDate)
-                .addGap(222, 222, 222))
+                .addComponent(datetime, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(time, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(249, 249, 249))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(datetime, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(time, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jTxtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jDate, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jTxtTime, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(14, 14, 14))))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, 40));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, 50));
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         mainmenupanel.setBackground(new java.awt.Color(111, 99, 99));
-        mainmenupanel.setPreferredSize(new java.awt.Dimension(625, 790));
-        mainmenupanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 20, 20));
+        mainmenupanel.setPreferredSize(new java.awt.Dimension(1020, 790));
+        mainmenupanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 50, 20));
         jScrollPane1.setViewportView(mainmenupanel);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 41, 800, 490));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 41, 1010, 490));
 
         jPanel4.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -151,10 +126,10 @@ public class MenuItems extends javax.swing.JFrame {
         confirmbutton.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
         confirmbutton.setText("Confirm order");
 
-        jLabel1.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
-        jLabel1.setText("filter by");
+        Filterby.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
+        Filterby.setText("filter by");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        filtercombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Baked items", "Cold drinks", "Hot drinks", " " }));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -163,10 +138,10 @@ public class MenuItems extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(confirmbutton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 322, Short.MAX_VALUE)
+                .addComponent(Filterby, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(filtercombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(129, 129, 129)
                 .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(53, 53, 53))
@@ -179,93 +154,17 @@ public class MenuItems extends javax.swing.JFrame {
                     .addComponent(confirmbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel1)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(Filterby)
+                        .addComponent(filtercombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, 800, 60));
-
-        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
-
-        jLabel2.setText("Tax");
-
-        jSub1.setEditable(false);
-        jSub1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jSub1ActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setText("Total");
-
-        jLabel6.setText("SubTotal");
-
-        jTax1.setEditable(false);
-
-        jTotal1.setEditable(false);
-
-        btnReset4.setBackground(new java.awt.Color(102, 255, 51));
-        btnReset4.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
-        btnReset4.setText("Receipt");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(2, 2, 2)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jTax1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
-                                .addComponent(jSub1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jTotal1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addComponent(btnReset4)))
-                .addContainerGap(11, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(23, 23, 23)
-                        .addComponent(jLabel6))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jTax1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jSub1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTotal1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addComponent(btnReset4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
-        );
-
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 390, 180, 200));
-
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane3.setViewportView(jTextArea2);
-
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 40, 180, 340));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, 1000, 60));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jSub1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSub1ActionPerformed
+    private void subtotalfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSub1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jSub1ActionPerformed
 
@@ -309,28 +208,17 @@ public class MenuItems extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Filterby;
     private javax.swing.JButton btnReset;
-    private javax.swing.JButton btnReset4;
     private javax.swing.JButton confirmbutton;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jDate;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel datetime;
+    private javax.swing.JComboBox<String> filtercombo;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane3;
-    private java.awt.TextField jSub1;
-    private java.awt.TextField jTax1;
-    private javax.swing.JTextArea jTextArea2;
-    private java.awt.TextField jTotal1;
-    private javax.swing.JLabel jTxtDate;
-    private javax.swing.JLabel jTxtTime;
     private javax.swing.JPanel mainmenupanel;
+    private javax.swing.JLabel time;
     // End of variables declaration//GEN-END:variables
 
    
@@ -350,10 +238,10 @@ public useritempanel addItemCard(Itemmenu item) {
     card.putimagelabel(new ImageIcon(scaled));
 
     // Name and Price
-    card.getItemNameLabel().setText(item.getName());
+    card.getItemName().setText(item.getName());
     card.getactualprice().setText("Rs " + item.getPrice());
 
-    itemCards.add(card); // ✅ track for controller
+    itemCards.add(card); 
     mainmenupanel.add(card);
     mainmenupanel.revalidate();
     mainmenupanel.repaint();
@@ -362,47 +250,29 @@ public useritempanel addItemCard(Itemmenu item) {
 }
 
 public List<useritempanel> getItemCards() {
-    return itemCards; // ✅ Give controller access to cards
+    return itemCards; // 
 }
-public void addbtnResetListener(java.awt.event.ActionListener listener) {
+public void addbtnResetListener(ActionListener listener) {
     btnReset.addActionListener(listener);
 }
 
-public void addConfirmListener(java.awt.event.ActionListener listener) {
+public void addConfirmListener(ActionListener listener) {
     confirmbutton.addActionListener(listener);
 }
-// ✅ For the JTextArea
-public javax.swing.JTextArea getTxtArea() {
-    return jTextArea2;  // <-- Replace with your actual variable name if different
-}
 
-// ✅ For the Time label
+
 public javax.swing.JLabel getTxtTime() {
-    return jTxtTime; // <-- Replace with your time JLabel variable
+    return time; 
 }
 
-// ✅ For the Date label
+
 public javax.swing.JLabel getTxtDate() {
-    return jDate; // <-- Replace with your date JLabel variable
+    return datetime; 
 }
-
-
-public TextField getTxtSubTotal() {
-    return jSub1;
+public JComboBox<String> getfilterfield(){
+return filtercombo;
+            }
+public void addcombolistener(ActionListener listener){
+    filtercombo.addActionListener(listener);
 }
-
-public TextField getTxtTax() {
-    return jTax1;
-}
-
-public TextField getTxtTotal() {
-    return jTotal1;
-}
-public TextField[] getTextFields() {
-    return new TextField[] { jSub1, jTax1, jTotal1 };
-}
-public javax.swing.JButton getBtnReceipt() {
-    return btnReset4; // Replace with your actual receipt button variable name
-}
-
 }

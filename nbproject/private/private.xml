@@ -3,50 +3,53 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/dao/ForgotPasswordDAO.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/Signupcontroller.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/Useritempanelcontroller.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/MenuItems.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/MenuitemsController.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/useritempanel.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/Dashboardcontroller.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/model/Orderentry.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/model/Itemmenu.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/dashboard.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/editmenu.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/ForgotPasswordController.java</file>
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/login.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/UserMenucontroller.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/Logincontroller.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/reusemenupanel.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/ForgotPassword.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/admindasboardcontroller.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/WorkersPanelController.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/addemployee.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/addemployeecontroller.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/Edititemcontroller.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/admin_sidebar.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/Signup.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/Workersreusecontroller.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/Signupcontroller.java</file>
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/ItemController.java</file>
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/AddItemController.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/editmenu.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/admin_sidebar.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/admindasboardcontroller.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/Edititemcontroller.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/model/Itemmenu.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/ReusablePanelController.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/ForgotPassword.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/Useritempanelcontroller.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/Dashboardcontroller.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/images/redvelvetnew.jpg</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/images/user%20dashboard.pg.jpg</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/aboutcafe.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/images/aboutcafee.jpg</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/database/Database.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/database/Mysqlconnection.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/adddialouge.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/editdialoge.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/Workersmanage.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/ForgotPasswordController.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/Logincontroller.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/dao/logindao.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/WorkerPanelreuse.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/addemployee.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/reusemenupanel.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/model/Employee.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/dao/Employeedao.java</file>
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/dao/Itemdao.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/addemployeecontroller.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/WorkersPanelController.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/MenuItems.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/UserMenucontroller.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/Workersreusecontroller.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/Signup.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/dashboard.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/Editemployee.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/dao/logindao.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/dao/Orderdao.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/dao/Employeedao.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/Sessioncontroller.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/Orderconfirmation.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/ReusablePanelController.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/dao/userdao.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/model/User.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/dao/ForgotPasswordDAO.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/OrderConfirmationcontroller.java</file>
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/Editworkercontroller.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/dao/Connectionprovider.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/useritempanel.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/adddialouge.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/WorkerPanelreuse.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/Workersmanage.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/aboutcafe.java</file>
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/cafecraft_group2_37a/Cafecraft_group2_37A.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/Receiptpage.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/editdialoge.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/model/Employee.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/Editemployee.java</file>
         </group>
     </open-files>
 </project-private>

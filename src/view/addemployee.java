@@ -14,10 +14,13 @@ public class addemployee extends javax.swing.JDialog {
 
     /**
      * Creates new form addemployee
+     * @param parent
+     * @param modal
      */
     public addemployee(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+         setLocationRelativeTo(null); 
     }
 
     /**

@@ -114,5 +114,36 @@ public boolean deleteItemById(Itemmenu item) {
         return false;
     }
 }
+
+public List<Itemmenu> getItemsByCategory(String category) {
+    List<Itemmenu> itemList = new ArrayList<>();
+ Connection conn=mysql.openConnection();
+ String sql = "SELECT * FROM items WHERE category = ?";
+    try {PreparedStatement stmt = conn.prepareStatement(sql);
+        stmt.setString(1, category);
+        ResultSet rs = stmt.executeQuery();
+
+        while (rs.next()) {
+            int id = rs.getInt("id");
+            String name = rs.getString("name");
+            String cat = rs.getString("category");
+            double price = rs.getDouble("price");
+            byte[] imageBytes = rs.getBytes("image_path");
+            itemList.add(new Itemmenu(id,name,price,imageBytes,cat));
+        }
+
+        rs.close();
+        stmt.close();
+        conn.close();
+
+    } 
+    catch (Exception e) {
+        e.printStackTrace();
+    }
+
+    return itemList;
 }
+
+}
+
 

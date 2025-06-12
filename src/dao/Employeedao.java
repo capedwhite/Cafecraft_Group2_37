@@ -30,7 +30,7 @@ public class Employeedao {
           try(PreparedStatement pstmt=conn.prepareStatement(sql)){
 pstmt.setString(1,employee.getName());
 pstmt.setString(2,employee.getstatus());
-pstmt.setInt(3,employee.getNumber());
+pstmt.setString(3,employee.getNumber());
 int affectedrows=pstmt.executeUpdate();
 return    affectedrows != 0;
 }
@@ -53,7 +53,7 @@ mysql.CloseConnection(conn);
                     rs.getInt("id"),
                     rs.getString("employee_name"),
                     rs.getString("employee_Status"),
-                    rs.getInt("employee_number")
+                    rs.getString("employee_number")
                         
                 );
                 employees.add(employee);
@@ -73,7 +73,7 @@ mysql.CloseConnection(conn);
     try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, employee.getName());
             stmt.setString(2, employee.getstatus());
-            stmt.setInt(3, employee.getNumber());
+            stmt.setString(3, employee.getNumber());
             stmt.setInt(4,employee.getId());
 
             int rowsAffected = stmt.executeUpdate();

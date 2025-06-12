@@ -43,4 +43,7 @@ public String getAnswer(){
     return Answer;
 }
 
+public void setID(int ID) {
+     this.id= ID;
+    }
 }

@@ -7,6 +7,7 @@ package view;
 import java.awt.Image;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
+import javax.swing.JComboBox;
 
 
 
@@ -40,35 +41,46 @@ public class adddialouge extends javax.swing.JDialog {
         categorylabel = new javax.swing.JLabel();
         itemfield = new javax.swing.JTextField();
         pricefield = new javax.swing.JTextField();
-        categoryfield = new javax.swing.JTextField();
         chooseimagebutton = new javax.swing.JButton();
         Savebutton = new javax.swing.JButton();
         cancel = new javax.swing.JButton();
         chooseimagepreview = new javax.swing.JLabel();
+        category = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(189, 171, 171));
+        getContentPane().setLayout(null);
 
         itemnamelabel.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
         itemnamelabel.setText("Item name");
+        getContentPane().add(itemnamelabel);
+        itemnamelabel.setBounds(47, 66, 106, 18);
 
         pricelabel.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
         pricelabel.setText("price ");
+        getContentPane().add(pricelabel);
+        pricelabel.setBounds(47, 107, 106, 18);
 
         categorylabel.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
         categorylabel.setText("Category");
+        getContentPane().add(categorylabel);
+        categorylabel.setBounds(47, 151, 106, 18);
 
         itemfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 itemfieldActionPerformed(evt);
             }
         });
+        getContentPane().add(itemfield);
+        itemfield.setBounds(171, 59, 147, 28);
 
         pricefield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pricefieldActionPerformed(evt);
             }
         });
+        getContentPane().add(pricefield);
+        pricefield.setBounds(171, 99, 147, 30);
 
         chooseimagebutton.setBackground(new java.awt.Color(153, 255, 0));
         chooseimagebutton.setFont(new java.awt.Font("Bahnschrift", 1, 12)); // NOI18N
@@ -78,6 +90,8 @@ public class adddialouge extends javax.swing.JDialog {
                 chooseimagebuttonActionPerformed(evt);
             }
         });
+        getContentPane().add(chooseimagebutton);
+        chooseimagebutton.setBounds(210, 204, 108, 22);
 
         Savebutton.setBackground(new java.awt.Color(51, 204, 0));
         Savebutton.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
@@ -88,6 +102,8 @@ public class adddialouge extends javax.swing.JDialog {
                 SavebuttonActionPerformed(evt);
             }
         });
+        getContentPane().add(Savebutton);
+        Savebutton.setBounds(47, 256, 82, 30);
 
         cancel.setBackground(new java.awt.Color(255, 0, 51));
         cancel.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
@@ -98,65 +114,16 @@ public class adddialouge extends javax.swing.JDialog {
                 cancelActionPerformed(evt);
             }
         });
+        getContentPane().add(cancel);
+        cancel.setBounds(229, 256, 100, 30);
 
         chooseimagepreview.setText("choose an image");
+        getContentPane().add(chooseimagepreview);
+        chooseimagepreview.setBounds(76, 187, 98, 51);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Savebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cancel))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(categorylabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(itemnamelabel, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
-                                    .addComponent(pricelabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(categoryfield, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
-                            .addComponent(itemfield)
-                            .addComponent(pricefield, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(chooseimagepreview, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(chooseimagebutton)))
-                .addContainerGap(82, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(itemfield, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(itemnamelabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pricefield, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pricelabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(categorylabel)
-                    .addComponent(categoryfield, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chooseimagepreview, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
-                    .addComponent(chooseimagebutton))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Savebutton)
-                    .addComponent(cancel))
-                .addGap(14, 14, 14))
-        );
+        category.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Baked items", "Cold drinks", "Hot drinks" }));
+        getContentPane().add(category);
+        category.setBounds(170, 140, 150, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -227,7 +194,7 @@ public class adddialouge extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Savebutton;
     private javax.swing.JButton cancel;
-    private javax.swing.JTextField categoryfield;
+    private javax.swing.JComboBox<String> category;
     private javax.swing.JLabel categorylabel;
     private javax.swing.JButton chooseimagebutton;
     private javax.swing.JLabel chooseimagepreview;
@@ -247,8 +214,8 @@ return itemfield;
         public javax.swing.JTextField getpricefield(){
 return pricefield;
 }
-            public javax.swing.JTextField getcategoryfield(){
-return categoryfield;
+            public JComboBox<String> getcategoryfield(){
+return category;
             }
             
  public void addChooseimagelistener(ActionListener listener){
