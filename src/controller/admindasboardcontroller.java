@@ -1,22 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controller;
 
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+<<<<<<< HEAD
 import view.Workersmanage;
 import view.admin_sidebar;
 import view.editmenu;
 import view.login;
+=======
 
-/**
- *
- * @author ASUS
- */
+import view.admin_sidebar;
+import view.editmenu;
+import view.aboutcafe;
+import controller.AboutCafeController;
+>>>>>>> origin/aboutcafe_function
+
 public class admindasboardcontroller {
+<<<<<<< HEAD
     private final admin_sidebar admindashboard;
     public admindasboardcontroller(admin_sidebar admindashboard){
         this.admindashboard=admindashboard;
@@ -26,9 +27,25 @@ public class admindasboardcontroller {
     }
 
    class additemlistener implements ActionListener{
+=======
+>>>>>>> origin/aboutcafe_function
 
+    private final admin_sidebar admindashboard;
+
+    public admindasboardcontroller(admin_sidebar admindashboard) {
+        this.admindashboard = admindashboard;
+
+        System.out.println("Admin Dashboard Loaded");
+
+        admindashboard.addEditmenubtnListener(new additemlistener());
+        admindashboard.addAboutCafeListener(new AboutCafeListener());
+        admindashboard.testCafeButtonWiring();
+    }
+
+    class additemlistener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+<<<<<<< HEAD
            editmenu menuadmin = new editmenu(); 
     menuadmin.setVisible(true);
     admindashboard.dispose();
@@ -60,5 +77,23 @@ public class admindasboardcontroller {
         }
            
        }
+=======
+            editmenu menuadmin = new editmenu();
+            menuadmin.setVisible(true);
+        }
+    }
+    //addeed by prajal 
+    // this below part to call about cafe in adminside 
+
+    class AboutCafeListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            System.out.println("About Cafe button clicked (Admin)");
+            aboutcafe aboutView = new aboutcafe();
+           AboutCafeController aboutcafe =  new AboutCafeController(aboutView);
+            aboutView.setVisible(true);
+        }
+    }
+>>>>>>> origin/aboutcafe_function
 }
 
