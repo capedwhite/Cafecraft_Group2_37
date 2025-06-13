@@ -74,9 +74,8 @@ class AddUserListener implements ActionListener{
                else{
                    Sessioncontroller.setcurrentuser(user.getID());
                    dashboard Dashboard = new dashboard();
-                   Itemdao itemDao = new Itemdao();
                    Dashboard.setVisible(true);
-                   Dashboardcontroller dashboardcontrol = new Dashboardcontroller(Dashboard,itemDao);
+                   Dashboardcontroller dashboardcontrol = new Dashboardcontroller(Dashboard);
                }
     close();
             }

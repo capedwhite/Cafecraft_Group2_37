@@ -21,7 +21,9 @@ public class Workersreusecontroller {
     private final Workersmanage workermanage;
     private final Employeedao employeedao;
     private final WorkerPanelreuse panelreuse;
-    public Workersreusecontroller (Workersmanage workermanage,Employeedao employeedao,WorkerPanelreuse panelreuse){
+    private final WorkersPanelController workerpanelcontroller;
+    public Workersreusecontroller (Workersmanage workermanage,Employeedao employeedao,WorkerPanelreuse panelreuse,WorkersPanelController workerpanelcontroller){
+        this.workerpanelcontroller = workerpanelcontroller;
         this.workermanage=workermanage;
         this.employeedao=employeedao;
         this.panelreuse=panelreuse;
@@ -37,7 +39,7 @@ public class Workersreusecontroller {
             System.out.println("button clicked");
             Editemployee editemployee = new Editemployee();
            
-            Editworkercontroller editworkercontrol = new Editworkercontroller(editemployee,employeedao,workermanage,selectedworker);
+            Editworkercontroller editworkercontrol = new Editworkercontroller(editemployee,employeedao,workermanage,selectedworker,workerpanelcontroller);
              editemployee.setVisible(true);
         }
         
@@ -53,8 +55,8 @@ public class Workersreusecontroller {
              boolean check = employeedao.deleteItemById(selectedItem);
              if(check){
                  JOptionPane.showMessageDialog(panelreuse,"Deleted employee sucessfully");
-                WorkersPanelController workercontroller = new WorkersPanelController(workermanage);
-                workercontroller.loadAllItemsToPanel();
+               
+                workerpanelcontroller.loadAllItemsToPanel();
                  
              }
              else{

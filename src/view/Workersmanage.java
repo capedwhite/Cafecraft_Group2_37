@@ -4,7 +4,9 @@
  */
 package view;
 
+
 import java.awt.event.ActionListener;
+
 import javax.swing.JPanel;
 import model.Employee;
 
@@ -22,6 +24,7 @@ public class Workersmanage extends javax.swing.JFrame {
         this.setSize(1011,618);
         this.setResizable(false);
         setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -80,14 +83,15 @@ public class Workersmanage extends javax.swing.JFrame {
         jLabel5.setText("Actions");
         jPanel1.add(jLabel5);
 
+        jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(1022, 400));
 
         workerpanel.setBackground(new java.awt.Color(111, 99, 99));
-        workerpanel.setPreferredSize(new java.awt.Dimension(1010, 0));
+        workerpanel.setMinimumSize(new java.awt.Dimension(1011, 600));
+        workerpanel.setPreferredSize(new java.awt.Dimension(1010, 800));
         workerpanel.setRequestFocusEnabled(false);
-        java.awt.FlowLayout flowLayout1 = new java.awt.FlowLayout(java.awt.FlowLayout.LEFT);
-        flowLayout1.setAlignOnBaseline(true);
-        workerpanel.setLayout(flowLayout1);
+        workerpanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 10));
         jScrollPane1.setViewportView(workerpanel);
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
@@ -133,7 +137,7 @@ public class Workersmanage extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1017, Short.MAX_VALUE)
-            .addComponent(jScrollPane1)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -224,7 +228,7 @@ public WorkerPanelreuse addEmployeeCard(Employee employee){
     return card;
     
 }
-    
+
 
 }
 

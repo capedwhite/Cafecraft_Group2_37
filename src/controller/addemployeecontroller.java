@@ -21,8 +21,9 @@ public class addemployeecontroller {
     private final Employeedao edao;
     private final addemployee addemp;
     private final Workersmanage workermanage;
-    public addemployeecontroller( Employeedao edao,addemployee addemp,Workersmanage workermanage){
-     
+    private final WorkersPanelController workerpanelcontroller;
+    public addemployeecontroller( Employeedao edao,addemployee addemp,Workersmanage workermanage,WorkersPanelController workerpanelcontroller){
+        this.workerpanelcontroller = workerpanelcontroller;
         this.edao=edao;
         this.addemp=addemp;
         this.workermanage=workermanage;
@@ -48,7 +49,7 @@ public class addemployeecontroller {
             if (check){
                    JOptionPane.showMessageDialog(addemp,"new employee added sucessfully");
                    addemp.dispose();
-                   WorkersPanelController workerpanel = new WorkersPanelController(workermanage);
+                   workerpanelcontroller.loadAllItemsToPanel();
                    
                 
             }

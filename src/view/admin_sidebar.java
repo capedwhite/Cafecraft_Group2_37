@@ -17,8 +17,8 @@ public class admin_sidebar extends javax.swing.JFrame {
      */
     public admin_sidebar() {
         initComponents();
-         this.setResizable(false);
-            setLocationRelativeTo(null);
+ this.setResizable(false);
+            this.setLocationRelativeTo(null);
             this.setSize(1011,618);
             
     }
@@ -37,11 +37,11 @@ public class admin_sidebar extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         editmenubtn = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        Viewfeedbackbtn = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         Manageemployee = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
-        btnAboutCafe = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,6 +53,11 @@ public class admin_sidebar extends javax.swing.JFrame {
         Logoutbtn.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
         Logoutbtn.setForeground(new java.awt.Color(255, 255, 255));
         Logoutbtn.setText("Logout");
+        Logoutbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LogoutbtnActionPerformed(evt);
+            }
+        });
 
         jButton1.setBackground(new java.awt.Color(102, 255, 102));
         jButton1.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
@@ -100,16 +105,16 @@ public class admin_sidebar extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(51, 0, 51));
-        jButton6.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(51, 51, 0));
-        jButton6.setText("view feedback");
-        jButton6.setBorder(null);
-        jButton6.setBorderPainted(false);
-        jButton6.setContentAreaFilled(false);
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        Viewfeedbackbtn.setBackground(new java.awt.Color(51, 0, 51));
+        Viewfeedbackbtn.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
+        Viewfeedbackbtn.setForeground(new java.awt.Color(51, 51, 0));
+        Viewfeedbackbtn.setText("View feedback");
+        Viewfeedbackbtn.setBorder(null);
+        Viewfeedbackbtn.setBorderPainted(false);
+        Viewfeedbackbtn.setContentAreaFilled(false);
+        Viewfeedbackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                ViewfeedbackbtnActionPerformed(evt);
             }
         });
 
@@ -142,7 +147,7 @@ public class admin_sidebar extends javax.swing.JFrame {
         jButton9.setBackground(new java.awt.Color(51, 0, 51));
         jButton9.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         jButton9.setForeground(new java.awt.Color(51, 51, 0));
-        jButton9.setText("view orders");
+        jButton9.setText("View orders");
         jButton9.setBorder(null);
         jButton9.setBorderPainted(false);
         jButton9.setContentAreaFilled(false);
@@ -152,83 +157,79 @@ public class admin_sidebar extends javax.swing.JFrame {
             }
         });
 
-        btnAboutCafe.setBackground(new java.awt.Color(51, 0, 51));
-        btnAboutCafe.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
-        btnAboutCafe.setForeground(new java.awt.Color(51, 51, 0));
-        btnAboutCafe.setText("About Cafe");
-        btnAboutCafe.setBorder(null);
-        btnAboutCafe.setBorderPainted(false);
-        btnAboutCafe.setContentAreaFilled(false);
-        btnAboutCafe.addActionListener(new java.awt.event.ActionListener() {
+        jButton10.setBackground(new java.awt.Color(51, 0, 51));
+        jButton10.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
+        jButton10.setForeground(new java.awt.Color(51, 51, 0));
+        jButton10.setText("Inventory");
+        jButton10.setBorder(null);
+        jButton10.setBorderPainted(false);
+        jButton10.setContentAreaFilled(false);
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAboutCafeActionPerformed(evt);
+                jButton10ActionPerformed(evt);
             }
         });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/width_800.jpeg"))); // NOI18N
         jLabel2.setText("jLabel2");
 
-        jButton11.setBackground(new java.awt.Color(51, 0, 51));
-        jButton11.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
-        jButton11.setForeground(new java.awt.Color(51, 51, 0));
-        jButton11.setText("inventory");
-        jButton11.setBorder(null);
-        jButton11.setBorderPainted(false);
-        jButton11.setContentAreaFilled(false);
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-
-                    .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Logoutbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Manageemployee, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
-                            .addComponent(jButton9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(editmenubtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-
-                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-
-                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(btnAboutCafe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(6, 6, 6)
+                .addComponent(editmenubtn, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(Manageemployee, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(Viewfeedbackbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Logoutbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 810, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(70, 70, 70)
                 .addComponent(editmenubtn, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(Manageemployee, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
+                .addComponent(Viewfeedbackbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51)
                 .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addComponent(Logoutbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addGap(58, 58, 58)
+                .addComponent(Logoutbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(84, 84, 84)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(370, 370, 370)
+                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -242,9 +243,9 @@ public class admin_sidebar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void ViewfeedbackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewfeedbackbtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_ViewfeedbackbtnActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
@@ -258,9 +259,9 @@ public class admin_sidebar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton9ActionPerformed
 
-    private void btnAboutCafeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAboutCafeActionPerformed
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAboutCafeActionPerformed
+    }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
@@ -270,9 +271,9 @@ public class admin_sidebar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_editmenubtnActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void LogoutbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutbtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }//GEN-LAST:event_LogoutbtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -312,33 +313,28 @@ public class admin_sidebar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Logoutbtn;
     private javax.swing.JButton Manageemployee;
+    private javax.swing.JButton Viewfeedbackbtn;
+    private javax.swing.JButton editmenubtn;
     private javax.swing.JButton jButton1;
-
-    private javax.swing.JButton jButton2;
-
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
- public void addAboutCafeListener(ActionListener listener) {
-        btnAboutCafe.addActionListener(listener);
-    }
-
-    // Optional: test if wiring works
-    public void testCafeButtonWiring() {
-        btnAboutCafe.addActionListener(e -> System.out.println("🧪 About Cafe button was clicked (test)"));
-    }
-    public void addEditmenubtnListener(ActionListener listener) {
+public void addADDeditmenulistener(ActionListener listener){
     editmenubtn.addActionListener(listener);
 }
-
 
 public void addADDmanageemployeelistener(ActionListener listener){
     Manageemployee.addActionListener(listener);
 }
+public void Addlogoutlistener(ActionListener listener){
     Logoutbtn.addActionListener(listener);
 }
 
+public void Addfeedbacklistener(ActionListener listener){
+    Viewfeedbackbtn.addActionListener(listener);
+}
+}

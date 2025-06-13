@@ -15,7 +15,6 @@ public class aboutcafe extends javax.swing.JFrame {
     
     public aboutcafe() {
         initComponents();
-           initComponents();
          this.setResizable(false);
             setLocationRelativeTo(null);
   setSize(1011,618);
@@ -31,149 +30,149 @@ public class aboutcafe extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         abtTxt = new javax.swing.JTextArea();
-        jPanel2 = new javax.swing.JPanel();
-        btnsave = new javax.swing.JButton();
-        btnedit = new javax.swing.JButton();
-        btnexit = new javax.swing.JButton();
+        Exitbtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(111, 99, 99));
+        jPanel1.setLayout(null);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/openn.png"))); // NOI18N
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(320, 290, 380, 300);
+
+        jLabel14.setFont(new java.awt.Font("Bahnschrift", 1, 36)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(219, 197, 184));
+        jLabel14.setText("2025");
+        jPanel1.add(jLabel14);
+        jLabel14.setBounds(500, 230, 130, 44);
+
+        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel8.setFont(new java.awt.Font("Bahnschrift", 1, 36)); // NOI18N
+        jLabel8.setText("Cafe ");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(500, 190, 390, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ABoutcafe.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(582, 0, 440, 620);
 
         jLabel2.setBackground(new java.awt.Color(111, 99, 99));
-        jLabel2.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Bahnschrift", 1, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("CafeCraft");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(40, 20, 350, 50);
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Welcome to, ");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(10, 90, 151, 32);
+
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Bahnschrift", 2, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 204, 204));
+        jLabel4.setText(" your cozy corner of comfort and creativity! ");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(10, 140, 386, 23);
+
+        jLabel5.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(233, 202, 187));
+        jLabel5.setText("Cafecraft");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(160, 100, 119, 30);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-star-48.png"))); // NOI18N
+        jLabel6.setText("jLabel6");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(30, 170, 53, 48);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-star-48.png"))); // NOI18N
+        jLabel10.setText("jLabel6");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(80, 170, 53, 48);
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-star-48.png"))); // NOI18N
+        jLabel11.setText("jLabel6");
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(180, 170, 53, 48);
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-star-48.png"))); // NOI18N
+        jLabel12.setText("jLabel6");
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(130, 170, 53, 48);
+
+        jLabel13.setFont(new java.awt.Font("Bahnschrift", 3, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(219, 197, 184));
+        jLabel13.setText("one sip at a time");
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(390, 60, 160, 23);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-kawaii-coffee-96.png"))); // NOI18N
+        jLabel7.setText("jLabel7");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(310, 0, 90, 96);
+
+        abtTxt.setEditable(false);
         abtTxt.setBackground(new java.awt.Color(111, 99, 99));
         abtTxt.setColumns(20);
         abtTxt.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
         abtTxt.setForeground(new java.awt.Color(255, 255, 255));
+        abtTxt.setLineWrap(true);
         abtTxt.setRows(5);
+        abtTxt.setText("We’re more than just a café — we’re a haven\nwhere rich aromas, handcrafted drinks, and\nheartfelt conversations come together.\nWhether you’re here for your daily caffeine \nfix,a sweet treat, or just a quiet space to\nunwind, our welcoming ambiance and\npassionate team are always ready to serve\nyou with a smile. From our freshly brewed\ncoffee to our artisan-inspired menu, every\ndetail is designed to make you feel right at \nhome. So come in, grab a seat, and let the\nflavor and warmth of CaféCraft stir your soul — one sip at a time.\n\n");
         jScrollPane1.setViewportView(abtTxt);
 
-        jPanel2.setBackground(new java.awt.Color(111, 99, 99));
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(10, 230, 417, 260);
 
-        btnsave.setBackground(new java.awt.Color(153, 255, 153));
-        btnsave.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
-        btnsave.setText("save");
-        btnsave.addActionListener(new java.awt.event.ActionListener() {
+        Exitbtn.setBackground(new java.awt.Color(255, 51, 51));
+        Exitbtn.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
+        Exitbtn.setText("Exit");
+        Exitbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnsaveActionPerformed(evt);
+                ExitbtnActionPerformed(evt);
             }
         });
-
-        btnedit.setBackground(new java.awt.Color(255, 255, 51));
-        btnedit.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
-        btnedit.setText("Edit");
-        btnedit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btneditActionPerformed(evt);
-            }
-        });
-
-        btnexit.setBackground(new java.awt.Color(255, 51, 51));
-        btnexit.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
-        btnexit.setText("exit");
-        btnexit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnexitActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(btnsave, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(btnedit, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
-                .addComponent(btnexit, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(91, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(29, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnsave)
-                    .addComponent(btnedit)
-                    .addComponent(btnexit))
-                .addContainerGap())
-        );
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane1)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(169, 169, 169)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 581, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 424, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
+        jPanel1.add(Exitbtn);
+        Exitbtn.setBounds(150, 500, 98, 47);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1028, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btneditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditActionPerformed
+    private void ExitbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitbtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btneditActionPerformed
-
-    private void btnexitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnexitActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnexitActionPerformed
-
-    private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnsaveActionPerformed
+    }//GEN-LAST:event_ExitbtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -211,54 +210,28 @@ public class aboutcafe extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Exitbtn;
     private javax.swing.JTextArea abtTxt;
-    private javax.swing.JButton btnedit;
-    private javax.swing.JButton btnexit;
-    private javax.swing.JButton btnsave;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 
-// ✅ Returns trimmed text from the about section
-public String getAboutText() {
-    return abtTxt.getText().trim();
+public void Exitbtnlistener(ActionListener listener){
+    Exitbtn.addActionListener(listener);
+}
 }
 
-// ✅ Sets the text in the about section
-public void setAboutText(String content) {
-    abtTxt.setText(content);
-}
-
-// ✅ Allows enabling/disabling editing in the text area
-public void setEditable(boolean editable) {
-    abtTxt.setEditable(editable);
-}
-
-// ✅ Adds listener to Save button
-public void addSaveButtonListener(ActionListener listener) {
-    btnsave.addActionListener(listener);
-}
-
-// ✅ Adds listener to Edit button
-public void addEditButtonListener(ActionListener listener) {
-    btnedit.addActionListener(listener);
-}
-
-// ✅ Adds listener to Exit button
-public void addExitButtonListener(ActionListener listener) {
-    btnexit.addActionListener(listener);
-}
-
-// ✅ Hides Edit and Save buttons (used for user view)
-public void hideAdminButtons() {
-    btnedit.setVisible(false);
-    btnsave.setVisible(false);
-}
-
-
-
-
-}

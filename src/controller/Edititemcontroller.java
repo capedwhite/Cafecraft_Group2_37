@@ -30,11 +30,13 @@ public class Edititemcontroller {
     private final Itemdao itemdao;
     private final Itemmenu item;
     private final editmenu userView;
-    public Edititemcontroller(editdialoge userdialoge,Itemdao itemdao,Itemmenu item,editmenu userView){
+     private final ItemController itemcontroller;
+    public Edititemcontroller(editdialoge userdialoge,Itemdao itemdao,Itemmenu item,editmenu userView,ItemController itemcontroller){
         this.userdialoge=userdialoge;
         this.itemdao=itemdao;
         this.item=item;
         this.userView=userView;
+        this.itemcontroller = itemcontroller;
         userdialoge.setFields(item);
         userdialoge.savebuttonlistener(new savebutton());
         userdialoge.addChooseimagelistener(new chooseimage());
@@ -53,8 +55,8 @@ public class Edititemcontroller {
             if(check){
                  JOptionPane.showMessageDialog(userdialoge,"edited item sucessfully");
                  
-                 ItemController itemcontrol = new ItemController(userView);
-                 itemcontrol.loadAllItemsToPanel();
+                 
+                 itemcontroller.loadAllItemsToPanel();
             }
             else{
                 JOptionPane.showMessageDialog(userdialoge,"failed to edit item");

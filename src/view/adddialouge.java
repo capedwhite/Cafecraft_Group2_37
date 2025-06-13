@@ -25,6 +25,8 @@ public class adddialouge extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         setLocationRelativeTo(null);
+        setSize(400,400);
+        setResizable(false);
     }
 
     /**
@@ -91,7 +93,7 @@ public class adddialouge extends javax.swing.JDialog {
             }
         });
         getContentPane().add(chooseimagebutton);
-        chooseimagebutton.setBounds(210, 204, 108, 22);
+        chooseimagebutton.setBounds(210, 204, 120, 22);
 
         Savebutton.setBackground(new java.awt.Color(51, 204, 0));
         Savebutton.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N

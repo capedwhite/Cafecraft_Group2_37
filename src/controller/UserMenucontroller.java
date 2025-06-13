@@ -17,6 +17,7 @@ import model.Itemmenu;
 import model.Orderentry;
 import view.MenuItems;
 import view.Orderconfirmation;
+import view.dashboard;
 import view.useritempanel;
 
 public class UserMenucontroller {
@@ -33,6 +34,7 @@ List<Orderentry> currentOrderList = new ArrayList<>();
         menuitem.addConfirmListener(new confirmlistener());
         menuitem.addbtnResetListener(new resetbtn());
         menuitem.addcombolistener(new combolistener());
+        menuitem.addlistenerbackbtn(new backbtnlistener());
 
         loadUserItems(); // 🔁 Load menu items into UI
 //        MenuitemsController menucontroller =new MenuitemsController(menuitem); 
@@ -142,5 +144,15 @@ List<Orderentry> currentOrderList = new ArrayList<>();
     }
        
         }
-        
+        class backbtnlistener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            menuitem.dispose();
+            dashboard Dashboard = new dashboard();
+            Dashboard.setVisible(true);
+            Dashboardcontroller dashboardcontrol = new Dashboardcontroller(Dashboard);
+        }
+            
+}
 }

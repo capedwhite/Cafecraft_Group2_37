@@ -46,8 +46,6 @@ public class MenuItems extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        datetime = new javax.swing.JLabel();
-        time = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         mainmenupanel = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -55,6 +53,7 @@ public class MenuItems extends javax.swing.JFrame {
         confirmbutton = new javax.swing.JButton();
         Filterby = new javax.swing.JLabel();
         filtercombo = new javax.swing.JComboBox<>();
+        Backbtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(1380, 809));
@@ -63,43 +62,28 @@ public class MenuItems extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel10.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Menu cafecraft");
-
-        datetime.setBackground(new java.awt.Color(102, 255, 255));
-        datetime.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        datetime.setForeground(new java.awt.Color(255, 255, 255));
-
-        time.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(455, Short.MAX_VALUE)
+                .addContainerGap(420, Short.MAX_VALUE)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(datetime, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(time, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(249, 249, 249))
+                .addGap(606, 606, 606))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(datetime, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
-                    .addComponent(time, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(13, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, 50));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, 80));
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
@@ -108,7 +92,7 @@ public class MenuItems extends javax.swing.JFrame {
         mainmenupanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 50, 20));
         jScrollPane1.setViewportView(mainmenupanel);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 41, 1010, 490));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 81, 1010, 450));
 
         jPanel4.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -131,6 +115,10 @@ public class MenuItems extends javax.swing.JFrame {
 
         filtercombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Baked items", "Cold drinks", "Hot drinks", " " }));
 
+        Backbtn.setBackground(new java.awt.Color(102, 255, 51));
+        Backbtn.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
+        Backbtn.setText("Back");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -138,7 +126,9 @@ public class MenuItems extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(confirmbutton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 322, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(Backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 187, Short.MAX_VALUE)
                 .addComponent(Filterby, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(filtercombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -151,7 +141,9 @@ public class MenuItems extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(confirmbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(confirmbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(Filterby)
@@ -208,17 +200,16 @@ public class MenuItems extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Backbtn;
     private javax.swing.JLabel Filterby;
     private javax.swing.JButton btnReset;
     private javax.swing.JButton confirmbutton;
-    private javax.swing.JLabel datetime;
     private javax.swing.JComboBox<String> filtercombo;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel mainmenupanel;
-    private javax.swing.JLabel time;
     // End of variables declaration//GEN-END:variables
 
    
@@ -260,19 +251,13 @@ public void addConfirmListener(ActionListener listener) {
     confirmbutton.addActionListener(listener);
 }
 
-
-public javax.swing.JLabel getTxtTime() {
-    return time; 
-}
-
-
-public javax.swing.JLabel getTxtDate() {
-    return datetime; 
-}
 public JComboBox<String> getfilterfield(){
 return filtercombo;
             }
 public void addcombolistener(ActionListener listener){
     filtercombo.addActionListener(listener);
+}
+public void addlistenerbackbtn(ActionListener listener){
+    Backbtn.addActionListener(listener);
 }
 }

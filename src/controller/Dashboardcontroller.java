@@ -5,7 +5,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
+import view.Feedback;
 import view.MenuItems;
+import view.aboutcafe;
 //import view.MenuItems;
 import view.dashboard;
 import view.login;
@@ -13,15 +15,17 @@ import view.useritempanel;
 
 public class Dashboardcontroller {
     private final dashboard userview;
-    private final Itemdao itemdao;
+    private final Itemdao itemdao = new Itemdao();
 
-    public Dashboardcontroller(dashboard userview, Itemdao itemdao) {
+    public Dashboardcontroller(dashboard userview) {
         this.userview = userview;
-        this.itemdao = itemdao;
+        
 
         // Attach action listeners
         userview.addlogoutlistener(new LogoutListener());
-        userview.addMenubtnlistener(new MenuListener()); // ✅ CORRECT class name
+        userview.addMenubtnlistener(new MenuListener()); 
+        userview.feedbackbtnlistener(new feedbacklistener());
+        userview.addaboutcafelistener(new aboutcafelistener());
     }
 
     // ✅ Handles logout and opens login again
@@ -41,11 +45,35 @@ public class Dashboardcontroller {
     class MenuListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            userview.dispose();
             System.out.println("Menu button clicked");
            MenuItems menuitem = new MenuItems(); 
            List<useritempanel> itempanelList = new ArrayList<>();
            UserMenucontroller menucontrol = new UserMenucontroller(itemdao,menuitem,itempanelList);            
         menuitem.setVisible(true); 
         }
+    }
+    class feedbacklistener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+           userview.dispose();
+           Feedback feedback = new Feedback();
+           feedback.setVisible(true);
+           Feedbackcontroller feedbackcontrol = new Feedbackcontroller(feedback);
+        }
+        
+    }
+    class aboutcafelistener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            userview.dispose();
+            aboutcafe Aboutcafe = new aboutcafe();
+            Aboutcafe.setVisible(true);
+            Aboutcafecontroller aboutcafecontrol = new Aboutcafecontroller(Aboutcafe);
+            
+        }
+        
     }
 }

@@ -49,7 +49,7 @@ public final class ItemController {
         menuPanel.removeAll();
         for (Itemmenu item : itemList) {
            reusemenupanel card = userView.addItemCard(item); 
-            ReusablePanelController Reusecontrol = new ReusablePanelController(card,itemDao,userView);
+            ReusablePanelController Reusecontrol = new ReusablePanelController(card,itemDao,userView,ItemController.this);
         }
 
         menuPanel.revalidate();
@@ -70,7 +70,7 @@ public final class ItemController {
         public void actionPerformed(ActionEvent e) {
            
                adddialouge dialog = new adddialouge(userView,true);
-               AddItemController additemcontrol = new AddItemController(dialog,userView);// your custom dialog to input details   
+               AddItemController additemcontrol = new AddItemController(dialog,userView,ItemController.this);// your custom dialog to input details   
     dialog.setVisible(true);
 
         }

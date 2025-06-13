@@ -39,8 +39,8 @@ public class dashboard extends javax.swing.JFrame {
         Menubtn = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        feedbackbtn = new javax.swing.JButton();
+        Aboutcafe = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         logoutbutton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
@@ -111,27 +111,27 @@ public class dashboard extends javax.swing.JFrame {
         jButton6.setContentAreaFilled(false);
         jButton6.setFocusPainted(false);
 
-        jButton8.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setText("Feedback");
-        jButton8.setBorderPainted(false);
-        jButton8.setContentAreaFilled(false);
-        jButton8.setFocusPainted(false);
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        feedbackbtn.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        feedbackbtn.setForeground(new java.awt.Color(255, 255, 255));
+        feedbackbtn.setText("Feedback");
+        feedbackbtn.setBorderPainted(false);
+        feedbackbtn.setContentAreaFilled(false);
+        feedbackbtn.setFocusPainted(false);
+        feedbackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                feedbackbtnActionPerformed(evt);
             }
         });
 
-        jButton9.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jButton9.setText("About");
-        jButton9.setBorderPainted(false);
-        jButton9.setContentAreaFilled(false);
-        jButton9.setFocusPainted(false);
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        Aboutcafe.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        Aboutcafe.setForeground(new java.awt.Color(255, 255, 255));
+        Aboutcafe.setText("About Cafe");
+        Aboutcafe.setBorderPainted(false);
+        Aboutcafe.setContentAreaFilled(false);
+        Aboutcafe.setFocusPainted(false);
+        Aboutcafe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                AboutcafeActionPerformed(evt);
             }
         });
 
@@ -172,7 +172,7 @@ public class dashboard extends javax.swing.JFrame {
                             .addComponent(jButton3)
                             .addComponent(Menubtn)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton9)
+                        .addComponent(Aboutcafe)
                         .addGap(21, 21, 21)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
@@ -182,7 +182,7 @@ public class dashboard extends javax.swing.JFrame {
                         .addComponent(jButton10)
                         .addGap(42, 42, 42))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton8)
+                        .addComponent(feedbackbtn)
                         .addGap(58, 58, 58))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jButton6)
@@ -202,11 +202,11 @@ public class dashboard extends javax.swing.JFrame {
                 .addGap(42, 42, 42)
                 .addComponent(jButton6)
                 .addGap(27, 27, 27)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(feedbackbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addComponent(jButton10)
                 .addGap(43, 43, 43)
-                .addComponent(jButton9)
+                .addComponent(Aboutcafe)
                 .addGap(27, 27, 27)
                 .addComponent(logoutbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49))
@@ -239,17 +239,17 @@ public class dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void AboutcafeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AboutcafeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_AboutcafeActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void feedbackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feedbackbtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_feedbackbtnActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
@@ -299,15 +299,15 @@ public class dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Aboutcafe;
     private javax.swing.JButton Menubtn;
+    private javax.swing.JButton feedbackbtn;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
@@ -326,4 +326,11 @@ public class dashboard extends javax.swing.JFrame {
     public void addMenubtnlistener( ActionListener listener){
         Menubtn.addActionListener(listener);
     }
+    public void feedbackbtnlistener(ActionListener listener){
+        feedbackbtn.addActionListener(listener);
+}
+    public void addaboutcafelistener(ActionListener listener){
+        Aboutcafe.addActionListener(listener);
+    }
+    
 }

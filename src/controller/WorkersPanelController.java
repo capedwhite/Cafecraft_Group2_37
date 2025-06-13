@@ -35,7 +35,7 @@ workermanage.Backbtnlistener(new backbtn());
         @Override
         public void actionPerformed(ActionEvent e) {
            addemployee addworker = new addemployee(workermanage,true);
-           addemployeecontroller addemployecontrol= new addemployeecontroller(employeedao,addworker,workermanage);
+           addemployeecontroller addemployecontrol= new addemployeecontroller(employeedao,addworker,workermanage,WorkersPanelController.this);
             addworker.setVisible(true);
             
             
@@ -48,7 +48,7 @@ workermanage.Backbtnlistener(new backbtn());
         workerpanel.removeAll();
         for (Employee employee : employees) {
            WorkerPanelreuse card = workermanage.addEmployeeCard(employee);
-           Workersreusecontroller workercontrol = new Workersreusecontroller(workermanage,employeedao,card);
+           Workersreusecontroller workercontrol = new Workersreusecontroller(workermanage,employeedao,card,WorkersPanelController.this);
            
         }
 

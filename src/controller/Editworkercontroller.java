@@ -17,11 +17,13 @@ import view.Workersmanage;
  * @author ASUS
  */
 public class Editworkercontroller {
+        private final WorkersPanelController workerpanelcontroller;
     private final Employee selectedworker;
             private final Employeedao employeedao;
             private final Editemployee editemployee;
             private Workersmanage workermanage;
-            public Editworkercontroller(Editemployee editemployee,Employeedao employeedao,Workersmanage workermanage,Employee selectedworker){
+            public Editworkercontroller(Editemployee editemployee,Employeedao employeedao,Workersmanage workermanage,Employee selectedworker,WorkersPanelController workerpanelcontroller){
+                this.workerpanelcontroller = workerpanelcontroller;
                 this.editemployee = editemployee;
                 this.selectedworker=selectedworker;
                 this.employeedao=employeedao;
@@ -43,8 +45,8 @@ public class Editworkercontroller {
             if(check){
                  JOptionPane.showMessageDialog(editemployee,"edited item sucessfully");
                  
-                 WorkersPanelController workercontroll = new WorkersPanelController(workermanage);
-                 workercontroll.loadAllItemsToPanel();
+               
+                 workerpanelcontroller.loadAllItemsToPanel();
             }
             else{
                 JOptionPane.showMessageDialog(editemployee,"failed to edit item");

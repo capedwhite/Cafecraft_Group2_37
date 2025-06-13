@@ -30,9 +30,11 @@ public class AddItemController {
     private final view.editmenu editMenu;
     private final Itemdao itemdao = new Itemdao();
      private byte[] imageBytes = null; 
-    public AddItemController(adddialouge userdialouge,editmenu editMenu){
+     private final ItemController itemcontroller;
+    public AddItemController(adddialouge userdialouge,editmenu editMenu,ItemController itemcontroller){
         this.userdialouge=userdialouge;
         this.editMenu=editMenu;
+        this.itemcontroller = itemcontroller;
         userdialouge.addSaveitembuttonlistener(new savebuttonlistener());
         userdialouge.addChooseimagelistener(new chooseimagelistener());
     }
@@ -55,8 +57,8 @@ public class AddItemController {
                 boolean check = itemdao.Insertitem(item);
                 if(check){
                 JOptionPane.showMessageDialog(userdialouge,"menu item added sucessfully");
-                ItemController itemcontrol = new ItemController(editMenu);
-                itemcontrol.loadAllItemsToPanel();
+                
+                itemcontroller.loadAllItemsToPanel();
             }  
                 else{
                     JOptionPane.showMessageDialog(userdialouge,"failed to add item");

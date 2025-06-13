@@ -22,12 +22,14 @@ public class ReusablePanelController {
     private final reusemenupanel userreuse;
     private final Itemdao itemdao;
     private final editmenu userView;
+    private final ItemController itemcontroller;
     
     
-    public ReusablePanelController(reusemenupanel userreuse,Itemdao itemdao,editmenu userView){
+    public ReusablePanelController(reusemenupanel userreuse,Itemdao itemdao,editmenu userView,ItemController itemcontroller){
         this.userreuse = userreuse;
         this.itemdao=itemdao;
         this.userView= userView;
+        this.itemcontroller = itemcontroller;
         userreuse.addADDeditblistener(new EditListener());
         userreuse.addADDdeletelistener(new Deletelistener());
         
@@ -43,7 +45,7 @@ public class ReusablePanelController {
             System.out.println("button clicked");
             Itemmenu selectedItem = userreuse.getItem();
             editdialoge editpanel = new editdialoge();
-            Edititemcontroller editController = new Edititemcontroller(editpanel,itemdao, selectedItem,userView);
+            Edititemcontroller editController = new Edititemcontroller(editpanel,itemdao, selectedItem,userView,itemcontroller);
             editpanel.setVisible(true);
         }
         
