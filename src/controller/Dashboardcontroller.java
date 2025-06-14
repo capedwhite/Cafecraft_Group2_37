@@ -27,6 +27,7 @@ public class Dashboardcontroller {
         userview.addMenubtnlistener(new MenuListener()); 
         userview.feedbackbtnlistener(new feedbacklistener());
         userview.addaboutcafelistener(new aboutcafelistener());
+        userview.addReservationBtnListener(new ReservationListener());
     }
 
     // ✅ Handles logout and opens login again
@@ -77,4 +78,12 @@ public class Dashboardcontroller {
         }
         
     }
+    class ReservationListener implements ActionListener {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        System.out.println("Reservation button clicked");
+        reservation reserveView = new reservation();
+        ReservationController rc = new ReservationController(reserveView);
+        reserveView.setVisible(true);
+    }}
 }

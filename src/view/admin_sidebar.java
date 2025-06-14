@@ -183,7 +183,7 @@ public class admin_sidebar extends javax.swing.JFrame {
                 .addComponent(editmenubtn, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnreservation, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addComponent(Manageemployee, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -212,7 +212,7 @@ public class admin_sidebar extends javax.swing.JFrame {
                 .addGap(70, 70, 70)
                 .addComponent(editmenubtn, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnreservation, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
                 .addComponent(Manageemployee, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
@@ -314,6 +314,7 @@ public class admin_sidebar extends javax.swing.JFrame {
     private javax.swing.JButton Logoutbtn;
     private javax.swing.JButton Manageemployee;
     private javax.swing.JButton Viewfeedbackbtn;
+    private javax.swing.JButton btnreservation;
     private javax.swing.JButton editmenubtn;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
@@ -335,5 +336,8 @@ public void Addlogoutlistener(ActionListener listener){
 
 public void Addfeedbacklistener(ActionListener listener){
     Viewfeedbackbtn.addActionListener(listener);
+}
+public void addReservationAdminListener(ActionListener listener) {
+    btnreservation.addActionListener(listener);
 }
 }

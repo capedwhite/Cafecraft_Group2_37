@@ -22,9 +22,10 @@ public class admindasboardcontroller {
         this.admindashboard = admindashboard;
 
         admindashboard.addADDeditmenulistener(new additemlistener());
-        admindashboard.addADDmanageemployeelistener(new manageemployee());
+        admindashboard.addADDmanageemployeelistener(new manageeemployee());
         admindashboard.Addlogoutlistener(new logoutbtn());
         admindashboard.Addfeedbacklistener(new feedbacklistener());
+        admindashboard.addReservationAdminListener(new openReservationAdmin());
     }
 
     class additemlistener implements ActionListener {
@@ -36,7 +37,7 @@ public class admindasboardcontroller {
             ItemController menucontrol = new ItemController(menuadmin);
         }
     }
-
+    class manageeemployee implements ActionListener{
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("button clicked");
@@ -73,4 +74,13 @@ public class admindasboardcontroller {
         }
            
        }
+        class openReservationAdmin implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            reservationadmin adminView = new reservationadmin(); // JFrame with table
+            ReservationAdminController rc = new ReservationAdminController(adminView); // controller binds it
+            adminView.setVisible(true);
+            admindashboard.dispose();
+        }
+    }
 }

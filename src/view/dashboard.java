@@ -5,12 +5,15 @@
 package view;
 
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
 
 /**
  *
  * @author NITRO
  */
 public class dashboard extends javax.swing.JFrame {
+
+    private JButton btnReservation;
 
     /**
      * Creates new form dashboard
@@ -331,5 +334,8 @@ public class dashboard extends javax.swing.JFrame {
     public void addaboutcafelistener(ActionListener listener){
         Aboutcafe.addActionListener(listener);
     }
+        public void addReservationBtnListener(ActionListener listener) {
+    btnReservation.addActionListener(listener);
+}
     
 }

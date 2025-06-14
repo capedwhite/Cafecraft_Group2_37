@@ -39,6 +39,7 @@ public class reservationadmin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        tblereservation.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         tblereservation.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
