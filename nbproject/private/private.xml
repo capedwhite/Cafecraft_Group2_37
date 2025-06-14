@@ -51,17 +51,15 @@
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/model/Employee.java</file>
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/Editemployee.java</file>
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/Feedback.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/build/built-jar.properties</file>
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/nbproject/build-impl.xml</file>
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/dao/Connectionprovider.java</file>
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/Feedbackcontroller.java</file>
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/model/Feedbackmodel.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/model/AboutCafe.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/dao/Feedbackdao.java</file>
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/Viewfeedbackadmin.java</file>
-            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/images/redvelvetnew.jpg</file>
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/view/Feedbackreusepanel.java</file>
             <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/images/aboutcafee.jpg</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/ViewFeedbackcontroller.java</file>
+            <file>file:/C:/Users/ASUS/OneDrive/Documents/NetBeansProjects/Cafecraft_group2_37A/src/controller/Aboutcafecontroller.java</file>
         </group>
     </open-files>
 </project-private>
