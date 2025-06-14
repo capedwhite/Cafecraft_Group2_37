@@ -34,7 +34,7 @@ public class admin_sidebar extends javax.swing.JFrame {
 
         Logoutbtn = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnreservation = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         editmenubtn = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
@@ -63,15 +63,15 @@ public class admin_sidebar extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(51, 0, 51));
-        jButton3.setText("View Reservations");
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.setContentAreaFilled(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnreservation.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
+        btnreservation.setForeground(new java.awt.Color(51, 0, 51));
+        btnreservation.setText("View Reservations");
+        btnreservation.setBorder(null);
+        btnreservation.setBorderPainted(false);
+        btnreservation.setContentAreaFilled(false);
+        btnreservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnreservationActionPerformed(evt);
             }
         });
 
@@ -186,7 +186,7 @@ public class admin_sidebar extends javax.swing.JFrame {
                             .addComponent(jButton9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(editmenubtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(btnreservation, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 805, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -199,7 +199,7 @@ public class admin_sidebar extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(editmenubtn, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnreservation, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Manageemployee, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
@@ -222,9 +222,9 @@ public class admin_sidebar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnreservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreservationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnreservationActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
@@ -292,10 +292,10 @@ public class admin_sidebar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Logoutbtn;
     private javax.swing.JButton Manageemployee;
+    private javax.swing.JButton btnreservation;
     private javax.swing.JButton editmenubtn;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
@@ -311,5 +311,11 @@ public void addADDmanageemployeelistener(ActionListener listener){
 }
 public void Addlogoutlistener(ActionListener listener){
     Logoutbtn.addActionListener(listener);
+}
+
+
+
+public void addReservationAdminListener(ActionListener listener) {
+    btnreservation.addActionListener(listener);
 }
 }

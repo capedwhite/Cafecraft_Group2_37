@@ -9,6 +9,7 @@ import view.MenuItems;
 //import view.MenuItems;
 import view.dashboard;
 import view.login;
+import view.reservation;
 import view.useritempanel;
 
 public class Dashboardcontroller {
@@ -22,6 +23,7 @@ public class Dashboardcontroller {
         // Attach action listeners
         userview.addlogoutlistener(new LogoutListener());
         userview.addMenubtnlistener(new MenuListener()); // ✅ CORRECT class name
+           userview.addReservationBtnListener(new ReservationListener()); // ✅ change made by prajal
     }
 
     // ✅ Handles logout and opens login again
@@ -48,4 +50,13 @@ public class Dashboardcontroller {
         menuitem.setVisible(true); 
         }
     }
+    // ✅ change made by prajal - open reservation form
+class ReservationListener implements ActionListener {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        System.out.println("Reservation button clicked");
+        reservation reserveView = new reservation();
+        ReservationController rc = new ReservationController(reserveView);
+        reserveView.setVisible(true);
+    }}
 }
