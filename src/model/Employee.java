@@ -47,7 +47,7 @@ public class Employee {
     public void setName(String employee_name){
         this.employee_name=employee_name;
     }
-    
+     
  public void setStatus(String employee_Status){
         this.employee_Status=employee_Status;
     }

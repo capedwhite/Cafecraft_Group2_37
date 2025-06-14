@@ -34,7 +34,7 @@ public class admin_sidebar extends javax.swing.JFrame {
 
         Logoutbtn = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnreservation = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         editmenubtn = new javax.swing.JButton();
         Viewfeedbackbtn = new javax.swing.JButton();
@@ -68,15 +68,15 @@ public class admin_sidebar extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(51, 0, 51));
-        jButton3.setText("View Reservations");
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.setContentAreaFilled(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnreservation.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
+        btnreservation.setForeground(new java.awt.Color(51, 0, 51));
+        btnreservation.setText("View Reservations");
+        btnreservation.setBorder(null);
+        btnreservation.setBorderPainted(false);
+        btnreservation.setContentAreaFilled(false);
+        btnreservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnreservationActionPerformed(evt);
             }
         });
 
@@ -239,9 +239,9 @@ public class admin_sidebar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnreservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreservationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnreservationActionPerformed
 
     private void ViewfeedbackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewfeedbackbtnActionPerformed
         // TODO add your handling code here:
@@ -317,7 +317,6 @@ public class admin_sidebar extends javax.swing.JFrame {
     private javax.swing.JButton editmenubtn;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton9;

@@ -37,7 +37,7 @@ public class dashboard extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         Menubtn = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnReservation = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         feedbackbtn = new javax.swing.JButton();
         Aboutcafe = new javax.swing.JButton();
@@ -92,15 +92,15 @@ public class dashboard extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Reservation");
-        jButton5.setBorderPainted(false);
-        jButton5.setContentAreaFilled(false);
-        jButton5.setFocusPainted(false);
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btnReservation.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        btnReservation.setForeground(new java.awt.Color(255, 255, 255));
+        btnReservation.setText("Reservation");
+        btnReservation.setBorderPainted(false);
+        btnReservation.setContentAreaFilled(false);
+        btnReservation.setFocusPainted(false);
+        btnReservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btnReservationActionPerformed(evt);
             }
         });
 
@@ -165,7 +165,7 @@ public class dashboard extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton5)
+                    .addComponent(btnReservation)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -198,7 +198,7 @@ public class dashboard extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addComponent(Menubtn)
                 .addGap(36, 36, 36)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
                 .addComponent(jButton6)
                 .addGap(27, 27, 27)
@@ -243,9 +243,9 @@ public class dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_AboutcafeActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btnReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReservationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_btnReservationActionPerformed
 
     private void feedbackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feedbackbtnActionPerformed
         // TODO add your handling code here:
@@ -305,7 +305,6 @@ public class dashboard extends javax.swing.JFrame {
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
