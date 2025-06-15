@@ -4,7 +4,9 @@
  */
 package cafecraft_group2_37a;
 import controller.Logincontroller;
-import database.*;
+import Database.Database;
+import Database.Mysqlconnection;
+
 import view.*;
 
  /*

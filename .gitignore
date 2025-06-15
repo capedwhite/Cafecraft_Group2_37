@@ -2,3 +2,4 @@
 database/
 /nbproject/private/
 /dist/
+!/src/database/

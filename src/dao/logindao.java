@@ -8,7 +8,7 @@
  * @author user
  */
 package dao;
-import database.Mysqlconnection;
+import Database.Mysqlconnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
