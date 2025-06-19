@@ -30,7 +30,6 @@ public final class ItemController {
         this.userView = userView;
         
         userView.addAddItemListener(new AddItemListener());
-        userView.addAddresetitemListener(new resetlistener());
         userView.addAddexitbtnlistener(new Exitlistener());
         loadAllItemsToPanel();
         
@@ -66,25 +65,7 @@ public final class ItemController {
         }
         
     }
-    class resetlistener implements ActionListener{
 
-        @Override
-        public void actionPerformed(ActionEvent e) {
-             int confirm = JOptionPane.showConfirmDialog(null, "Are you sure you want to reset the menu?", "Confirm Reset", JOptionPane.YES_NO_OPTION);
-    if (confirm == JOptionPane.YES_OPTION) {
-        boolean deleted = new Itemdao().deleteAllItems();
-        if (deleted) {
-            userView.removeAll();
-           userView.revalidate();
-            userView.repaint();
-            JOptionPane.showMessageDialog(null, "Menu has been reset!");
-        } else {
-            JOptionPane.showMessageDialog(null, "Failed to reset menu.");
-        }
-    }
-        }
-        
-    }
     class Exitlistener implements ActionListener{
 
         @Override

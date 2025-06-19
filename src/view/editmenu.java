@@ -44,7 +44,6 @@ public final class editmenu extends javax.swing.JFrame {
         buttonpanel = new javax.swing.JPanel();
         Addbutton = new javax.swing.JButton();
         exitbutton = new javax.swing.JButton();
-        resetbtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         menupanel = new javax.swing.JPanel();
 
@@ -104,17 +103,6 @@ public final class editmenu extends javax.swing.JFrame {
             }
         });
 
-        resetbtn.setBackground(new java.awt.Color(255, 0, 51));
-        resetbtn.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        resetbtn.setForeground(new java.awt.Color(255, 255, 255));
-        resetbtn.setText("Reset");
-        resetbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        resetbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resetbtnActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout buttonpanelLayout = new javax.swing.GroupLayout(buttonpanel);
         buttonpanel.setLayout(buttonpanelLayout);
         buttonpanelLayout.setHorizontalGroup(
@@ -123,8 +111,6 @@ public final class editmenu extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addComponent(Addbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(resetbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
                 .addComponent(exitbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(59, 59, 59))
         );
@@ -136,9 +122,7 @@ public final class editmenu extends javax.swing.JFrame {
                     .addGroup(buttonpanelLayout.createSequentialGroup()
                         .addComponent(Addbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(1, 1, 1))
-                    .addGroup(buttonpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(exitbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(resetbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(exitbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
@@ -184,10 +168,6 @@ public final class editmenu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_exitbuttonActionPerformed
 
-    private void resetbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetbtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_resetbtnActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -232,7 +212,6 @@ public final class editmenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel menupanel;
-    private javax.swing.JButton resetbtn;
     private javax.swing.JPanel titlepanel;
     // End of variables declaration//GEN-END:variables
 
@@ -264,9 +243,7 @@ card. getactualprice().setText("Rs " + item.getPrice());
 Addbutton.addActionListener(listener);
     }
 
-        public void addAddresetitemListener(ActionListener listener){
-resetbtn.addActionListener(listener);
-    }
+
         public void addAddexitbtnlistener(ActionListener listener){
             exitbutton.addActionListener(listener);
         }

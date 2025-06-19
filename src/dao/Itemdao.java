@@ -64,20 +64,7 @@ mysql.CloseConnection(conn);
 }
         return items;
     }
-public boolean deleteAllItems() {
-    String sql = "DELETE FROM items";  // or your actual table name
-    Connection conn=mysql.openConnection();
-    try (PreparedStatement stmt = conn.prepareStatement(sql)) {
-        int rows = stmt.executeUpdate();
-        return rows > 0;
-    } catch (Exception ex) {
-        Logger.getLogger(Itemdao.class.getName()).log(Level.SEVERE,null,ex);
-        return false;
-    }
-              finally{
-mysql.CloseConnection(conn);
-}
-}
+
       
 public boolean updateItems(Itemmenu item){
     Connection conn=mysql.openConnection();
