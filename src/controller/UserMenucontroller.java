@@ -60,6 +60,8 @@ List<Orderentry> currentOrderList = new ArrayList<>();
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            double totalPrice = 0;
+                
             int userID = Sessioncontroller.getcurrentuser();
             System.out.println("DEBUG - Logged-in user ID: " + userID);
           try {
@@ -78,16 +80,22 @@ List<Orderentry> currentOrderList = new ArrayList<>();
 
                     Orderentry order = new Orderentry(item.getName(), item.getPrice(), quantity, item.getId());
                     currentOrderList.add(order);
-                    double totalPrice = 0;
+                
+                  
                   totalPrice += order.getUnitPrice() * order.getQty() ;
-                    boolean check = orderdao.Insertorderdetails(order, userID,totalPrice);
-
+                }
+            }
+                
+              
+                  boolean check = orderdao.Insertorderdetails(currentOrderList, userID, totalPrice);
+                
                     if (!check) {
                         Sucess=false;
                         JOptionPane.showMessageDialog(menuitem, "failed to insert item");
                     }
-                }
-            }
+                
+        
+            
 
             if (!hasSelection) {
          JOptionPane.showMessageDialog(menuitem, "You have to select at least one item first!");
@@ -99,7 +107,8 @@ List<Orderentry> currentOrderList = new ArrayList<>();
                 orderconfirmation.setVisible(true);
 
         } 
-          }catch (Exception ex) {
+          }
+          catch (Exception ex) {
             Logger.getLogger(AddItemController.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(menuitem, "An error occurred while placing the order.");
         }
@@ -124,7 +133,7 @@ List<Orderentry> currentOrderList = new ArrayList<>();
         public void actionPerformed(ActionEvent e) {
              String selectedCategory = (String) menuitem.getfilterfield().getSelectedItem();
          JPanel menuPanel = menuitem.getMenupanel();
-        // Fetch filtered items from DB
+       
         List<Itemmenu> filteredItems;
         if (selectedCategory.equals("All")) {
             filteredItems = itemdao.getAllMenuItems();

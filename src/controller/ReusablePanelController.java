@@ -62,8 +62,8 @@ public class ReusablePanelController {
              boolean check = itemdao.deleteItemById(selectedItem);
              if(check){
                  JOptionPane.showMessageDialog(userView,"Deleted item sucessfully");
-                ItemController itemcontrol = new ItemController(userView);
-                itemcontrol.loadAllItemsToPanel();
+                
+                itemcontroller.loadAllItemsToPanel();
                  
              }
              else{

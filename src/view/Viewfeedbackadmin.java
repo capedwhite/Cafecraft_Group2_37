@@ -90,9 +90,11 @@ public class Viewfeedbackadmin extends javax.swing.JFrame {
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(1009, 1000));
 
         Feedbacklist.setBackground(new java.awt.Color(111, 99, 99));
-        Feedbacklist.setPreferredSize(new java.awt.Dimension(1009, 800));
+        Feedbacklist.setMaximumSize(new java.awt.Dimension(32600, 32600));
+        Feedbacklist.setPreferredSize(new java.awt.Dimension(1009, 2000));
         Feedbacklist.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 7));
         jScrollPane1.setViewportView(Feedbacklist);
 
@@ -114,7 +116,7 @@ public class Viewfeedbackadmin extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 447, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 447, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())

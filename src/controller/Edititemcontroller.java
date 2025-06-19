@@ -55,7 +55,7 @@ public class Edititemcontroller {
             if(check){
                  JOptionPane.showMessageDialog(userdialoge,"edited item sucessfully");
                  
-                 
+                 userdialoge.dispose();
                  itemcontroller.loadAllItemsToPanel();
             }
             else{

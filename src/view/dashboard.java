@@ -5,15 +5,12 @@
 package view;
 
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
 
 /**
  *
  * @author NITRO
  */
 public class dashboard extends javax.swing.JFrame {
-
-    private JButton btnReservation;
 
     /**
      * Creates new form dashboard
@@ -44,7 +41,7 @@ public class dashboard extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         feedbackbtn = new javax.swing.JButton();
         Aboutcafe = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        Orderhistory = new javax.swing.JButton();
         logoutbutton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -138,15 +135,15 @@ public class dashboard extends javax.swing.JFrame {
             }
         });
 
-        jButton10.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        jButton10.setForeground(new java.awt.Color(255, 255, 255));
-        jButton10.setText("Order history");
-        jButton10.setBorderPainted(false);
-        jButton10.setContentAreaFilled(false);
-        jButton10.setFocusPainted(false);
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        Orderhistory.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        Orderhistory.setForeground(new java.awt.Color(255, 255, 255));
+        Orderhistory.setText("Order history");
+        Orderhistory.setBorderPainted(false);
+        Orderhistory.setContentAreaFilled(false);
+        Orderhistory.setFocusPainted(false);
+        Orderhistory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                OrderhistoryActionPerformed(evt);
             }
         });
 
@@ -182,7 +179,7 @@ public class dashboard extends javax.swing.JFrame {
                 .addContainerGap(28, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton10)
+                        .addComponent(Orderhistory)
                         .addGap(42, 42, 42))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(feedbackbtn)
@@ -207,7 +204,7 @@ public class dashboard extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addComponent(feedbackbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
-                .addComponent(jButton10)
+                .addComponent(Orderhistory)
                 .addGap(43, 43, 43)
                 .addComponent(Aboutcafe)
                 .addGap(27, 27, 27)
@@ -254,9 +251,9 @@ public class dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_feedbackbtnActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void OrderhistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderhistoryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_OrderhistoryActionPerformed
 
     private void logoutbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutbuttonActionPerformed
         // TODO add your handling code here:
@@ -304,8 +301,9 @@ public class dashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Aboutcafe;
     private javax.swing.JButton Menubtn;
+    private javax.swing.JButton Orderhistory;
+    private javax.swing.JButton btnReservation;
     private javax.swing.JButton feedbackbtn;
-    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton6;
@@ -337,5 +335,7 @@ public class dashboard extends javax.swing.JFrame {
         public void addReservationBtnListener(ActionListener listener) {
     btnReservation.addActionListener(listener);
 }
-    
+    public void addOrderhistorylistener(ActionListener listener){
+        Orderhistory.addActionListener(listener);
+    }
 }

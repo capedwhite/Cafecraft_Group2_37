@@ -59,7 +59,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="titlepanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="438" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" pref="438" max="32767" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
               <Component id="buttonpanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -237,13 +237,13 @@
               <Dimension value="[120, 3400]"/>
             </Property>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[1090, 790]"/>
+              <Dimension value="[1090, 1070]"/>
             </Property>
           </Properties>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout">
             <Property name="alignment" type="int" value="3"/>
-            <Property name="horizontalGap" type="int" value="20"/>
+            <Property name="horizontalGap" type="int" value="15"/>
             <Property name="verticalGap" type="int" value="20"/>
           </Layout>
         </Container>

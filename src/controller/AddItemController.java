@@ -37,6 +37,7 @@ public class AddItemController {
         this.itemcontroller = itemcontroller;
         userdialouge.addSaveitembuttonlistener(new savebuttonlistener());
         userdialouge.addChooseimagelistener(new chooseimagelistener());
+        userdialouge.addcancelbuttonlistener(new cancellistener());
     }
     class savebuttonlistener implements ActionListener{
 
@@ -57,10 +58,11 @@ public class AddItemController {
                 boolean check = itemdao.Insertitem(item);
                 if(check){
                 JOptionPane.showMessageDialog(userdialouge,"menu item added sucessfully");
-                
+                userdialouge.dispose();
                 itemcontroller.loadAllItemsToPanel();
             }  
                 else{
+                    userdialouge.dispose();
                     JOptionPane.showMessageDialog(userdialouge,"failed to add item");
                 }
     }
@@ -99,6 +101,14 @@ class chooseimagelistener implements ActionListener{
             }
 }
   }
+class cancellistener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+           userdialouge.dispose();
+        }
+        
     }
+}
   
     

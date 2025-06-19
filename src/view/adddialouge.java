@@ -220,6 +220,9 @@ return pricefield;
 return category;
             }
             
+               public void addcancelbuttonlistener(ActionListener listener){
+        cancel.addActionListener(listener);
+    }
  public void addChooseimagelistener(ActionListener listener){
         chooseimagebutton.addActionListener(listener);
     }

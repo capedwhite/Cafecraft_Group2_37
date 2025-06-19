@@ -43,7 +43,7 @@ mysql.CloseConnection(conn);
        public List<Itemmenu> getAllMenuItems() {
              Connection conn=mysql.openConnection();
         List<Itemmenu> items = new ArrayList<>();
-        String sql = "SELECT id, name, price, image_path, Category FROM items";
+        String sql = "SELECT id, name, price, image_path, Category FROM items where is_active= 1";
         try (PreparedStatement pstmt = conn.prepareStatement(sql);
              ResultSet rs = pstmt.executeQuery()) {
             while(rs.next()) {
@@ -101,7 +101,7 @@ mysql.CloseConnection(conn);
 }
 }
 public boolean deleteItemById(Itemmenu item) {
-    String sql = "DELETE FROM items WHERE id = ?";
+    String sql = "UPDATE items SET is_active = 0 WHERE id = ?";
     Connection conn=mysql.openConnection();
          try(PreparedStatement stmt = conn.prepareStatement(sql)) {
 

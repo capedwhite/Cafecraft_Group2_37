@@ -40,7 +40,7 @@ public class admin_sidebar extends javax.swing.JFrame {
         Viewfeedbackbtn = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         Manageemployee = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        Vieworders = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
@@ -144,16 +144,16 @@ public class admin_sidebar extends javax.swing.JFrame {
             }
         });
 
-        jButton9.setBackground(new java.awt.Color(51, 0, 51));
-        jButton9.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(51, 51, 0));
-        jButton9.setText("View orders");
-        jButton9.setBorder(null);
-        jButton9.setBorderPainted(false);
-        jButton9.setContentAreaFilled(false);
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        Vieworders.setBackground(new java.awt.Color(51, 0, 51));
+        Vieworders.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
+        Vieworders.setForeground(new java.awt.Color(51, 51, 0));
+        Vieworders.setText("View orders");
+        Vieworders.setBorder(null);
+        Vieworders.setBorderPainted(false);
+        Vieworders.setContentAreaFilled(false);
+        Vieworders.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                ViewordersActionPerformed(evt);
             }
         });
 
@@ -200,7 +200,7 @@ public class admin_sidebar extends javax.swing.JFrame {
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(Vieworders, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(180, 180, 180)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 810, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -228,7 +228,7 @@ public class admin_sidebar extends javax.swing.JFrame {
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(370, 370, 370)
-                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(Vieworders, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
@@ -255,9 +255,9 @@ public class admin_sidebar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ManageemployeeActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void ViewordersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewordersActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_ViewordersActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
@@ -314,13 +314,13 @@ public class admin_sidebar extends javax.swing.JFrame {
     private javax.swing.JButton Logoutbtn;
     private javax.swing.JButton Manageemployee;
     private javax.swing.JButton Viewfeedbackbtn;
+    private javax.swing.JButton Vieworders;
     private javax.swing.JButton btnreservation;
     private javax.swing.JButton editmenubtn;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 public void addADDeditmenulistener(ActionListener listener){
@@ -339,5 +339,8 @@ public void Addfeedbacklistener(ActionListener listener){
 }
 public void addReservationAdminListener(ActionListener listener) {
     btnreservation.addActionListener(listener);
+}
+public void addviewordersListener(ActionListener listener) {
+    Vieworders.addActionListener(listener);
 }
 }

@@ -9,6 +9,7 @@ import view.editmenu;
 import view.login;
 import view.reservationadmin;                      // ✅ added by Prajal
 import controller.ReservationAdminController;     // ✅ added by Prajal
+import view.Vieworders;
 
 /**
  *
@@ -26,6 +27,7 @@ public class admindasboardcontroller {
         admindashboard.Addlogoutlistener(new logoutbtn());
         admindashboard.Addfeedbacklistener(new feedbacklistener());
         admindashboard.addReservationAdminListener(new openReservationAdmin());
+        admindashboard.addviewordersListener(new vieworder());
     }
 
     class additemlistener implements ActionListener {
@@ -83,4 +85,16 @@ public class admindasboardcontroller {
             admindashboard.dispose();
         }
     }
+        class vieworder implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+           admindashboard.dispose();
+           Vieworders vieworder = new Vieworders();
+           vieworder.setVisible(true);
+           Viewordercontroller viewcontrol = new Viewordercontroller(vieworder);
+           
+        }
+            
+        }
 }

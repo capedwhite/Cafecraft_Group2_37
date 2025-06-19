@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import view.Feedback;
 import view.MenuItems;
+import view.Userorderhistory;
 import view.aboutcafe;
 //import view.MenuItems;
 import view.dashboard;
@@ -28,6 +29,7 @@ public class Dashboardcontroller {
         userview.feedbackbtnlistener(new feedbacklistener());
         userview.addaboutcafelistener(new aboutcafelistener());
         userview.addReservationBtnListener(new ReservationListener());
+        userview.addOrderhistorylistener(new orderlistener());
     }
 
     // ✅ Handles logout and opens login again
@@ -86,4 +88,17 @@ public class Dashboardcontroller {
         ReservationController rc = new ReservationController(reserveView);
         reserveView.setVisible(true);
     }}
+    class orderlistener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+          userview.dispose();
+            
+          System.out.println("orderhistory btn clicked");
+          Userorderhistory orderhistory = new Userorderhistory();
+          orderhistory.setVisible(true);
+          Orderhistorycontroller orderhistorycontrol = new Orderhistorycontroller(orderhistory);
+        }
+        
+    }
 }

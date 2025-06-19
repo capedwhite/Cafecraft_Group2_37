@@ -22,6 +22,13 @@ public class Orderentry {
             this.total = price * quantity;
             this.itemId= itemId;
         }
+              public Orderentry(String name, double price, int quantity) {
+            this.productName = name;
+            this.unitPrice = price;
+            this.qty = quantity;
+            this.total = price * quantity;
+            
+        }
         public String getProductName() {
     return productName;
 }

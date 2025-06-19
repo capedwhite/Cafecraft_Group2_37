@@ -20,10 +20,6 @@ import view.reusemenupanel;
  * @author ASUS
  */
 public final class ItemController {
-//    String name = nameField.getText();
-//String category = categoryCombo.getSelectedItem().toString();
-//double price = Double.parseDouble(priceField.getText());
-//byte[] imageBytes = getImageBytesFromLabelOrChooser();
 
     private final Itemdao itemDao =new Itemdao();
     private final editmenu userView;
@@ -57,13 +53,7 @@ public final class ItemController {
     }
     
     
-    public void open(){
-        
-        this.userView.setVisible(true);
-    }
-    public void close(){
-        this.userView.dispose();
-    }
+
     class AddItemListener implements ActionListener{
 
         @Override
@@ -99,6 +89,7 @@ public final class ItemController {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            userView.dispose();
             admin_sidebar adminside = new admin_sidebar();
             admindasboardcontroller admindashboard = new admindasboardcontroller(adminside);
             adminside.setVisible(true);

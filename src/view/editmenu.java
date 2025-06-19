@@ -5,9 +5,9 @@
 package view;
 
 
+
 import java.awt.Image;
 import java.awt.event.ActionListener;
-import javax.swing.BoxLayout;
 
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
@@ -27,8 +27,6 @@ public final class editmenu extends javax.swing.JFrame {
 //        loadItemsIntoComboBox();
             this.setResizable(false);
             setLocationRelativeTo(null);
-            
-            
     }
 
     /**
@@ -149,8 +147,8 @@ public final class editmenu extends javax.swing.JFrame {
 
         menupanel.setBackground(new java.awt.Color(111, 99, 99));
         menupanel.setMinimumSize(new java.awt.Dimension(120, 3400));
-        menupanel.setPreferredSize(new java.awt.Dimension(1090, 790));
-        menupanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEADING, 20, 20));
+        menupanel.setPreferredSize(new java.awt.Dimension(1090, 1070));
+        menupanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEADING, 15, 20));
         jScrollPane1.setViewportView(menupanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -172,7 +170,7 @@ public final class editmenu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(titlepanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 438, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(buttonpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())

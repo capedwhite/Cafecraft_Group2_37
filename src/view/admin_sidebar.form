@@ -59,7 +59,7 @@
           </Group>
           <Group type="102" attributes="0">
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton9" min="-2" pref="175" max="-2" attributes="0"/>
+              <Component id="Vieworders" min="-2" pref="175" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <EmptySpace min="180" pref="180" max="-2" attributes="0"/>
@@ -92,7 +92,7 @@
           </Group>
           <Group type="102" attributes="0">
               <EmptySpace min="370" pref="370" max="-2" attributes="0"/>
-              <Component id="jButton9" min="-2" pref="39" max="-2" attributes="0"/>
+              <Component id="Vieworders" min="-2" pref="39" max="-2" attributes="0"/>
           </Group>
           <Component id="jLabel2" min="-2" pref="590" max="-2" attributes="0"/>
       </Group>
@@ -254,7 +254,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ManageemployeeActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton9">
+    <Component class="javax.swing.JButton" name="Vieworders">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="0" red="33" type="rgb"/>
@@ -273,7 +273,7 @@
         <Property name="contentAreaFilled" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton9ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ViewordersActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton10">
