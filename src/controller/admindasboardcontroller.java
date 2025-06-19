@@ -7,14 +7,11 @@ import view.Workersmanage;
 import view.admin_sidebar;
 import view.editmenu;
 import view.login;
-import view.reservationadmin;                      // ✅ added by Prajal
-import controller.ReservationAdminController;     // ✅ added by Prajal
+import view.reservationadmin;
+import controller.ReservationAdminController;
 import view.Vieworders;
+import view.inventory;
 
-/**
- *
- * @author ASUS
- */
 public class admindasboardcontroller {
 
     private final admin_sidebar admindashboard;
@@ -28,6 +25,7 @@ public class admindasboardcontroller {
         admindashboard.Addfeedbacklistener(new feedbacklistener());
         admindashboard.addReservationAdminListener(new openReservationAdmin());
         admindashboard.addviewordersListener(new vieworder());
+        admindashboard.addInventoryButtonListener(new OpenInventoryPanel());
     }
 
     class additemlistener implements ActionListener {
@@ -39,62 +37,64 @@ public class admindasboardcontroller {
             ItemController menucontrol = new ItemController(menuadmin);
         }
     }
-    class manageeemployee implements ActionListener{
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("button clicked");
-                admindashboard.dispose();
-               Workersmanage workermanage= new Workersmanage();
-               workermanage.setVisible(true);
-               WorkersPanelController workercontroll= new WorkersPanelController(workermanage);
-              
-               
-              
-       }
-        
-   }
-       class logoutbtn implements ActionListener{
 
+    class manageeemployee implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-           admindashboard.dispose();
-           login Login = new login();
-           Login.setVisible(true);
-           Logincontroller logincontrol = new Logincontroller(Login);
-           
+            admindashboard.dispose();
+            Workersmanage workermanage = new Workersmanage();
+            workermanage.setVisible(true);
+            WorkersPanelController workercontroll = new WorkersPanelController(workermanage);
         }
-           
-       }
-       class feedbacklistener implements ActionListener{
+    }
 
+    class logoutbtn implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            admindashboard.dispose();
+            login Login = new login();
+            Login.setVisible(true);
+            Logincontroller logincontrol = new Logincontroller(Login);
+        }
+    }
+
+    class feedbacklistener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
             admindashboard.dispose();
             Viewfeedbackadmin viewfeedback = new Viewfeedbackadmin();
             viewfeedback.setVisible(true);
-             ViewFeedbackcontroller viewfeedbackcontrol = new ViewFeedbackcontroller(viewfeedback);
+            ViewFeedbackcontroller viewfeedbackcontrol = new ViewFeedbackcontroller(viewfeedback);
         }
-           
-       }
-        class openReservationAdmin implements ActionListener {
+    }
+
+    class openReservationAdmin implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            reservationadmin adminView = new reservationadmin(); // JFrame with table
-            ReservationAdminController rc = new ReservationAdminController(adminView); // controller binds it
+            reservationadmin adminView = new reservationadmin();
+            ReservationAdminController rc = new ReservationAdminController(adminView);
             adminView.setVisible(true);
             admindashboard.dispose();
         }
     }
-        class vieworder implements ActionListener{
 
+    class vieworder implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-           admindashboard.dispose();
-           Vieworders vieworder = new Vieworders();
-           vieworder.setVisible(true);
-           Viewordercontroller viewcontrol = new Viewordercontroller(vieworder);
-           
+            admindashboard.dispose();
+            Vieworders vieworder = new Vieworders();
+            vieworder.setVisible(true);
+            Viewordercontroller viewcontrol = new Viewordercontroller(vieworder);
         }
-            
+    }
+
+    private class OpenInventoryPanel implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            inventory inventoryView = new inventory();
+            InventoryController inventoryController = new InventoryController(inventoryView);
+            inventoryView.setVisible(true);
+            admindashboard.dispose();
         }
+    }
 }
