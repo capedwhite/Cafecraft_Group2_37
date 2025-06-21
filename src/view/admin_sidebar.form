@@ -51,7 +51,7 @@
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="Viewfeedbackbtn" min="-2" pref="175" max="-2" attributes="0"/>
           </Group>
-          <Component id="inventoryButton" min="-2" pref="181" max="-2" attributes="0"/>
+          <Component id="jButton10" min="-2" pref="181" max="-2" attributes="0"/>
           <Component id="Logoutbtn" min="-2" pref="180" max="-2" attributes="0"/>
           <Group type="102" attributes="0">
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
@@ -82,7 +82,7 @@
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="Viewfeedbackbtn" min="-2" pref="48" max="-2" attributes="0"/>
               <EmptySpace min="51" pref="51" max="-2" attributes="0"/>
-              <Component id="inventoryButton" min="-2" pref="47" max="-2" attributes="0"/>
+              <Component id="jButton10" min="-2" pref="47" max="-2" attributes="0"/>
               <EmptySpace min="58" pref="58" max="-2" attributes="0"/>
               <Component id="Logoutbtn" min="-2" pref="70" max="-2" attributes="0"/>
           </Group>
@@ -276,7 +276,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ViewordersActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="inventoryButton">
+    <Component class="javax.swing.JButton" name="jButton10">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="0" red="33" type="rgb"/>
@@ -295,7 +295,7 @@
         <Property name="contentAreaFilled" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inventoryButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton10ActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">

@@ -5,7 +5,6 @@
 package view;
 
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
 
 /**
  *
@@ -42,7 +41,7 @@ public class admin_sidebar extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         Manageemployee = new javax.swing.JButton();
         Vieworders = new javax.swing.JButton();
-        inventoryButton = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -158,16 +157,16 @@ public class admin_sidebar extends javax.swing.JFrame {
             }
         });
 
-        inventoryButton.setBackground(new java.awt.Color(51, 0, 51));
-        inventoryButton.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
-        inventoryButton.setForeground(new java.awt.Color(51, 51, 0));
-        inventoryButton.setText("Inventory");
-        inventoryButton.setBorder(null);
-        inventoryButton.setBorderPainted(false);
-        inventoryButton.setContentAreaFilled(false);
-        inventoryButton.addActionListener(new java.awt.event.ActionListener() {
+        jButton10.setBackground(new java.awt.Color(51, 0, 51));
+        jButton10.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
+        jButton10.setForeground(new java.awt.Color(51, 51, 0));
+        jButton10.setText("Inventory");
+        jButton10.setBorder(null);
+        jButton10.setBorderPainted(false);
+        jButton10.setContentAreaFilled(false);
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inventoryButtonActionPerformed(evt);
+                jButton10ActionPerformed(evt);
             }
         });
 
@@ -194,7 +193,7 @@ public class admin_sidebar extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addComponent(Viewfeedbackbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(inventoryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(Logoutbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(6, 6, 6)
@@ -221,7 +220,7 @@ public class admin_sidebar extends javax.swing.JFrame {
                 .addGap(6, 6, 6)
                 .addComponent(Viewfeedbackbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(51, 51, 51)
-                .addComponent(inventoryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(58, 58, 58)
                 .addComponent(Logoutbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
@@ -260,9 +259,9 @@ public class admin_sidebar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ViewordersActionPerformed
 
-    private void inventoryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inventoryButtonActionPerformed
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_inventoryButtonActionPerformed
+    }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
@@ -318,8 +317,8 @@ public class admin_sidebar extends javax.swing.JFrame {
     private javax.swing.JButton Vieworders;
     private javax.swing.JButton btnreservation;
     private javax.swing.JButton editmenubtn;
-    private javax.swing.JButton inventoryButton;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel2;
@@ -344,15 +343,4 @@ public void addReservationAdminListener(ActionListener listener) {
 public void addviewordersListener(ActionListener listener) {
     Vieworders.addActionListener(listener);
 }
-
-public JButton getInventoryButton() {    
-    return inventoryButton;  
-} 
- 
-public void addInventoryButtonListener(ActionListener listener) {   
-    inventoryButton.addActionListener(listener); 
-} 
-
-
-
 }
