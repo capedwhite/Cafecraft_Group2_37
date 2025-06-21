@@ -1,12 +1,15 @@
 package controller;
 
 import dao.ReservationDAO;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import model.Reservation;
 import view.reservationadmin;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.util.List;
+import view.admin_sidebar;
 
 public class ReservationAdminController {
     private final reservationadmin view;
@@ -20,7 +23,7 @@ public class ReservationAdminController {
 
         view.addMarkCompleteListener(e -> updateCompletedReservations()); // ✅ existing feature
         view.addResetListener(e -> resetAllReservations());    // ✅ added by Prajal
-        view.addExitListener(e -> view.dispose());
+        view.addExitListener(new exitlistener());
     }
 
     public void loadReservations() {
@@ -72,5 +75,16 @@ public class ReservationAdminController {
                 JOptionPane.showMessageDialog(null, "Failed to delete reservations.");
             }
         }
+    }
+    class exitlistener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+           view.dispose();
+           admin_sidebar adminsidebar = new admin_sidebar();
+           admindasboardcontroller admincontrol = new admindasboardcontroller(adminsidebar);
+           adminsidebar.setVisible(true);
+        }
+        
     }
 }

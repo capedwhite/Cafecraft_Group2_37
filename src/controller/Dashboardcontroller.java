@@ -83,10 +83,12 @@ public class Dashboardcontroller {
     class ReservationListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
+        userview.dispose();
         System.out.println("Reservation button clicked");
         reservation reserveView = new reservation();
         ReservationController rc = new ReservationController(reserveView);
         reserveView.setVisible(true);
+        
     }}
     class orderlistener implements ActionListener{
 
