@@ -34,22 +34,18 @@ public class reservation extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         comboTableNo = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        txtPeople = new javax.swing.JTextField();
         txtPeople = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         username = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtUsername = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        txtUsername = new javax.swing.JTextField();
         txtTime = new javax.swing.JTextField();
         txtDate = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         btnSubmit = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
@@ -61,48 +57,7 @@ public class reservation extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Bahnschrift", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(86, 63, 54));
         jLabel1.setText("Make Reservation");
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel1.setFont(new java.awt.Font("Bahnschrift", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(86, 63, 54));
-        jLabel1.setText("Make Reservation");
-
-        comboTableNo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "available table", " ", "table 1", "tabel 2", "table 3 ", "table 4", " " }));
-        comboTableNo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboTableNoActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(126, 126, 126)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(comboTableNo, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(378, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(comboTableNo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23))
-        );
-
-        jPanel2.setBackground(new java.awt.Color(111, 99, 99));
-        jPanel2.setLayout(null);
-
-        jLabel2.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("No of people");
-        jPanel2.add(jLabel2);
-        jLabel2.setBounds(440, 40, 220, 42);
         comboTableNo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "available table", " ", "table 1", "tabel 2", "table 3 ", "table 4", " " }));
         comboTableNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,42 +128,12 @@ public class reservation extends javax.swing.JFrame {
         });
         jPanel2.add(txtUsername);
         txtUsername.setBounds(640, 220, 260, 50);
-        jPanel2.add(txtPeople);
-        txtPeople.setBounds(640, 40, 260, 50);
-
-        jLabel4.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Date");
-        jPanel2.add(jLabel4);
-        jLabel4.setBounds(440, 110, 120, 31);
-
-        username.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
-        username.setForeground(new java.awt.Color(255, 255, 255));
-        username.setText("Username");
-        jPanel2.add(username);
-        username.setBounds(440, 240, 130, 31);
-
-        jLabel3.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Time");
-        jPanel2.add(jLabel3);
-        jLabel3.setBounds(440, 180, 120, 31);
-
-        txtUsername.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsernameActionPerformed(evt);
-            }
-        });
-        jPanel2.add(txtUsername);
-        txtUsername.setBounds(640, 220, 260, 50);
 
         txtTime.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTimeActionPerformed(evt);
             }
         });
-        jPanel2.add(txtTime);
-        txtTime.setBounds(640, 160, 260, 50);
         jPanel2.add(txtTime);
         txtTime.setBounds(640, 160, 260, 50);
 
@@ -219,6 +144,10 @@ public class reservation extends javax.swing.JFrame {
         });
         jPanel2.add(txtDate);
         txtDate.setBounds(640, 100, 260, 50);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tablreserve.png"))); // NOI18N
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(-30, 140, 524, 351);
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -264,12 +193,6 @@ public class reservation extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1010, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(2, 2, 2))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -277,11 +200,7 @@ public class reservation extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -304,10 +223,6 @@ public class reservation extends javax.swing.JFrame {
     private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUsernameActionPerformed
-
-    private void comboTableNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTableNoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_comboTableNoActionPerformed
 
     private void comboTableNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTableNoActionPerformed
         // TODO add your handling code here:
@@ -346,6 +261,7 @@ public class reservation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

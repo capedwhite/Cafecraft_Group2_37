@@ -1,10 +1,13 @@
 package controller;
 
 import dao.ReservationDAO;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import model.Reservation;
 import view.reservation;
 import javax.swing.*;
 import java.util.List;
+import view.dashboard;
 
 public final class ReservationController {
     private final reservation userView;
@@ -52,7 +55,7 @@ public final class ReservationController {
         });
 
         // ✅ Handle Cancel button (exit the form)
-        userView.addCancelListener(e -> userView.dispose());
+        userView.addCancelListener(new cancelbtn());
     }
 
     public void loadAvailableTables() {
@@ -70,5 +73,16 @@ public final class ReservationController {
 
         // Optional: set the default selected item to placeholder
         combo.setSelectedIndex(0);
+    }
+
+    class cancelbtn implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+           userView.dispose();
+           dashboard Dashboard = new dashboard();
+           Dashboardcontroller dashboardcontrol = new Dashboardcontroller(Dashboard);
+        }
+        
     }
 }
