@@ -45,7 +45,6 @@ public class reservation extends javax.swing.JFrame {
         txtUsername = new javax.swing.JTextField();
         txtTime = new javax.swing.JTextField();
         txtDate = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         btnSubmit = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
@@ -144,11 +143,6 @@ public class reservation extends javax.swing.JFrame {
         });
         jPanel2.add(txtDate);
         txtDate.setBounds(640, 100, 260, 50);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tablreserve.png"))); // NOI18N
-        jLabel5.setText("jLabel5");
-        jPanel2.add(jLabel5);
-        jLabel5.setBounds(-50, 170, 440, 330);
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -262,7 +256,6 @@ public class reservation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
