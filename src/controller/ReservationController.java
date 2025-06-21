@@ -82,6 +82,7 @@ public final class ReservationController {
            userView.dispose();
            dashboard Dashboard = new dashboard();
            Dashboardcontroller dashboardcontrol = new Dashboardcontroller(Dashboard);
+           Dashboard.setVisible(true);
         }
         
     }

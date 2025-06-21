@@ -7,7 +7,10 @@ import view.reusableinventory;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.List;
+import view.admin_sidebar;
 
 public class InventoryController {
     private final inventory view;
@@ -18,8 +21,7 @@ public class InventoryController {
         this.dao = new InventoryDAO();
 
         this.view.getAddItemButton().addActionListener(e -> showAddPanel());
-        this.view.getExitButton().addActionListener(e -> System.exit(0));
-
+        view.addxitActionListener(new exitbtn());
         loadAllItems();
     }
 
@@ -103,4 +105,15 @@ public class InventoryController {
             card.getStatusLabel().setForeground(Color.BLACK);
         }
     }
+    class exitbtn implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            view.dispose();
+            admin_sidebar Admindashboard = new admin_sidebar();
+            admindasboardcontroller admindashboard = new admindasboardcontroller(Admindashboard);
+            Admindashboard.setVisible(true);
+        }
+        
+}
 }
