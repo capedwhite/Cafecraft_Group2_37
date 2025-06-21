@@ -66,12 +66,19 @@ public class reusableinventory extends javax.swing.JPanel {
         setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 255, 51), 1, true));
         setAutoscrolls(true);
 
-        txtItemName.setBackground(new java.awt.Color(204, 204, 204));
         txtItemName.setForeground(new java.awt.Color(51, 51, 51));
         txtItemName.setText("Enter Item Name Here");
         txtItemName.setAutoscrolls(false);
         txtItemName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         txtItemName.setCaretColor(new java.awt.Color(204, 204, 204));
+        txtItemName.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtItemNameFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtItemNameFocusLost(evt);
+            }
+        });
         txtItemName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtItemNameActionPerformed(evt);
@@ -95,7 +102,7 @@ public class reusableinventory extends javax.swing.JPanel {
             }
         });
 
-        btnCancel.setText("canel");
+        btnCancel.setText("cancel");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
@@ -171,6 +178,19 @@ public class reusableinventory extends javax.swing.JPanel {
     private void txtItemNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtItemNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtItemNameActionPerformed
+
+    private void txtItemNameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtItemNameFocusGained
+if(txtItemName.getText().equals("Enter Item Name Here") ){
+    txtItemName.setText("");
+}// TODO add your handling code here:
+    }//GEN-LAST:event_txtItemNameFocusGained
+
+    private void txtItemNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtItemNameFocusLost
+        // TODO add your handling code here:
+        if(txtItemName.getText().isEmpty() ){
+    txtItemName.setText("Enter Item Name Here");
+}
+    }//GEN-LAST:event_txtItemNameFocusLost
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

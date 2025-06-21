@@ -91,10 +91,11 @@ public class admindasboardcontroller {
     private class OpenInventoryPanel implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+              admindashboard.dispose();
             inventory inventoryView = new inventory();
             InventoryController inventoryController = new InventoryController(inventoryView);
             inventoryView.setVisible(true);
-            admindashboard.dispose();
+            
         }
     }
 }
