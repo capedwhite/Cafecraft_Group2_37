@@ -4,17 +4,34 @@
  */
 package view;
 
+import com.toedter.calendar.JCalendar;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JPanel;
+import model.Employee;
+import com.toedter.calendar.JDateChooser;
+import java.util.Date;
+import javax.swing.JLabel;
+
 /**
  *
  * @author Unish K.C
  */
 public class AttendanceTrackerr extends javax.swing.JFrame {
+private List<Attendancereusepanel> panelcollect = new ArrayList<>();
 
     /**
      * Creates new form AttendanceTrackerr
      */
     public AttendanceTrackerr() {
         initComponents();
+calendar.setDate(new Date()); // Default to today
+this.setSize(1011,618);
+this.setResizable(false);
+this.setLocationRelativeTo(null);
+
+
     }
 
     /**
@@ -29,21 +46,17 @@ public class AttendanceTrackerr extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
+        Addbtn = new javax.swing.JButton();
+        Exitbtn = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        Attendancepanel = new javax.swing.JPanel();
+        totalpresent = new javax.swing.JLabel();
+        totalabsent = new javax.swing.JLabel();
+        calendar = new com.toedter.calendar.JCalendar();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,94 +66,104 @@ public class AttendanceTrackerr extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Date:");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 23, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 140, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Add New Attendance:");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 70, -1, -1));
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 27, 220, -1));
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 74, 220, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
 
-        jButton1.setBackground(java.awt.Color.green);
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton1.setText("ADD");
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(473, 67, -1, -1));
+        Addbtn.setBackground(java.awt.Color.green);
+        Addbtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Addbtn.setText("ADD");
+        jPanel2.add(Addbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(252, 120, 80, -1));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("ID:");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 149, -1, -1));
-        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 141, 130, 30));
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Name:");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 225, -1, -1));
-        jPanel2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 221, 100, 30));
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Status:");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 309, -1, -1));
-        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(106, 305, 100, 30));
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Name", "Status"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 850, 390));
-
-        jButton2.setBackground(java.awt.Color.red);
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton2.setText("EXIT");
-        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Exitbtn.setBackground(java.awt.Color.red);
+        Exitbtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Exitbtn.setText("EXIT");
+        Exitbtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Exitbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                ExitbtnActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 547, 100, 30));
+        jPanel2.add(Exitbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 510, 90, 40));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Present:");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 550, -1, -1));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, -1, -1));
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Absent:");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 550, -1, -1));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, -1, -1));
 
-        jButton3.setBackground(java.awt.Color.green);
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton3.setText("ADD ROW");
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, -1, -1));
+        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        Attendancepanel.setLayout(new javax.swing.BoxLayout(Attendancepanel, javax.swing.BoxLayout.Y_AXIS));
+        jScrollPane2.setViewportView(Attendancepanel);
+
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 570, 380));
+
+        totalpresent.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
+        totalpresent.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(totalpresent, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 60, 20));
+
+        totalabsent.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
+        totalabsent.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(totalabsent, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, 50, 20));
+        jPanel2.add(calendar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 170, 390, 250));
+
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel5.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Track Attendance");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(435, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(315, 315, 315))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel5)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 70));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1115, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 999, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 618, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 606, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void ExitbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitbtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_ExitbtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,23 +204,54 @@ public class AttendanceTrackerr extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton Addbtn;
+    private javax.swing.JPanel Attendancepanel;
+    private javax.swing.JButton Exitbtn;
+    private com.toedter.calendar.JCalendar calendar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel totalabsent;
+    private javax.swing.JLabel totalpresent;
     // End of variables declaration//GEN-END:variables
+public JPanel getattendancepanel(){
+    return Attendancepanel;
+}
+public Attendancereusepanel addEmployeeCard(Employee employee){
+    
+    Attendancereusepanel card = new Attendancereusepanel(employee);
+    
+    card.getworkername().setText(employee.getName());
+    card.getworkerid().setText(String.valueOf(employee.getId()));
+    
+    panelcollect.add(card);
+    Attendancepanel.add(card);
+    Attendancepanel.revalidate();
+    Attendancepanel.repaint();
+    return card;
+    
+}
+public void addAddbtnlistener(ActionListener listener){
+    Addbtn.addActionListener(listener);
+}
+public void addexitbtnlistener(ActionListener listener){
+    Exitbtn.addActionListener(listener);
+}
+public List<Attendancereusepanel> getemployeecards(){
+    return panelcollect;
+}
+public JCalendar getselecteddate(){
+    return calendar;
+}
+public JLabel getabsent(){
+    return totalabsent;
+}
+public JLabel getpresent(){
+    return totalpresent;
+}
 }

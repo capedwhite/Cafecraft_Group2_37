@@ -55,7 +55,7 @@ public class aboutcafe extends javax.swing.JFrame {
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/openn.png"))); // NOI18N
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(320, 290, 380, 300);
+        jLabel9.setBounds(360, 300, 380, 300);
 
         jLabel14.setFont(new java.awt.Font("Bahnschrift", 1, 36)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(219, 197, 184));
@@ -143,7 +143,7 @@ public class aboutcafe extends javax.swing.JFrame {
         jScrollPane1.setViewportView(abtTxt);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(10, 230, 417, 260);
+        jScrollPane1.setBounds(10, 230, 420, 260);
 
         Exitbtn.setBackground(new java.awt.Color(255, 51, 51));
         Exitbtn.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
@@ -154,7 +154,7 @@ public class aboutcafe extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Exitbtn);
-        Exitbtn.setBounds(150, 500, 98, 47);
+        Exitbtn.setBounds(170, 500, 98, 47);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

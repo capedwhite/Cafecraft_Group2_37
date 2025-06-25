@@ -42,6 +42,7 @@ public class Vieworders extends javax.swing.JFrame {
         Orderlistpanel = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         Exitbtn = new javax.swing.JButton();
+        dailysalesreport = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -88,12 +89,18 @@ public class Vieworders extends javax.swing.JFrame {
             }
         });
 
+        dailysalesreport.setBackground(new java.awt.Color(51, 255, 0));
+        dailysalesreport.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
+        dailysalesreport.setText("Daily sales report");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(99, 99, 99)
+                .addComponent(dailysalesreport)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Exitbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42))
         );
@@ -101,7 +108,9 @@ public class Vieworders extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Exitbtn, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Exitbtn, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                    .addComponent(dailysalesreport, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -169,6 +178,7 @@ public class Vieworders extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Exitbtn;
     private javax.swing.JPanel Orderlistpanel;
+    private javax.swing.JButton dailysalesreport;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
@@ -202,4 +212,8 @@ public Placedorderreuse addorder(Orderjoin order){
 public void addexitListener(ActionListener listener) {
     Exitbtn.addActionListener(listener);
 }
+public void addsalesreportListener(ActionListener listener) {
+    dailysalesreport.addActionListener(listener);
+}
+
 }

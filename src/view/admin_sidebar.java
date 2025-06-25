@@ -38,7 +38,7 @@ public class admin_sidebar extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         editmenubtn = new javax.swing.JButton();
         Viewfeedbackbtn = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        attendancetrack = new javax.swing.JButton();
         Manageemployee = new javax.swing.JButton();
         Vieworders = new javax.swing.JButton();
         Inventory = new javax.swing.JButton();
@@ -118,16 +118,16 @@ public class admin_sidebar extends javax.swing.JFrame {
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(51, 0, 51));
-        jButton7.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(51, 51, 51));
-        jButton7.setText("Attendance");
-        jButton7.setBorder(null);
-        jButton7.setBorderPainted(false);
-        jButton7.setContentAreaFilled(false);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        attendancetrack.setBackground(new java.awt.Color(51, 0, 51));
+        attendancetrack.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
+        attendancetrack.setForeground(new java.awt.Color(51, 51, 51));
+        attendancetrack.setText("Attendance");
+        attendancetrack.setBorder(null);
+        attendancetrack.setBorderPainted(false);
+        attendancetrack.setContentAreaFilled(false);
+        attendancetrack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                attendancetrackActionPerformed(evt);
             }
         });
 
@@ -189,7 +189,7 @@ public class admin_sidebar extends javax.swing.JFrame {
                 .addComponent(Manageemployee, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(attendancetrack, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addComponent(Viewfeedbackbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -216,7 +216,7 @@ public class admin_sidebar extends javax.swing.JFrame {
                 .addGap(6, 6, 6)
                 .addComponent(Manageemployee, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(attendancetrack, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
                 .addComponent(Viewfeedbackbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(51, 51, 51)
@@ -247,9 +247,9 @@ public class admin_sidebar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ViewfeedbackbtnActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void attendancetrackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_attendancetrackActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_attendancetrackActionPerformed
 
     private void ManageemployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ManageemployeeActionPerformed
         // TODO add your handling code here:
@@ -258,10 +258,6 @@ public class admin_sidebar extends javax.swing.JFrame {
     private void ViewordersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewordersActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ViewordersActionPerformed
-
-    private void InventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InventoryActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_InventoryActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
@@ -274,6 +270,10 @@ public class admin_sidebar extends javax.swing.JFrame {
     private void LogoutbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutbtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_LogoutbtnActionPerformed
+
+    private void InventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InventoryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_InventoryActionPerformed
 
     /**
      * @param args the command line arguments
@@ -316,11 +316,11 @@ public class admin_sidebar extends javax.swing.JFrame {
     private javax.swing.JButton Manageemployee;
     private javax.swing.JButton Viewfeedbackbtn;
     private javax.swing.JButton Vieworders;
+    private javax.swing.JButton attendancetrack;
     private javax.swing.JButton btnreservation;
     private javax.swing.JButton editmenubtn;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 public void addADDeditmenulistener(ActionListener listener){
@@ -345,5 +345,8 @@ public void addviewordersListener(ActionListener listener) {
 }
 public void addInventoryButtonListener(ActionListener listener){
     Inventory.addActionListener(listener);
+}
+public void addAttendanceButtonListener(ActionListener listener){
+    attendancetrack.addActionListener(listener);
 }
 }

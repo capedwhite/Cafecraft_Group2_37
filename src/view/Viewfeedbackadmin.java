@@ -4,6 +4,7 @@
  */
 package view;
 
+import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 import model.Feedbackmodel;
@@ -22,6 +23,7 @@ public class Viewfeedbackadmin extends javax.swing.JFrame {
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         this.setSize(1011,618);
+        
     }
 
     /**
@@ -94,7 +96,7 @@ public class Viewfeedbackadmin extends javax.swing.JFrame {
 
         Feedbacklist.setBackground(new java.awt.Color(111, 99, 99));
         Feedbacklist.setMaximumSize(new java.awt.Dimension(32600, 32600));
-        Feedbacklist.setPreferredSize(new java.awt.Dimension(1009, 2000));
+        Feedbacklist.setPreferredSize(new java.awt.Dimension(1009, 4000));
         Feedbacklist.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 7));
         jScrollPane1.setViewportView(Feedbacklist);
 
@@ -177,6 +179,7 @@ public void addfeedback(Feedbackmodel feedbackmodel){
     card.getUsername().setText(feedbackmodel.getUserName());
     card.getFeedbacktext().setText(feedbackmodel.getFeedbacktext());
     Feedbacklist.add(card);
+    
      Feedbacklist.revalidate();
     Feedbacklist.repaint();
 }

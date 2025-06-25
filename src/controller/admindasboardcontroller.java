@@ -9,6 +9,7 @@ import view.editmenu;
 import view.login;
 import view.reservationadmin;
 import controller.ReservationAdminController;
+import view.AttendanceTrackerr;
 import view.Vieworders;
 import view.inventory;
 
@@ -26,6 +27,7 @@ public class admindasboardcontroller {
         admindashboard.addReservationAdminListener(new openReservationAdmin());
         admindashboard.addviewordersListener(new vieworder());
         admindashboard.addInventoryButtonListener(new OpenInventoryPanel());
+        admindashboard.addAttendanceButtonListener(new attendance());
     }
 
     class additemlistener implements ActionListener {
@@ -88,7 +90,7 @@ public class admindasboardcontroller {
         }
     }
 
-    private class OpenInventoryPanel implements ActionListener {
+     class OpenInventoryPanel implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
               admindashboard.dispose();
@@ -98,4 +100,17 @@ public class admindasboardcontroller {
             
         }
     }
+      class attendance implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            admindashboard.dispose();
+            AttendanceTrackerr attendancetracker = new AttendanceTrackerr();
+            Attendanceworkercontrolller attendancecontrol = new Attendanceworkercontrolller(attendancetracker);
+            attendancetracker.setVisible(true);
+            
+        }
+          
+      }
+    
 }

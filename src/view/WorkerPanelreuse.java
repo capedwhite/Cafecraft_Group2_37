@@ -4,6 +4,7 @@
  */
 package view;
 
+import java.awt.Dimension;
 import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import model.Employee;
@@ -21,7 +22,7 @@ private final Employee employee;
     public WorkerPanelreuse(Employee employee) {
         this.employee=employee;
         initComponents();
-         setSize(1010,75);
+         this.setPreferredSize(new Dimension(1015, 75));
     }
 
     /**

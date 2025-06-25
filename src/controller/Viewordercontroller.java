@@ -13,6 +13,7 @@ import model.Orderjoin;
 import view.Placedorderreuse;
 import view.Vieworders;
 import view.admin_sidebar;
+import view.dailysalesreport;
 
 /**
  *
@@ -26,7 +27,7 @@ public class Viewordercontroller {
         
         loadAllItemsToPanel();
         vieworder.addexitListener(new exitbutton());
-        
+        vieworder.addsalesreportListener(new salesreport());
 }
     public void loadAllItemsToPanel() {
         List<Orderjoin> orderjoin = orderdao.getAllPendingOrders(); 
@@ -50,6 +51,18 @@ public class Viewordercontroller {
            admin_sidebar admindashboard = new admin_sidebar();
            admindasboardcontroller admincontrol = new admindasboardcontroller(admindashboard);
            admindashboard.setVisible(true);
+        }
+        
+    }
+    class salesreport implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+             vieworder.dispose();
+           dailysalesreport dailysales = new dailysalesreport();
+           Salesreportcontroller salescontrol = new Salesreportcontroller(dailysales);
+           dailysales.setVisible(true);
+         
         }
         
     }
