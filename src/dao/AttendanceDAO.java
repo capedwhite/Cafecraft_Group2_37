@@ -44,11 +44,11 @@ public class AttendanceDAO {
     public int getTotalByStatus(String status,Date date) {
          Connection con=  mysql.openConnection();
         int total = 0;
-        String sql = "SELECT COUNT(*) FROM attendance WHERE status = ? and date=?";
+        String sql = "SELECT COUNT(*) FROM attendance WHERE status = ? and attendance_date=?";
 
         try (PreparedStatement pst = con.prepareStatement(sql)) {
             pst.setString(1, status);
-            pst.setDate(1,new java.sql.Date(date.getTime()));
+            pst.setDate(2,new java.sql.Date(date.getTime()));
             ResultSet rs = pst.executeQuery();
             if (rs.next()) {
                 total = rs.getInt(1);
