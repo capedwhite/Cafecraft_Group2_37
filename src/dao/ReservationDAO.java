@@ -18,7 +18,7 @@ public class ReservationDAO {
 
             ps.setString(1, r.getUsername());
             ps.setInt(2, r.getNoOfPeople());
-            ps.setString(3, r.getDate());
+ps.setString(3, r.getDate());
             ps.setString(4, r.getTime());
             ps.setInt(5, r.getTableNo());
             ps.setString(6, r.getStatus());

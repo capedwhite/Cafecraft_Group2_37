@@ -4,6 +4,8 @@
  */
 package view;
 
+import com.toedter.calendar.JDateChooser;
+import java.util.Date;
 import javax.swing.JComboBox;
 
 /**
@@ -44,8 +46,8 @@ public class reservation extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         txtUsername = new javax.swing.JTextField();
         txtTime = new javax.swing.JTextField();
-        txtDate = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+        txtDate = new com.toedter.calendar.JDateChooser();
         jPanel3 = new javax.swing.JPanel();
         btnSubmit = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
@@ -137,17 +139,11 @@ public class reservation extends javax.swing.JFrame {
         jPanel2.add(txtTime);
         txtTime.setBounds(640, 160, 260, 50);
 
-        txtDate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDateActionPerformed(evt);
-            }
-        });
-        jPanel2.add(txtDate);
-        txtDate.setBounds(640, 100, 260, 50);
-
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tablreserve.png"))); // NOI18N
         jPanel2.add(jLabel5);
         jLabel5.setBounds(-30, 140, 524, 351);
+        jPanel2.add(txtDate);
+        txtDate.setBounds(640, 100, 260, 50);
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -216,10 +212,6 @@ public class reservation extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTimeActionPerformed
 
-    private void txtDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDateActionPerformed
-
     private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUsernameActionPerformed
@@ -265,7 +257,7 @@ public class reservation extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField txtDate;
+    private com.toedter.calendar.JDateChooser txtDate;
     private javax.swing.JTextField txtPeople;
     private javax.swing.JTextField txtTime;
     private javax.swing.JTextField txtUsername;
@@ -279,8 +271,8 @@ public String getPeople() {
     return txtPeople.getText().trim();
 }
 
-public String getDate() {
-    return txtDate.getText().trim();
+public Date getDatee() {
+    return txtDate.getDate();
 }
 
 public String getTime() {
@@ -299,7 +291,6 @@ public int getSelectedTableNo() {
 public void clearFields() {
     txtUsername.setText("");
     txtPeople.setText("");
-    txtDate.setText("");
     txtTime.setText("");
     comboTableNo.setSelectedIndex(0);
 }

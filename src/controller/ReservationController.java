@@ -1,8 +1,11 @@
 package controller;
 
+import com.toedter.calendar.JDateChooser;
 import dao.ReservationDAO;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import model.Reservation;
 import view.reservation;
 import javax.swing.*;
@@ -24,7 +27,9 @@ public final class ReservationController {
             try {
                 String username = userView.getUsername();
                 int noOfPeople = Integer.parseInt(userView.getPeople());
-                String date = userView.getDate();
+                Date date = userView.getDatee();
+                           SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+String formattedDate = sdf.format(date);
                 String time = userView.getTime();
 
                 // ✅ Ensure user selected a valid table (not the placeholder)
@@ -38,7 +43,7 @@ public final class ReservationController {
                 int tableNo = Integer.parseInt(selected.replace("Table ", ""));
 
                 // ✅ Save reservation
-                Reservation r = new Reservation(username, noOfPeople, date, time, tableNo);
+                Reservation r = new Reservation(username, noOfPeople, formattedDate, time, tableNo);
                 boolean saved = dao.saveReservation(r);
 
                 if (saved) {
